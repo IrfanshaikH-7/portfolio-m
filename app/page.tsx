@@ -10,10 +10,16 @@ const Home: NextPage = () => {
 
   return (
     <>
-    <div className='h-screen w-full bg-slate-500'>
-<div className='text-black font-bold '>
+    <div className='h-screen w-full bg-gray-950 flex justify-center items-center'>
+<div className='text-yellow-600 text-5xl font-bold '>
       hello world
     </div>
+    <a href="/">alpha</a>
+    <a href="/">Lorem ipsum dolor sit amet.</a>
+    <a href="/">Lorem ipsum dolor sit amet.</a>
+    <a href="/">Lorem ipsum dolor sit amet.</a>
+    <a href="/">Lorem ipsum dolor sit amet.</a>
+
     </div>
     
     </>
