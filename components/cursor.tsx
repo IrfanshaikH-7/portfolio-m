@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'lucide-react';
 import { gsap } from 'gsap';
 import { MouseEve } from '@/types';
 
@@ -14,7 +15,7 @@ const Cursor = () => {
         const onMouseMove = (e: MouseEvent) => {
             const { clientX, clientY } = e;
             gsap.to(cursor, { x: clientX - 10, y: clientY - 10 });
-            console.log(e.target)
+            // console.log(e.target)
             
         }
         
@@ -45,7 +46,7 @@ const Cursor = () => {
 
     return (
         <div id='custom-cursor' className='custom-cursor'>
-            <span className='cursor-text'>view</span>
+            <span className='cursor-text'><Link height={8} width={8}/></span>
         </div>
     )
 }
