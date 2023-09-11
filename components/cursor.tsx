@@ -3,19 +3,23 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'lucide-react';
 import { gsap } from 'gsap';
-import { MouseEve } from '@/types';
+import { MouseEve, TestProps } from '@/types';
+import { LinkProps } from 'next/link';
+import { AppLinks } from 'next/dist/lib/metadata/types/extra-types';
+import { NextPage } from 'next';
 
 const Cursor = () => {
 
     useEffect(() => {
         const cursor = document.getElementById('custom-cursor');
         const cursorText = document.querySelector('.cursor-text');
-        const Links = document.querySelectorAll('a')
+        const Links = document.querySelectorAll('Link') as NodeListOf<HTMLAnchorElement>
+
         
         const onMouseMove = (e: MouseEvent) => {
             const { clientX, clientY } = e;
             gsap.to(cursor, { x: clientX - 10, y: clientY - 10 });
-            // console.log(e.target)
+            // console.log(LinksbyID)
             
         }
         
@@ -32,13 +36,14 @@ const Cursor = () => {
                 }
             }
         }
-        const onMousel =() => {
+        const onMousel =(event: MouseEvent) => {
             gsap.to(cursor,{scale:1})
             cursorText?.setAttribute('style', 'display: none; ')
         }
         
-        Links.forEach((link) => {
+        Links.forEach((link ) => {
             link.addEventListener('mouseenter', onMouseE);
+
             link.addEventListener('mouseleave', onMousel);
         })
         window.addEventListener('mousemove', onMouseMove);

@@ -1,4 +1,13 @@
 import { KanbanSquare,Text } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import Link from 'next/link'
 
 const Navbar = () => {
     return ( 
@@ -8,7 +17,37 @@ const Navbar = () => {
           <KanbanSquare className=" h-5 w-5 text-white"/>
           <p className="ml-1 capitalize text-sm font-semibold text-white">irfan</p>
             </div>
-            <Text className=" h-5 w-5 text-white"/>
+
+            <DropdownMenu>
+  <DropdownMenuTrigger><Text className=" h-5 w-5 text-white"/></DropdownMenuTrigger>
+  <DropdownMenuContent className="flex mr-32 px-8">
+    <DropdownMenuSeparator />
+<DropdownMenuItem>
+  <Link href='/portfolio' id="linnk" className="linnk uppercase text-xs font-semibold text-slate-700">
+    Portfolio
+  </Link>
+</DropdownMenuItem>
+
+<DropdownMenuItem>
+  <Link href='/about' id="linnk1"  className="linnk uppercase text-xs font-semibold text-slate-700">
+    About
+  </Link>
+</DropdownMenuItem>
+
+<DropdownMenuItem>
+  <Link href='/contact' id="linnk2" className="linnk uppercase text-xs font-semibold text-slate-700">
+    Contact
+  </Link>
+</DropdownMenuItem>
+
+<DropdownMenuItem>
+  <Link href='/blog' id="linnk3" className="linnk uppercase text-xs font-semibold text-slate-700">
+    Blog
+  </Link>
+</DropdownMenuItem>
+  </DropdownMenuContent>
+</DropdownMenu>
+            
 
         </div>
         
