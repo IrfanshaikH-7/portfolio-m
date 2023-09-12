@@ -10,6 +10,7 @@ import Head from 'next/head';
 import { useState } from 'react';
 import Image from 'next/image';
 import Navbar from '@/components/navbar';
+import { ModeToggle } from '@/components/ui/mode-toggle';
 
 const Home: NextPage = () => {
   const [cursorVariant, setCursorVariant] = useState('default');
@@ -17,16 +18,18 @@ const Home: NextPage = () => {
   return (
     <>
       <AnimatePresence>
-        <motion.main className='bg-[#060608] h-screen w-full'
+        <motion.main className='h-screen w-full'
           initial={{ scale: 0.7, opacity: 0 }}
           animate={{ scale: 1, opacity: 1, transition: { ease: 'easeOut', duration: 0.5 } }}
 
         >
-          <motion.div className='z-50 fixed bg-transparent w-full h-auto transition-opacity'
+          <motion.div className=' flex  z-50 fixed bg-transparent w-full h-auto transition-opacity'
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1, transition: { ease: 'easeOut', duration: 0.5 } }}
 
-          ><Navbar />
+          >
+            <Navbar />
+            
           </motion.div>
 
           <section className='h-full w-full m-auto flex justify-center items-center'>
@@ -48,6 +51,9 @@ const Home: NextPage = () => {
           </section>
 
         </motion.main>
+        <main className='h-screen w-7xl'>
+
+        </main>
       </AnimatePresence>
     </>
   );

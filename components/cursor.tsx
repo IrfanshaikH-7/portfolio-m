@@ -13,7 +13,7 @@ const Cursor = () => {
     useEffect(() => {
         const cursor = document.getElementById('custom-cursor');
         const cursorText = document.querySelector('.cursor-text');
-        const Links = document.querySelectorAll('Link') as NodeListOf<HTMLAnchorElement>
+        const Links = document.querySelectorAll('a')
 
         
         const onMouseMove = (e: MouseEvent) => {
@@ -41,7 +41,7 @@ const Cursor = () => {
             cursorText?.setAttribute('style', 'display: none; ')
         }
         
-        Links.forEach((link ) => {
+        Links.forEach((link) => {
             link.addEventListener('mouseenter', onMouseE);
 
             link.addEventListener('mouseleave', onMousel);

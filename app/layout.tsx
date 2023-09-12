@@ -3,6 +3,7 @@ import Cursor from '@/components/cursor'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { ThemeProvider } from '@/components/providers/theme-provider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -16,20 +17,27 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      
-      <body className={inter.className}>
-        <Cursor />
-        <div className=' bg-[#060608] h-screen w-full '>
-          {children}
-        </div>
-            
-          
-          
-        
-        
+    <html lang="en" suppressHydrationWarning>
 
-        </body>
+      <body className={inter.className}>
+
+        <ThemeProvider 
+        attribute='class'
+        defaultTheme='dark'
+        enableSystem
+        storageKey='portfolio-m'
+        >
+          <Cursor />
+          <div className=' dark:bg-[#060608] h-screen w-full '>
+            {children}
+          </div>
+        </ThemeProvider>
+
+
+
+
+
+      </body>
     </html>
   )
 }
