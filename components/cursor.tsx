@@ -11,11 +11,19 @@ import { NextPage } from 'next';
 const Cursor = () => {
 
     useEffect(() => {
+        
         const cursor = document.getElementById('custom-cursor');
         const cursorText = document.querySelector('.cursor-text');
         const Links = document.querySelectorAll('a')
 
+        const onMouseLeave = (e: MouseEvent) => {
+            gsap.to(cursor, {scale:0})
+            cursor?.setAttribute('style',"display: none;")
+            console.log("Leavd")
+        }
         
+        window?.addEventListener('mouseleave', () => console.log("leaved"))
+
         const onMouseMove = (e: MouseEvent) => {
             const { clientX, clientY } = e;
             gsap.to(cursor, { x: clientX - 10, y: clientY - 10 });
@@ -25,6 +33,7 @@ const Cursor = () => {
         
 
         const onMouseE = (event: MouseEvent) => {
+            // console.log("Entered")
             if (event.target instanceof Element){
                 if(event.target.classList.contains('view')){
                     gsap.to(cursor,{duration:0.1,scale:4})
@@ -40,6 +49,8 @@ const Cursor = () => {
             gsap.to(cursor,{scale:1})
             cursorText?.setAttribute('style', 'display: none; ')
         }
+
+        
         
         Links.forEach((link) => {
             link.addEventListener('mouseenter', onMouseE);
@@ -48,6 +59,7 @@ const Cursor = () => {
         })
         window.addEventListener('mousemove', onMouseMove);
     }, [])
+    
 
     return (
         <div id='custom-cursor' className='custom-cursor'>

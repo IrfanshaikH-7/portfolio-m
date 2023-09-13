@@ -51,6 +51,12 @@ const Navbar = () => {
                 Blog
               </Link>
             </DropdownMenuItem>
+
+            <DropdownMenuItem className= "group hover:bg-amber-200/80 hover:text-slate-900 transition-all duration-300">
+              <Link href='/admin' id="linnk1" className="linnk uppercase text-xs font-semibold text-slate-300 group-hover:text-slate-900 transition-all duration-300">
+                Admin
+              </Link>
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
         <div className="ml-2">
