@@ -15,6 +15,7 @@ import { useEffect } from "react";
 import { currentUser, redirectToSignIn } from "@clerk/nextjs";
 import { db } from "@/lib/db";
 import Link from "next/link";
+import UploadZone from "@/components/upload-things/upload-zone";
 const Page = async () => {
 
     const user = await currentUser();
@@ -38,13 +39,20 @@ const Page = async () => {
     if(admin1) {
         return (
             <div className="flex flex-col justify-center items-center h-full w-full">
-                <p className="text-7xl text-emerald-400 font-cute font-extrabold">
+              
+              <div>
+                <UploadZone />
+                </div>
+                <div className="flex flex-col justify-center items-center">
+                  <p className="text-7xl text-emerald-400 font-cute font-extrabold">
                     Greetings Mr.{admin1.name}
-                    </p>
+                </p>
                 
                 <div className="flex justify-center items-center h-12 w-48 rounded-md bg-slate-500">
                 <UserButton afterSignOutUrl="/portfolio" />
                 </div>
+                </div>
+                
             </div>
         )
     }
