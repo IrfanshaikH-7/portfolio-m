@@ -1,13 +1,4 @@
-"use client";
- 
-// You need to import our styles for the button to look right. Best to import in the root /layout.tsx but this is fine
-import "@uploadthing/react/styles.css";
- 
-import { UploadDropzone } from "@/lib/utils";
-import { ChangeEvent, KeyboardEvent, useState } from "react";
-
-import { zodResolver } from "@hookform/resolvers/zod"
-import * as z from "zod"
+"use client"
 import {
   Form,
   FormControl,
@@ -17,133 +8,77 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
-import { useForm } from "react-hook-form";
-import { Button } from "../ui/button";
-import { X } from "lucide-react";
+import React from 'react'
+import { TagInput } from '@/components/tag-input'
+import { zodResolver } from "@hookform/resolvers/zod"
+import * as z from "zod"
+import { useForm } from "react-hook-form"
+import { Button } from "../ui/button"
+import { toast } from "../ui/use-toast"
 
-declare global {
-  interface WindowEventMap {
-    keydown: KeyboardEvent<HTMLInputElement>
-  }
-}
 
-const formSchema = z.object({
-  title: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
-  }),
-  taqs: z.string().min(3),
-  category: z.string()
+const UploadZone = () => {
 
 
 
-})
- 
-export default function UploadZone() {
-  const [images, setImages] = useState(["fir","asos"]);
-  const [taqs, setTaqs] = useState<String[]>(["fir","asos"]);
-  const [isKeyDown, setIsKeyDown] = useState(false);
+  const [tags, setTags] = React.useState<string[]>([]);
 
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+
+  const FormSchema = z.object({
+    tag: z.array(z.string()),
+  })
+  const form = useForm<z.infer<typeof FormSchema>>({
+    resolver: zodResolver(FormSchema),
     defaultValues: {
-      title: "",
-      taqs: '',
-      category: 'Full stack' || 'Hobby' || ''
+      tag: [],
     },
   })
-
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values)
-  }
-
-  
-
-  const handleKeyDown = (e: KeyboardEvent & { target: EventTarget}) => {
-      if(e.key !== 'Enter') return false
-      setIsKeyDown(true)
-      
+  const { setValue } = form;
+  function onSubmit(values: z.infer<typeof FormSchema>) {
+    console.log(values.tag)
+    toast({
+      title: "You submitted the following values:",
+      description: (
+        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
+          <code className="text-white">{JSON.stringify(values, null, 2)}</code>
+        </pre>
+      ),
+    })
   }
 
   return (
-    // <main className="flex flex-col items-center  justify-between px-2 border rounded-md">
-    //   <UploadDropzone
-    //     endpoint="imageUploader"
-    //     onClientUploadComplete={(res) => {
-    //       // Do something with the response
-    //       console.log("Files: ", res);
-    //       alert("Upload Completed");
-    //     }}
-    //     onUploadError={(error: Error) => {
-    //       // Do something with the error.
-    //       alert(`ERROR! ${error.message}`);
-    //     }}
-    //   />
-    // </main>
     <Form {...form}>
-    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-      <FormField
-        control={form.control}
-        name="title"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Username</FormLabel>
-            <FormControl>
-                <Input placeholder="shadcn" {...field} />
-            </FormControl>
-            <FormDescription>
-              This is your public display name.
-            </FormDescription>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-      <FormField
-        control={form.control}
-        name="category"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Desc</FormLabel>
-            <FormControl>
-              <Input placeholder="shadcn" {...field} />
-            </FormControl>
-            <FormDescription>
-              This is your public display name.
-            </FormDescription>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-      <FormField
-        control={form.control}
-        name="taqs"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>taq</FormLabel>
-            <FormControl>
-              <div>
-                <Input placeholder="shadcn"  onKeyDown={handleKeyDown} {...field} />
-                {taqs.map((taq) => (
-                  <div className= "flex items-center justify-center text-white bg-red-700 w-fit">
-                    {taq} 
-                    <X className="h-4 w-4"/>
-                  </div>
-                ))}
-              </div>
-              
-            </FormControl>
-            <FormDescription>
-              This is your public display name.
-            </FormDescription>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-      <Button type="submit">Submit</Button>
-    </form>
-  </Form>
-  );
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+        <FormField
+          control={form.control}
+          name="tag"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Topics</FormLabel>
+              <FormControl>
+                <TagInput
+                  {...field}
+                  placeholder="Enter a topic"
+                  tags={tags}
+                  className='sm:min-w-[450px]'
+                  setTags={(newTags) => {
+                    setTags(newTags);
+                    setValue("tag", newTags as [string, ...string[]]);
+                  }}
+                />
+              </FormControl>
+              <FormDescription>
+                These are the topics that you&apos;re interested in.
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <Button type="submit">Submit</Button>
+      </form>
+    </Form>
+  )
 }
+
+export default UploadZone;
