@@ -8,6 +8,7 @@ interface TagInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   placeholder?: string;
   tags: string[];
   setTags: React.Dispatch<React.SetStateAction<string[]>>;
+//   setdes: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
 const TagInput = React.forwardRef<HTMLInputElement, TagInputProps>((props, ref) => {
@@ -39,21 +40,7 @@ const TagInput = React.forwardRef<HTMLInputElement, TagInputProps>((props, ref) 
 
     return (
         <div>
-            <div className={`flex flex-wrap gap-2 rounded-md ${tags.length !== 0 && 'mb-3'}`}>
-                {tags.map((tag, index) => (
-                    <span key={index} className="transition-all border bg-secondary text-secondary-foreground hover:bg-secondary/80 inline-flex h-8 items-center text-sm pl-2 rounded-md">
-                        {tag}
-                        <Button
-                            type="button" 
-                            variant="ghost"
-                            onClick={() => removeTag(tag)}
-                            className={cn("py-1 px-3 h-full hover:bg-transparent")}
-                        >
-                            <X size={14} />
-                        </Button>
-                    </span>
-                ))}
-            </div>
+           
             <Input
                 ref={inputRef}
                 type="text"
@@ -63,6 +50,21 @@ const TagInput = React.forwardRef<HTMLInputElement, TagInputProps>((props, ref) 
                 onKeyDown={handleKeyDown}
                 className={className}
             />
+             <div className={`flex flex-wrap gap-1 mt-1 rounded-md ${tags.length !== 0 && 'mb-3'}`}>
+                {tags.map((tag, index) => (
+                    <span key={index} className={cn(`transition-all border border-slate-400 bg-slate-600 text-secondary-foreground hover:bg-secondary/80 inline-flex h-8 items-center text-sm pl-2 rounded-md shadow-sm`, )}>
+                        {tag}
+                        <Button
+                            type="button" 
+                            variant="ghost"
+                            onClick={() => removeTag(tag)}
+                            className={cn("py-1 px-3 h-full hover:bg-transparent", )}
+                        >
+                            <X size={14} />
+                        </Button>
+                    </span>
+                ))}
+            </div>
         </div>
     );
 });

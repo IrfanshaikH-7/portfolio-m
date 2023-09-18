@@ -36,11 +36,6 @@ export default function RootLayout({
             {children}
           </div>
         </ThemeProvider>
-
-
-
-
-
       </body>
     </html>
     </ClerkProvider>

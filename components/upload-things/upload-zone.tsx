@@ -15,28 +15,29 @@ import * as z from "zod"
 import { useForm } from "react-hook-form"
 import { Button } from "../ui/button"
 import { toast } from "../ui/use-toast"
+import { Input } from "../ui/input"
+import { Textarea } from "../ui/textarea"
 
 
-const UploadZone = () => {
-
-
-
+const FormZone = () => {
   const [tags, setTags] = React.useState<string[]>([]);
 
 
-
   const FormSchema = z.object({
-    tag: z.array(z.string()),
+    tag: z.array(z.string().max(6)),
+    pointers: z.string().min(3),
   })
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
       tag: [],
+      pointers: '',
     },
   })
   const { setValue } = form;
   function onSubmit(values: z.infer<typeof FormSchema>) {
     console.log(values.tag)
+    console.log(values.pointers)
     toast({
       title: "You submitted the following values:",
       description: (
@@ -48,28 +49,49 @@ const UploadZone = () => {
   }
 
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+    <div className="h-full w-full">
+      <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
         <FormField
           control={form.control}
           name="tag"
           render={({ field }) => (
-            <FormItem>
-              <FormLabel>Topics</FormLabel>
+            <FormItem className="relative w-full">
+              <FormLabel className="absolute -top-1.5 ml-3 px-3 bg-[#060608] rounded-md shadow-md text-[11px]  uppercase font-syne font-semibold ">Techs</FormLabel>
+
               <FormControl>
                 <TagInput
                   {...field}
                   placeholder="Enter a topic"
                   tags={tags}
-                  className='sm:min-w-[450px]'
+                  className= 'border-blue-400 border  bg-blue-200 text-slate-700 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0'
                   setTags={(newTags) => {
                     setTags(newTags);
                     setValue("tag", newTags as [string, ...string[]]);
                   }}
                 />
+
+
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="pointers"
+          render={({ field }) => (
+            <FormItem className="relative">
+              <FormLabel className="absolute -top-1.5 ml-3 px-3 bg-[#060608] rounded-md shadow-md text-[11px]  uppercase font-syne font-semibold ">Pointers</FormLabel>
+              <FormControl>
+                <Textarea rows={4} placeholder="enter pointers saperated by '.'" {...field} 
+                className= 'border-blue-400 border  bg-blue-200 text-slate-700 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0'
+
+                />
               </FormControl>
               <FormDescription>
-                These are the topics that you&apos;re interested in.
+                This is your public display name.
               </FormDescription>
               <FormMessage />
             </FormItem>
@@ -78,7 +100,9 @@ const UploadZone = () => {
         <Button type="submit">Submit</Button>
       </form>
     </Form>
+    </div>
+    
   )
 }
 
-export default UploadZone;
+export default FormZone;

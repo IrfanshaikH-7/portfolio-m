@@ -17,7 +17,11 @@ const HeroR = () => {
                     fill
                     className="object-contain h-full w-full "
                 />
-                <ChevronDown onClick={() => scrollTo(40,80)} className=" absolute bottom-0 h-8 text-white w-8 z-10" />
+                <div className="flex flex-col justify-center items-center absolute bottom-0 z-10 bg--50">
+                    <p className="text-green-200 text-xs ">Scroll</p>
+                <ChevronDown className="h-4 w-4" />
+
+                </div>
             </div>
             </motion.div>
         </>
