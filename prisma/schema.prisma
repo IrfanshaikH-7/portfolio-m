@@ -22,4 +22,21 @@ model Admin {
   name      String
 }
 
+model Project {
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  title     String? 
+  note      String
+  tags      String[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  
+}
+// model Tag {
+//   id        String  @id @default(auto()) @map("_id") @db.ObjectId
+//   name      String
+//   project   Project @relation(fields: [projectId], references: [id])
+//   projectId String @db.ObjectId
+//   createdAt DateTime  @default(now())
+//   updatedAt DateTime  @updatedAt
+// }
 

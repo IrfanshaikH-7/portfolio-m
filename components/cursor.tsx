@@ -1,12 +1,8 @@
 'use client'
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { useEffect } from 'react';
 import { Link } from 'lucide-react';
 import { gsap } from 'gsap';
-import { MouseEve, TestProps } from '@/types';
-import { LinkProps } from 'next/link';
-import { AppLinks } from 'next/dist/lib/metadata/types/extra-types';
-import { NextPage } from 'next';
+
 
 const Cursor = () => {
 
@@ -26,7 +22,7 @@ const Cursor = () => {
 
         const onMouseMove = (e: MouseEvent) => {
             const { clientX, clientY } = e;
-            gsap.to(cursor, { x: clientX - 10, y: clientY - 10 });
+            gsap.to(cursor, { x: clientX - 10, y: clientY - 10 ,})
             // console.log(LinksbyID)
             
         }

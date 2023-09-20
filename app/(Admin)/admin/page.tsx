@@ -76,7 +76,7 @@ const Page = async () => {
               </DropdownMenu>
             </div>
           </div>
-          <div className="flex-1 px-24">
+          <div className="flex-1 px-24 h-full ">
             <FormZone />
             
           </div>

@@ -118,7 +118,7 @@ a {
     @apply bg-[#060608] flex justify-center items-center
   }
   .heroR-link {
-    @apply  flex justify-center items-center rounded-lg mt-2 transition-all duration-300
+    @apply  flex justify-center items-center rounded-md mt-2 transition-all duration-300
   }
 
   .flex-jc-ic {

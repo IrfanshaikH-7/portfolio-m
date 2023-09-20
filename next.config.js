@@ -1,4 +1,23 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  experimental: {
+    serverActions: true,
+    serverComponentsExternalPackages: ["mongoose"],
+  },
+    images: {
+        remotePatterns: [
+         
+          {
+            protocol: "https",
+            hostname: "uploadthing.com",
+          },
+          {
+            protocol: "https",
+            hostname: "utfs.io",
+          },
+         
+        ],
+      },
+}
 
 module.exports = nextConfig
