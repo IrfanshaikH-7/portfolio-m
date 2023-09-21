@@ -6,14 +6,17 @@ import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import { NextResponse } from "next/server";
 
 
-export const CreateProject = async({title,note,tag}: Params) => {
+export const CreateProject = async ({ title, note, tag, githublink, livelink, pointers }: Params) => {
     try {
         await connectToDB()
         const project = await db.project.create({
             data: {
                 title: title,
                 note: note,
-                tags: tag
+                tags: tag,
+                githublink: githublink,
+                livelink : livelink,
+                pointers : pointers
             }
         })
         console.log("Created project")
@@ -31,12 +34,12 @@ export const CreateProject = async({title,note,tag}: Params) => {
         console.log("Created project")
 
         console.log("Created project")
-        
-        return NextResponse.json({project}, { status: 200});
+
+        return NextResponse.json({ project }, { status: 200 });
 
     } catch (error: any) {
         console.log(error)
-        return NextResponse.json({error: error.message}, { status: 500});
+        return NextResponse.json({ error: error.message }, { status: 500 });
     } finally {
         await db.$disconnect();
     }

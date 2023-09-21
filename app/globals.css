@@ -83,8 +83,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 20px;
-  height: 20px;
+  width: 20px !important ;
+  height:  20px !important;
   border-radius: 50%;
   pointer-events: none;
   z-index: 999999;
@@ -93,7 +93,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(248, 243, 243);
+  background-color: #fff; /*rgb(248, 243, 243)*/
   color: black;
 
 }

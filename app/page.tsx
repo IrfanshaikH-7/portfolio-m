@@ -18,41 +18,46 @@ const Home: NextPage = () => {
 
   return (
     <>
-        <motion.main className='h-screen w-full'
-          initial={{ scale: 0.7, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1, transition: { ease: 'easeOut', duration: 0.5 } }}
+      <motion.main className='h-screen w-full'
+        initial={{ scale: 0.7, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1, transition: { ease: 'easeOut', duration: 0.5 } }}
+      >
+        <motion.div className=' flex  z-50 fixed bg-transparent w-full h-auto transition-opacity'
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1, transition: { ease: 'easeOut', duration: 0.5 } }}
         >
-          <motion.div className=' flex  z-50 fixed bg-transparent w-full h-auto transition-opacity'
-            initial={{ y: -20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1, transition: { ease: 'easeOut', duration: 0.5 } }}
-          >
-            <Navbar />
-          </motion.div>
-          <section className='h-full w-full mx-auto flex justify-center items-center'>
-            <div className='mt-12 flex lg:flex-row flex-col gap-x-2  h-[90%] w-[90%] mx-auto my-auto'>
-              <HeroL />
-              <div className='flex justify-center items-center flex-1 h-full w-full'>
-                <div className='h-full space-y-12 flex-1 w-full  p-4 overflow-y-auto overflow-x-hidden snap-y'>
-                    <HeroR />
-                  <motion.div className='flex items-center text-center to-be h-full flex-1 w-full text-white text-9xl snap-mandatory snap-start '
-                    initial={{ opacity: 0, }}
-                    whileInView={{ opacity: 1, }}
-                    transition={{ delay: 0.2, duration: 0.7 }}
-                  >
-                    to be content
-                  </motion.div >
-                </div>
+          <Navbar />
+        </motion.div>
+        <section className='h-full w-full mx-auto flex justify-center items-center'>
+          <div className='relative mt-12 flex lg:flex-row flex-col gap-x-2  h-[90%] w-[90%] mx-auto my-auto '>
+           
+            
+            {/* <div className='absolute h-60 w-2 rounded-m top-0 right-0 bg-white ' />
+            <div className='absolute h-60 w-2 rounded-m top-0 right-0 bg-white ' /> */}
+
+            <HeroL />
+            <div className='flex justify-center items-center flex-1 h-full w-full'>
+              <div className='h-full space-y-12 flex-1 w-full  p-4 overflow-y-auto overflow-x-hidden snap-y'>
+                <HeroR />
+                <motion.div className='flex items-center text-center to-be h-full flex-1 w-full text-white text-9xl snap-mandatory snap-start '
+                  initial={{ opacity: 0, }}
+                  whileInView={{ opacity: 1, }}
+                  transition={{ delay: 0.2, duration: 0.7 }}
+                >
+                  to be content
+                </motion.div >
               </div>
             </div>
-          </section>
-
-        </motion.main>
-        <section className='h-screen w-7xl flex justify-center items-center bg-[#060608]'>
-          <div className='h-[90%] w-[90%]'>
-<LandingS />
           </div>
-          
         </section>
+
+      </motion.main>
+      <section className='h-screen w-7xl flex justify-center items-center bg-[#060608]'>
+        <div className='h-[90%] w-[90%]'>
+          <LandingS />
+        </div>
+
+      </section>
     </>
   );
 };

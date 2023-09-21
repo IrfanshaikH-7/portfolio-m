@@ -34,8 +34,11 @@ const FormZone = () => {
   const FormSchema = z.object({
     tag: z.array(z.string().max(6)),
     pointers: z.string().min(16),
+    githubLink: z.string(),
+    liveLink: z.string(),
     title: z.string().min(3),
     note: z.string().min(3),
+    
 
 
   })
@@ -45,19 +48,21 @@ const FormZone = () => {
       tag: [],
       pointers: '',
       title: '',
+      githubLink: '',
+      liveLink: '',
       note: ''
     },
   })
   const { setValue } = form;
   async function onSubmit(values: z.infer<typeof FormSchema>) {
-    console.log(values.tag)
-    console.log(values.pointers)
-    console.log(values.title)
-    console.log(values.note)
+    console.log(values)
     const proojects = await CreateProject({
-      title: "Second",
-      note: "Second note",
-      tag: ['alpha', 'beta', 'gamma']
+      title: values.title,
+      note: values.note,
+      tag: values.tag,
+      githublink: values.githubLink,
+      livelink: values.liveLink,
+      pointers: values.pointers
     })
 
 
@@ -77,42 +82,42 @@ const FormZone = () => {
     <div className=" flex flex-col justify-center h-full w-full ">
       <div className="h-64 w-96 relative mb-6 rounded-md feld self-center">
         {images == '' ? (
-            <div className="">
-              <UploadDropzone
+          <div className="">
+            <UploadDropzone
               className="h-64 w-full mb-2 p-8"
-                endpoint="imageUploader"
-                onClientUploadComplete={(res) => {
-                  // Do something with the response
-                  if (res) {
-                    setImages(res[0].url)
-                    const json = JSON.stringify(res)
-                    console.log(json);
-                    console.log(res[0].url)
-                  }
-                  // console.log("Files: ", res);
-                  // alert("Upload Completed");
-                }}
-                onUploadError={(error: Error) => {
-                  // Do something with the error.
-                  alert(`ERROR! ${error.message}`);
-                }}
-                />
-              </div>
-              
-          ) : (
-            <Image
+              endpoint="imageUploader"
+              onClientUploadComplete={(res) => {
+                // Do something with the response
+                if (res) {
+                  setImages(res[0].url)
+                  const json = JSON.stringify(res)
+                  console.log(json);
+                  console.log(res[0].url)
+                }
+                // console.log("Files: ", res);
+                // alert("Upload Completed");
+              }}
+              onUploadError={(error: Error) => {
+                // Do something with the error.
+                alert(`ERROR! ${error.message}`);
+              }}
+            />
+          </div>
+
+        ) : (
+          <Image
             src={images}
             alt="upload-img"
             fill
             className="object-cover rounded-md border border-blue-400"
           />
-          )
-          }
+        )
+        }
       </div>
-      
+
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-          
+
 
 
           <div className="flex w-full gap-2">
@@ -172,6 +177,42 @@ const FormZone = () => {
                   />
 
 
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="githubLink"
+            render={({ field }) => (
+              <FormItem className="relative flex-1">
+                <FormLabel className="absolute  -top-1 ml-3 px-3 bg-[#060608] rounded-md shadow-md text-[11px]  uppercase font-syne font-semibold ">
+                  Github link
+                </FormLabel>
+                <FormControl>
+                  <Input placeholder="Add a short note" {...field}
+                    className='border-blue-400 border  bg-zinc-900 text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0'
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="liveLink"
+            render={({ field }) => (
+              <FormItem className="relative flex-1">
+                <FormLabel className="absolute  -top-1 ml-3 px-3 bg-[#060608] rounded-md shadow-md text-[11px]  uppercase font-syne font-semibold ">
+                  Live link
+                </FormLabel>
+                <FormControl>
+                  <Input placeholder="Add a short note" {...field}
+                    className='border-blue-400 border  bg-zinc-900 text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0'
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
