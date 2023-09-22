@@ -6,7 +6,7 @@ import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import { NextResponse } from "next/server";
 
 
-export const CreateProject = async ({ title, note, tag, githublink, livelink, pointers }: Params) => {
+export const CreateProject = async ({ title, note, tag,imgUrl, githublink, livelink, pointers }: Params) => {
     try {
         await connectToDB()
         const project = await db.project.create({
@@ -14,6 +14,7 @@ export const CreateProject = async ({ title, note, tag, githublink, livelink, po
                 title: title,
                 note: note,
                 tags: tag,
+                imgUrl: imgUrl,
                 githublink: githublink,
                 livelink : livelink,
                 pointers : pointers

@@ -27,15 +27,15 @@ import { CreateProject } from '@/lib/server-actions'
 
 const FormZone = () => {
   const [tags, setTags] = useState<string[]>([]);
-  const [images, setImages] = useState('');
+  const [images, setImages] = useState<string[]>([]);
 
-  console.log(images)
-  console.log(" up image")
+  // console.log(images)
+  // console.log(" up image")
   const FormSchema = z.object({
-    tag: z.array(z.string().max(6)),
+    tag: z.array(z.string()),
     pointers: z.string().min(16),
-    githubLink: z.string(),
-    liveLink: z.string(),
+    githubLink: z.string().url().optional(),
+    liveLink: z.string().url().optional(),
     title: z.string().min(3),
     note: z.string().min(3),
     
@@ -55,11 +55,13 @@ const FormZone = () => {
   })
   const { setValue } = form;
   async function onSubmit(values: z.infer<typeof FormSchema>) {
+    console.log(images)
     console.log(values)
     const proojects = await CreateProject({
       title: values.title,
       note: values.note,
       tag: values.tag,
+      imgUrl: images,
       githublink: values.githubLink,
       livelink: values.liveLink,
       pointers: values.pointers
@@ -81,7 +83,7 @@ const FormZone = () => {
   return (
     <div className=" flex flex-col justify-center h-full w-full ">
       <div className="h-64 w-96 relative mb-6 rounded-md feld self-center">
-        {images == '' ? (
+        {images ?  (
           <div className="">
             <UploadDropzone
               className="h-64 w-full mb-2 p-8"
@@ -89,10 +91,16 @@ const FormZone = () => {
               onClientUploadComplete={(res) => {
                 // Do something with the response
                 if (res) {
-                  setImages(res[0].url)
+                  
                   const json = JSON.stringify(res)
                   console.log(json);
-                  console.log(res[0].url)
+                  var img = []
+                  for(var i in res){
+                    img.push(res[i].url)
+                  }
+                  setImages(img)
+                  console.log(img)
+                  // console.log(res[0].url)
                 }
                 // console.log("Files: ", res);
                 // alert("Upload Completed");
@@ -106,7 +114,7 @@ const FormZone = () => {
 
         ) : (
           <Image
-            src={images}
+            src={images[0]}
             alt="upload-img"
             fill
             className="object-cover rounded-md border border-blue-400"
