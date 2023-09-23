@@ -1,6 +1,7 @@
 import { Animata, Discord, LMS, NewLife, Port, Saas, Thread } from "@/components/portpolio/feature-card";
 import { FeatureTitle } from "@/components/portpolio/feature-title";
 import MoreProjects from "@/components/portpolio/more-project";
+import { prj } from "@/public/data/projects-detail";
 
 
 const features = [
@@ -50,7 +51,7 @@ const Portfolio = () => {
                     <div className="w-full py-[50vh]  px-20">
                         <ul>
                             {
-                                features.map((feature) => (
+                                prj.map((feature) => (
                                     <li key={feature.id}>
                                         <FeatureTitle id={feature.id} >
                                             {feature.title}
@@ -63,8 +64,17 @@ const Portfolio = () => {
                     <div className=" w-full  px-24 sticky top-0 h-full flex items-center">
                         <div className=" relative w-full aspect-video bg-gray-200 rounded-lg overflow-hidden shadow-gray-400  shadow-md ">
                             {
-                                features.map((feature) => (
-                                    <feature.card id={feature.id} key={feature.id} />
+                                prj.map((feature) => (
+                                    <feature.card id={feature.id} key={feature.id} 
+                                    title={feature.title}
+                                    imgUrl=""
+                                    note={feature.note}
+                                    tags={feature.tags}
+                                    githublink={feature.githublink}
+                                    livelink={feature.livelink}
+                                    discription={feature.discription}
+
+                                    />
                                 ))
                             }
                         </div>
