@@ -1,6 +1,7 @@
 "use client"
 import { useFeatureStore } from "@/lib/store";
 import { cn } from "@/lib/utils"
+import Image from "next/image";
 
 
 
@@ -24,7 +25,7 @@ const FeatureCard = ({ children, gradient, id }: FeatureCardProps) => {
     const isInViewF = useFeatureStore((state) => state.inViewF)
 
     return (
-        <div className={cn(" absolute inset-0 h-full w-full bg-gradient-to-br transition-opacity ",
+        <div className={cn(" absolute inset-0 h-full w-full bg-gradient-to-br transition-opacity p-1 group",
             gradient,
             isInViewF === id ? 'opacity-100' : 'opacity-0'
         )}>
@@ -44,9 +45,23 @@ export const Discord = ({ id, title, imgUrl, note, tags, githublink, livelink, d
             livelink={livelink}
             discription={discription}
         >
-            <div className="h-full w-full flex items-center justify-center text-2xl font-semibold text-black font-syne uppercase">
-                {note}
+            <div className="h-full w-full flex items-center justify-center text-2xl font-semibold text-black font-syne uppercase ">
+                <div className="h-full w-full relative p-2">
+                   <Image
+                    src={imgUrl}
+                    fill
+                    alt="img"
+                    className=" object-right-bottom  bg-blue-300  rounded-md"
+                /> 
+                
+                
+                </div>
+                <div className="absolute group-hover:bg-black bg-white right-0 w-2/3 h-full">
+                <p className="z-50 hover:text-white">{note}</p>
+                </div>
+                
             </div>
+            
         </FeatureCard>
     );
 }
@@ -78,7 +93,7 @@ export const NewLife = ({ id, title, imgUrl, note, tags, githublink, livelink, d
             livelink={livelink}
             discription={discription}
         >
-            <div className="h-full w-full flex items-center justify-center text-2xl font-semibold text-black font-syne uppercase">
+            <div className="h-full w-full flex items-center justify-center text-2xl font-semibold text-black font-syne uppercase ">
                 {note}
             </div>
         </FeatureCard>

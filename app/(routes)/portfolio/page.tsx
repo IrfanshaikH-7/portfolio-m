@@ -46,9 +46,9 @@ const Portfolio = () => {
     return (
         <>
             {/* <div className="h-96 w-full bg-orange-300"> room to scroll</div> */}
-            <main className="h-screen w-full flex justify-center items-center">
-                <section className="flex items-start gap-20 h-[90%] w-[90%] rounded-lg overflow-scroll">
-                    <div className="w-full py-[50vh]  px-20">
+            <main className="lg:h-screen h-screen w-full flex justify-center items-center relative">
+                <section className="flex items-start gap-8 h-[90%] w-[90%] rounded-lg overflow-scroll">
+                    <div className="w-2/6 lg:w-4/6 py-[50vh] px-16">
                         <ul>
                             {
                                 prj.map((feature) => (
@@ -62,12 +62,12 @@ const Portfolio = () => {
                         </ul>
                     </div>
                     <div className=" w-full  px-24 sticky top-0 h-full flex items-center">
-                        <div className=" relative w-full aspect-video bg-gray-200 rounded-lg overflow-hidden shadow-gray-400  shadow-md ">
+                        <div className=" relative w-full aspect-square lg:aspect-video bg-gray-200 rounded-lg overflow-hidden shadow-gray-400  shadow-md ">
                             {
                                 prj.map((feature) => (
                                     <feature.card id={feature.id} key={feature.id} 
                                     title={feature.title}
-                                    imgUrl=""
+                                    imgUrl={feature.imgUrl}
                                     note={feature.note}
                                     tags={feature.tags}
                                     githublink={feature.githublink}
