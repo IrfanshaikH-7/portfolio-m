@@ -79,6 +79,9 @@
     @apply bg-background text-foreground;
   }
 }
+/* .img-Con:hover{
+  background: #000;
+} */
 .custom-cursor {
   position: fixed;
   top: 0;

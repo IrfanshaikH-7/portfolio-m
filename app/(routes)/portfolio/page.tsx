@@ -62,7 +62,7 @@ const Portfolio = () => {
                         </ul>
                     </div>
                     <div className=" w-full  px-24 sticky top-0 h-full flex items-center">
-                        <div className=" relative w-full aspect-square lg:aspect-video bg-gray-200 rounded-lg overflow-hidden shadow-gray-400  shadow-md ">
+                        <div className=" relative w-full aspect-square lg:aspect-video bg-gray-200 rounded-lg overflow-hidden shadow-gray-400  shadow-md group transition-all duration-1000">
                             {
                                 prj.map((feature) => (
                                     <feature.card id={feature.id} key={feature.id} 
