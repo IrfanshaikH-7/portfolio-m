@@ -5,12 +5,12 @@ const HeroL = () => {
         <div className=' flex flex-1 flex-col justify-center items-start   '>
             <div className="flex flex-col items-center justify-evenly p-8 w-full ">
                 <div>
-                <h1 className="font-syne  text-7xl  lg:text-9xl text-center lg:self-start bg-gradient-to-r from-blue-600 via-pink-500 to bg-purple-600 bg-clip-text text-transparent shadow-md">
+                <h1 className="font-syne  text-7xl xl:text-9xl text-center lg:self-start bg-gradient-to-r from-blue-600 via-pink-500 to bg-purple-600 bg-clip-text text-transparent shadow-md">
                     Greetings!!
                 </h1>
-                <p className="font-syne text-sm text-center lg:text-lg mt-2 "> <span className="bg-gradient-to-r from-blue-500 to bg-pink-500 bg-clip-text text-transparent font-semibold text-base lg:text-2xl">I'm Irfan, 
+                <p className="font-syne text-sm text-center xl:text-lg mt-2 "> <span className="bg-gradient-to-r from-blue-500 to bg-pink-500 bg-clip-text text-transparent font-semibold text-base lg:text-2xl">I'm Irfan, 
                 </span>
-                 &nbsp; Lorem ipsum dolor sit amet consectetur adipisicing elit. <br /> Fugit nesciunt dolorem doloribus vero
+                 &nbsp; Lorem ipsum dolor sit amet consectetur adipisicing elit.  Fugit<br /> nesciunt dolorem doloribus vero
                 </p>
 
                 </div>

@@ -10,7 +10,7 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import React, { useState } from 'react'
-import { TagInput } from '@/components/tag-input'
+import { TagInput } from '@/components/admin-comp/tag-input'
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
 import { useForm } from "react-hook-form"
