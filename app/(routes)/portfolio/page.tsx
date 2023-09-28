@@ -1,3 +1,4 @@
+import Skills from "@/components/portpolio/Skills";
 import { Animata, Discord, LMS, NewLife, Port, Saas, Thread } from "@/components/portpolio/feature-card";
 import { FeatureTitle } from "@/components/portpolio/feature-title";
 import MoreProjects from "@/components/portpolio/more-project";
@@ -82,10 +83,13 @@ const Portfolio = () => {
                 </section>
             </main>
             <main className="h-screen w-full flex justify-center items-center">
-                <section className="h-[90%] w-[90%]">
+                <section className="h-[85%] w-[85%]">
                         <MoreProjects />
                 </section>
             </main>
+            <section className="h-screen w-full flex items-center justify-center">
+                <Skills />
+            </section>
         </>
     );
 }
