@@ -25,6 +25,7 @@ model Admin {
 model Project {
   id        String  @id @default(auto()) @map("_id") @db.ObjectId
   title     String? 
+  category  String
   note      String
   tags      String[]
   imgUrl    String[]

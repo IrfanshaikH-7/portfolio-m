@@ -2,16 +2,18 @@
 
 import { connectToDB } from "@/lib/connectToDB";
 import { db } from "@/lib/db";
+import { currentUser } from "@clerk/nextjs";
 import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import { NextResponse } from "next/server";
 
 
-export const CreateProject = async ({ title, note, tag,imgUrl, githublink, livelink, pointers }: Params) => {
+export const CreateProject = async ({ title, category, note, tag,imgUrl, githublink, livelink, pointers }: Params) => {
     try {
         await connectToDB()
         const project = await db.project.create({
             data: {
                 title: title,
+                category: category,
                 note: note,
                 tags: tag,
                 imgUrl: imgUrl,
@@ -44,4 +46,18 @@ export const CreateProject = async ({ title, note, tag,imgUrl, githublink, livel
     } finally {
         await db.$disconnect();
     }
+}
+export const checkadmin =async () => {
+    const user = await currentUser()
+    const admin1 = await db.admin.findUnique({
+        where: {
+          adminId: user?.id,
+        }
+    
+      })
+      if(admin1){
+        return true
+      }else {
+        return false
+      }
 }

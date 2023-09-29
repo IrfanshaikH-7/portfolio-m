@@ -23,22 +23,23 @@ import { UploadButton } from "@uploadthing/react"
 import Image from "next/image"
 import { POST } from "@/app/api/projects/route"
 import { CreateProject } from '@/lib/server-actions'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select'
 
 
 const FormZone = () => {
   const [tags, setTags] = useState<string[]>([]);
   const [images, setImages] = useState<string[]>([]);
-
   // console.log(images)
   // console.log(" up image")
   const FormSchema = z.object({
     tag: z.array(z.string()),
+    category: z.string(),
     pointers: z.string().min(16),
     githubLink: z.string().url().optional(),
     liveLink: z.string().url().optional(),
     title: z.string().min(3),
     note: z.string().min(3),
-    
+
 
 
   })
@@ -46,6 +47,7 @@ const FormZone = () => {
     resolver: zodResolver(FormSchema),
     defaultValues: {
       tag: [],
+      category: "",
       pointers: '',
       title: '',
       githubLink: '',
@@ -59,6 +61,7 @@ const FormZone = () => {
     console.log(values)
     const proojects = await CreateProject({
       title: values.title,
+      category:values.category,
       note: values.note,
       tag: values.tag,
       imgUrl: images,
@@ -81,21 +84,21 @@ const FormZone = () => {
   }
 
   return (
-    <div className=" flex flex-col justify-center h-full w-full ">
-      <div className="h-64 w-96 relative mb-6 rounded-md feld self-center">
-        {images ?  (
+    <div className=" flex flex-col justify-center h-full w-full max-w-3xl  ">
+      <div className="h-64 w-96 relative mb-6 rounded-md self-center">
+        {images ? (
           <div className="">
             <UploadDropzone
-              className="h-64 w-full mb-2 p-8"
+              className="h-64 w-full mb-6 p-8 border border-zinc-500"
               endpoint="imageUploader"
               onClientUploadComplete={(res) => {
                 // Do something with the response
                 if (res) {
-                  
+
                   const json = JSON.stringify(res)
                   console.log(json);
                   var img = []
-                  for(var i in res){
+                  for (var i in res) {
                     img.push(res[i].url)
                   }
                   setImages(img)
@@ -133,13 +136,13 @@ const FormZone = () => {
               control={form.control}
               name="title"
               render={({ field }) => (
-                <FormItem className="relative">
+                <FormItem className="relative flex-1">
                   <FormLabel className="absolute -top-1.5 ml-3 px-3 bg-[#060608] rounded-md shadow-md text-[11px]  uppercase font-syne font-semibold ">
                     Title
                   </FormLabel>
                   <FormControl>
                     <Input placeholder="Enter title" {...field}
-                      className='border-blue-400 border  bg-zinc-900 text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0'
+                      className='bg-zinc-900 border border-white text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0'
                     />
                   </FormControl>
                   <FormMessage />
@@ -148,22 +151,52 @@ const FormZone = () => {
             />
             <FormField
               control={form.control}
-              name="note"
+              name="category"
               render={({ field }) => (
                 <FormItem className="relative flex-1">
                   <FormLabel className="absolute  -top-1 ml-3 px-3 bg-[#060608] rounded-md shadow-md text-[11px]  uppercase font-syne font-semibold ">
-                    Project note
+                    category
                   </FormLabel>
                   <FormControl>
-                    <Input placeholder="Add a short note" {...field}
-                      className='border-blue-400 border  bg-zinc-900 text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0'
-                    />
+                    <div className=''>
+                      <Select  onValueChange={field.onChange} defaultValue={field.value}>
+                        <SelectTrigger className="bg-zinc-900 border border-white">
+                          <SelectValue placeholder="Theme" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="fullstack" >fullstack</SelectItem>
+                          <SelectItem value="frontend" >frontend</SelectItem>
+                          <SelectItem value="backend" >backend</SelectItem>
+                          <SelectItem value="others" >others</SelectItem>
+
+                        </SelectContent>
+                      </Select>
+
+                    </div>
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
           </div>
+
+          <FormField
+            control={form.control}
+            name="note"
+            render={({ field }) => (
+              <FormItem className="relative flex-1">
+                <FormLabel className="absolute  -top-1 ml-3 px-3 bg-[#060608] rounded-md shadow-md text-[11px]  uppercase font-syne font-semibold ">
+                  Project note
+                </FormLabel>
+                <FormControl>
+                  <Input placeholder="Add a short note" {...field}
+                    className='bg-zinc-900 border border-white text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0'
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
           <FormField
             control={form.control}
@@ -177,7 +210,7 @@ const FormZone = () => {
                     {...field}
                     placeholder="Press Enter to add #tag"
                     tags={tags}
-                    className='border-blue-400 border  bg-zinc-900 text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0'
+                    className='bg-zinc-900 border border-white text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0'
                     setTags={(newTags) => {
                       setTags(newTags);
                       setValue("tag", newTags as [string, ...string[]]);
@@ -201,7 +234,7 @@ const FormZone = () => {
                 </FormLabel>
                 <FormControl>
                   <Input placeholder="Add a short note" {...field}
-                    className='border-blue-400 border  bg-zinc-900 text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0'
+                    className='bg-zinc-900 border border-white text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0'
                   />
                 </FormControl>
                 <FormMessage />
@@ -219,7 +252,7 @@ const FormZone = () => {
                 </FormLabel>
                 <FormControl>
                   <Input placeholder="Add a short note" {...field}
-                    className='border-blue-400 border  bg-zinc-900 text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0'
+                    className='bg-zinc-900 border border-white text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0'
                   />
                 </FormControl>
                 <FormMessage />
@@ -237,14 +270,14 @@ const FormZone = () => {
                 </FormLabel>
                 <FormControl>
                   <Textarea rows={4} placeholder="Enter pointers saperated by '.'" {...field}
-                    className='border-blue-400 border  bg-zinc-900 text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0'
+                    className='bg-zinc-900 border border-white text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0'
                   />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
-          <Button className="w-full bg-gradient-to-t from-blue-400 opacity-90  to-gray-200 hover:opacity-100 transition-all" type="submit">Submit</Button>
+          <Button className="w-full bg-gradient-to-t from-orange-400 opacity-80  to-orange-500 hover:opacity-100 hover:-translate-y-1 transition-all" type="submit">Submit</Button>
         </form>
       </Form>
     </div>

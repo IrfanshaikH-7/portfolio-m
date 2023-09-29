@@ -1,21 +1,21 @@
 
 import { UserButton } from "@clerk/nextjs";
-import { KanbanSquare, Text } from "lucide-react";
+import { Text } from "lucide-react";
 Link
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { useUser } from "@clerk/nextjs";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { currentUser, redirectToSignIn } from "@clerk/nextjs";
 import { db } from "@/lib/db";
 import Link from "next/link";
 import FormZone from "@/components/upload-things/upload-zone";
+import AdminDB from "@/components/admin-comp/admin-main";
 const Page = async () => {
 
   const user = await currentUser();
@@ -23,8 +23,8 @@ const Page = async () => {
     where: {
       adminId: user?.id,
     }
-
   })
+
   // const admin = await db.admin.create({
   //     data: {
   //         adminId: user?.id,
@@ -37,53 +37,10 @@ const Page = async () => {
 
 
   if (admin1) {
+    
     return (
       <main className="flex  justify-center items-center h-full w-full">
-        <section className="flex  justify-center items-center w-11/12 h-[90%] ">
-          <div className="flex-1">
-<div className=" m-2 flex flex-col justify-center items-center h-auto w-auto space-y-3 rounded-md bg-slate-500/50 p-5">
-              <UserButton afterSignOutUrl="/portfolio" />
-              <p className="text-sm" >Explore my porfolio by logging out or.</p>
-
-              <DropdownMenu >
-                <DropdownMenuTrigger className="flex uppercase items-center">menu<Text className=" h-5 w-5  text-white" /></DropdownMenuTrigger>
-                <DropdownMenuContent className="flex  px-8 backdrop-blur-sm border-slate-600 bg-transparent">
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem className="group hover:bg-blue-300/80 hover:text-slate-900 transition-all duration-300">
-                    <Link href='/portfolio' id="linnk" className="linnk uppercase text-xs font-semibold text-slate-300 group-hover:text-slate-900 transition-all duration-300">
-                      Portfolio
-                    </Link>
-                  </DropdownMenuItem>
-
-                  <DropdownMenuItem className="group hover:bg-amber-200/80 hover:text-slate-900 transition-all duration-300">
-                    <Link href='/about' id="linnk1" className="linnk uppercase text-xs font-semibold text-slate-300 group-hover:text-slate-900 transition-all duration-300">
-                      About
-                    </Link>
-                  </DropdownMenuItem>
-
-                  <DropdownMenuItem className="group hover:bg-purple-300/80 hover:text-slate-900 transition-all duration-300">
-                    <Link href='/contact' id="linnk2" className="linnk uppercase text-xs font-semibold text-slate-300 group-hover:text-slate-900 transition-all duration-300">
-                      Contact
-                    </Link>
-                  </DropdownMenuItem>
-
-                  <DropdownMenuItem className="group hover:bg-pink-300/80 hover:text-slate-900 transition-all duration-300">
-                    <Link href='/blog' id="linnk3" className="linnk uppercase text-xs font-semibold text-slate-300 group-hover:text-slate-900 transition-all duration-300">
-                      Blog
-                    </Link>
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-            </div>
-          </div>
-          <div className="flex-1 px-24 h-full ">
-            <FormZone />
-            
-          </div>
-        </section>
-
-
-
+        <AdminDB />
       </main>
     )
   }
