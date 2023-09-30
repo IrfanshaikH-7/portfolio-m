@@ -25,7 +25,7 @@ const Skills = () => {
                                 <div className="grid grid-cols-2 gap-2 aspect-square  p-1 ">
                                     {
                                         languages.map((lan) => (
-                                            <div className="bg-zinc-800 aspect-square first:h-32 lg:first:h-48 xl:first:h-56 first:self-end first:justify-self-end last:h-32 last:lg:h-48 xl:last:h-56 rounded-sm ">
+                                            <div className="bg-zinc-800 border border-gray-500 aspect-square first:h-32 lg:first:h-40 xl:first:h-44 first:self-end first:justify-self-end last:h-32 last:lg:h-40 xl:last:h-44 rounded-sm ">
                                                 <p>{lan.lan}</p>
                                             </div>
                                         ))

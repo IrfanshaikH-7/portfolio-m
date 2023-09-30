@@ -90,6 +90,12 @@ const Portfolio = () => {
             <section className="h-screen w-full flex items-center justify-center">
                 <Skills />
             </section>
+            <div className="h-[85%] w-[85%] mx-auto">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum culpa nesciunt beatae reiciendis possimus nulla, amet eos sapiente voluptatem nihil, deleniti fugit, incidunt laborum.
+            </div>
+            <footer className="h-64 w-full bg-emerald-500">
+
+            </footer>
         </>
     );
 }
