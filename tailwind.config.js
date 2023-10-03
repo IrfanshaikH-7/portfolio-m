@@ -18,7 +18,8 @@ module.exports = {
     extend: {
       fontFamily: {
         'cute': ['Cute Font'],
-        'syne' : ['Syne', 'sans-serif']
+        'syne' : ['Syne', 'sans-serif'],
+        'arizona': ['Arizonia', 'cursive']
       },
       colors: {
         border: "hsl(var(--border))",

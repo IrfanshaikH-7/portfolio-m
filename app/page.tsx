@@ -14,15 +14,14 @@ import { ModeToggle } from '@/components/ui/mode-toggle';
 import LandingS from '@/components/Hero/LandingS';
 
 const Home: NextPage = () => {
-  const [cursorVariant, setCursorVariant] = useState('default');
 
   return (
     <>
-      <motion.main className='h-screen w-full'
+      <motion.main className='h-screen w-full flex justify-center'
         initial={{ scale: 0.7, opacity: 0 }}
         animate={{ scale: 1, opacity: 1, transition: { ease: 'easeOut', duration: 0.5 } }}
       >
-        <motion.div className=' flex  z-50 fixed bg-transparent w-full h-auto transition-opacity'
+        <motion.div className=' w-96 flex mx-auto z-50 fixed bg-transparent  h-auto transition-opacity'
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1, transition: { ease: 'easeOut', duration: 0.5 } }}
         >

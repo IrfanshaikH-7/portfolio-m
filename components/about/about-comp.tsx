@@ -14,43 +14,107 @@ const AboutComp = () => {
         // get the element by id and use scrollIntoView
         const elem = document.getElementById(targetId);
         elem?.scrollIntoView({
-          behavior: "smooth",
+            behavior: "smooth",
         });
-      };
-    return ( 
-        <section className="flex h-[80%] w-[85%] mt-12 bg-zinc-800/80 rounded-md">
-            <div className="flex flex-col px-24 gap-4 items-start justify-center w-2/6 h-full bg-emerald-950 ">
+    };
+    return (
+        <section className="flex md:flex-row flex-col h-[90%] md:h-[80%] w-[90%] md:w-[85%] md:mt-12 mt-16  rounded-md overflow-hidden bg-emerald-400 relative">
+            <div className="hidden md:flex w-2/6 items-center justify-center bg-emerald-400">
+             <div className="flex flex-col xl:ml-16 px-2  gap-4 items-start justify-center w-full h-fit ">
                 <div className="flex justify-center items-center group ">
-                    <div className="w-12 h-[1px] bg-emerald-500 group-hover:w-20 transition-all duration-300"/>
+                    <div className="md:w-6 lg:w-12 h-[1px] bg-zinc-900  md:group-hover:w-10 lg:group-hover:w-20 transition-all duration-300" />
                     <Link href='#abt' className="px-2 text-xs text-black dark:text-white uppercase" onClick={handleScroll}>About</Link>
 
                 </div>
                 <div className="flex justify-center items-center group ">
-                    <div className="w-12 h-[1px] bg-emerald-500 group-hover:w-20 transition-all duration-300"/>
-                    <Link href='#edu' className="px-2 text-xs text-black dark:text-white uppercase"  onClick={handleScroll}>Education</Link>
+                    <div className="md:w-6 lg:w-12 h-[1px] bg-zinc-900  md:group-hover:w-10 lg:group-hover:w-20 transition-all duration-300" />
+                    <Link href='#edu' className="px-2 text-xs text-black dark:text-white uppercase" onClick={handleScroll}>Education</Link>
 
                 </div>
                 <div className="flex justify-center items-center group ">
-                    <div className="w-12 h-[1px] bg-emerald-500 group-hover:w-20 transition-all duration-300"/>
-                    <Link href='#exp' className="px-2 text-xs text-black dark:text-white uppercase"  onClick={handleScroll}>Experience</Link>
+                    <div className="md:w-6 lg:w-12 h-[1px] bg-zinc-900  md:group-hover:w-10 lg:group-hover:w-20 transition-all duration-300" />
+                    <Link href='#exp' className="px-2 text-xs text-black dark:text-white uppercase" onClick={handleScroll}>Experience</Link>
                 </div>
+            </div>   
             </div>
-            <div className="h-full w-full px-4 py-2">
-                <div className="h-full w-full bg-emerald-800 overflow-y-auto">
-                    <div id="abt" className="bg-slate-600 h-[600px] w-full">
-                            sbt
+            <div className="md:hidden flex absolute top-0 right-0 font-semibold  bg-emerald-400 py-3 rounded-lg">
+            <div className="flex  xl:ml-16 px-2  gap-4 items-start justify-center w-full h-fit ">
+                <div className="flex justify-center items-center group ">
+                    <Link href='#abt' className="px-2 text-xs text-black dark:text-white uppercase hover:-translate-y-[2px] transition-all duration-300" onClick={handleScroll}>About</Link>
+
+                </div>
+                <div className="flex justify-center items-center group ">
+                    <Link href='#edu' className="px-2 text-xs text-black dark:text-white uppercase hover:-translate-y-[2px] transition-all duration-300" onClick={handleScroll}>Education</Link>
+
+                </div>
+                <div className="flex justify-center items-center group ">
+                    <Link href='#exp' className="px-2 text-xs text-black dark:text-white uppercase hover:-translate-y-[2px] transition-all duration-300" onClick={handleScroll}>Experience</Link>
+                </div>
+            </div>  
+            </div>
+            
+            <div className="h-full w-full px-1 pt-2 pb-1 md:py-2 md:px-4 rounded-md">
+                <div className="h-full w-full  overflow-y-auto px-4 lg:px-10 xl:px-32 bg-zinc-900/80 rounded-md ">
+                    <div id="abt" className="flex flex-col justify-center items-start h-full w-full">
+                        <h3 className="text-4xl font-semibold font-syne justify-self-start">Irfan shaikH</h3>
+                        <div className=" mt-4">
+                            <p className=" indent-8 text-sm font-syne tracking-wider mt-6">
+                                The world of art, softwares 'n' technology always facinated me and I've never been afraid to just jump in and give it a go. whethers it's development, openSource contributions or AI/ML.
+                            </p>
+                            <p className="text-sm font-syne tracking-wider mt-6">
+                                Fast forward to 2023 and I’ve tried it all, from Web Design to actually implementing them with code, Animation, HTML/CSS, Web Development by Creating various <Link href='/portfolio' className="text-base text-white">projects</Link> on them. Everything I have done, small or big, has been a vital stepping stone for where I am today.
+                            </p>
+                            <p className="text-sm font-syne tracking-wider mt-6">
+                                What excites me most about being a Web Developer is being able to design and create softwares that have a purpose and solve real problems. It goes beyond developing landing pages and websites and involves having a passion for designing experiences and solutions that help people, whether it's helping them make better audience, market themselves online, or buy something online. Leaning into customer insight and understanding their needs, finding the right problems to solve, delivering solutions as quickly as possible, learning from those and then iterating and improving that value over time is the key to great developer.
+                            </p>
+                        </div>
                     </div>
-                    <div id="edu" className="bg-slate-900 h-[600px] w-full">
-                            sbt
+
+                    <div id="edu" className="flex flex-col justify-center items-start h-full w-full">
+                        <div className="py-2">
+                         <span className="text-md font-syne font-bold tracking-wider mt-6">- Degree - 8.32 (current)</span>
+                            <p className="ml-4 text-sm font-syne lea tracking-wider mt-2 text-slate-200 ">
+                                Pursuing a Bachelor of Science in Computer Science with a focus on web development. Learned skills such as HTML/CSS, JavaScript, React, Node.js, MySql, MongoDB etc. Created projects such as Popular clones, Personal blog, E-commerce platform, and Portfolio website.
+                            </p>
+                            <p className="ml-4 text-sm font-syne lea tracking-wider mt-1 text-slate-200"><span className="font-semibold text-white">Relevent Course work :</span> C,C++,JAVA, Data structures using C++, Data Structures using Java</p>
+
+                        </div>
+                        <div className="py-2">
+                         <span className="text-md font-syne font-bold tracking-wider mt-6">- Intermediate</span>
+                         <p className="ml-4 text-sm font-syne lea tracking-wider mt-2 text-slate-300"><span className="text-white font-semibold">Stream:</span> Mathematics,Physics and Chemistry ( MPC )</p>
+                               
+                            
+                            <p className="ml-4 text-sm font-syne lea tracking-wider mt-2 text-slate-300">
+                               Completed my intermediate with a focus on building problem sloving skills using Mathematics. .
+                            </p>
+                        </div>
+                        <div className="py-2">
+                         <span className="text-md font-syne font-semibold tracking-wider mt-6">- School</span>
+                            <p className="ml-4 text-sm font-syne lea tracking-wider mt-2 text-slate-300">
+                               Completed my SSC
+                            </p>
+                        </div>
                     </div>
-                    <div id="exp" className="bg-slate-300 h-[600px] w-full">
-                            sbt
+                    <div id="exp" className="flex flex-col justify-center items-start h-full w-full">
+                        <div>
+                            <h1 className="font-arizona font-bold text-4xl">Experience. &nbsp; &nbsp;!</h1>
+                            <div className="mt-2">
+                              <p className=" ml-4 py-2 font-syne text-slate-300">Being a self-taught Developer Im looking for job apportunities.</p>
+                            <p className="ml-4 py-2 font-syne text-slate-300">
+                               Check out my <Link href='/portfolio' className="text-base text-white">projects</Link>  - These projects demonstrates my skills and experience in web development, which are essential for the any role in software development.
+                            </p>
+                            <p className="ml-4 py-2 font-syne text-slate-300">
+                                I have experience in various web technologies and frameworks, and I have a strong communication and collaboration skills , as well as problem solving and creativity skills,I am confident that i can use these skills to create high-quality web solutions for companies and customers.
+                            </p>  
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        
-     );
+
+    );
 }
- 
+
 export default AboutComp;

@@ -47,7 +47,7 @@ const Portfolio = () => {
     return (
         <>
             {/* <div className="h-96 w-full bg-orange-300"> room to scroll</div> */}
-            <main className="lg:h-screen h-screen w-full flex justify-center items-center relative">
+            <main className=" snap-mandatory lg:h-screen h-screen w-full flex justify-center items-center relative">
                 <section className="flex items-start gap-8 h-[90%] w-[90%] rounded-lg overflow-scroll">
                     <div className="md:w-2/6 lg:w-4/6 py-[50vh] px-2 lg:px-16 ">
                         <ul>
@@ -82,15 +82,15 @@ const Portfolio = () => {
                     </div>
                 </section>
             </main>
-            <main className="h-screen w-full flex justify-center items-center">
-                <section className="h-[85%] w-[85%]">
+            <main className="snap-center h-screen w-full flex justify-center items-center">
+                <section className="h-[80%] w-[80%]">
                         <MoreProjects />
                 </section>
             </main>
-            <section className="h-screen w-full flex items-center justify-center">
+            <section className="snap-center h-screen w-full flex items-center justify-center">
                 <Skills />
             </section>
-            <div className="h-[85%] w-[85%] mx-auto">
+            <div className="h-[80%] w-[80%] mx-auto">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum culpa nesciunt beatae reiciendis possimus nulla, amet eos sapiente voluptatem nihil, deleniti fugit, incidunt laborum.
             </div>
             <footer className="h-64 w-full bg-emerald-500">
