@@ -8,9 +8,9 @@ const HeroR = () => {
         <motion.div className=' h-full w-full snap-mandatory snap-start p-6'
                     initial={{ opacity: 0, }}
                     whileInView={{ opacity: 1, }}
-                    transition={{ delay: 0.2, duration: 0.7 }}
+                    transition={{ delay: 0.5, duration: 0.7 }}
                   >
-            <div className="relative h-full w-full flex items-center flex-col ">
+            <div className="relative h-full w-full flex justify-center items-center flex-col ">
                 <Image
                     src='/assets/hero1.png'
                     alt="image"

@@ -21,6 +21,11 @@ module.exports = {
         'syne' : ['Syne', 'sans-serif'],
         'arizona': ['Arizonia', 'cursive']
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

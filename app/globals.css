@@ -122,10 +122,17 @@ a {
     @apply bg-[#060608] flex justify-center items-center
   }
   .heroR-link {
-    @apply  flex justify-center items-center rounded-md mt-2 transition-all duration-300
+    @apply  flex justify-center items-center rounded-[80px] mt-2 transition-all duration-300
   }
 
   .flex-jc-ic {
     @apply flex items-center justify-center
   }
+}
+.no-scrollbar::-webkit-scrollbar{
+  display: none;
+}
+.no-scrollbar{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
