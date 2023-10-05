@@ -41,7 +41,7 @@ export const prj = [
         title: 'Port',
         id: 'port',
         card: Port,
-        imgUrl: '',
+        imgUrl: '/assets/projectImgs/port.png',
         note: 'Application using Google map api',
         tags: ['NextJs', 'Typescript', 'GoogleAPI', 'tailwind css'],
         githublink: 'https://github.com/IrfanshaikH-7/saas',

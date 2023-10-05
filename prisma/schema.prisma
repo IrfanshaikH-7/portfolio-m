@@ -36,6 +36,19 @@ model Project {
   updatedAt DateTime  @updatedAt
   
 }
+model Achievement {
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  title     String? 
+  imgUrl    String[]
+  date      DateTime
+}
+
+model Testimonials {
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  name      String 
+  testimony String
+  imgUrl    String 
+}
 // model Tag {
 //   id        String  @id @default(auto()) @map("_id") @db.ObjectId
 //   name      String

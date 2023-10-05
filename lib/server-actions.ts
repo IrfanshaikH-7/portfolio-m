@@ -47,6 +47,7 @@ export const CreateProject = async ({ title, category, note, tag,imgUrl, githubl
         await db.$disconnect();
     }
 }
+
 export const checkadmin =async () => {
     const user = await currentUser()
     const admin1 = await db.admin.findUnique({
@@ -61,3 +62,4 @@ export const checkadmin =async () => {
         return false
       }
 }
+

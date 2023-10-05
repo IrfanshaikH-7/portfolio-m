@@ -13,6 +13,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import FormZone from "../upload-things/upload-zone";
 import { cn } from "@/lib/utils";
+import AchievementForm from "./achievement-form";
 
 
 const AdminDB = () => {
@@ -67,7 +68,7 @@ const AdminDB = () => {
           }
           { state == 'achievement' &&
             <div className="flex justify-center items-center ml-2 w-3/4 px-24 h-full bg-zinc-800/70 rounded-sm">
-            Achievements
+            <AchievementForm />
           </div>
           }
           

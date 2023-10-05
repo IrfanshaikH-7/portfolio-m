@@ -1,4 +1,3 @@
-
 import { UserButton } from "@clerk/nextjs";
 import { Text } from "lucide-react";
 Link

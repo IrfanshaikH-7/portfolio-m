@@ -56,6 +56,7 @@ const FormZone = () => {
     },
   })
   const { setValue } = form;
+  
   async function onSubmit(values: z.infer<typeof FormSchema>) {
     console.log(images)
     console.log(values)
@@ -69,6 +70,7 @@ const FormZone = () => {
       livelink: values.liveLink,
       pointers: values.pointers
     })
+    setImages([])
 
 
     toast({
