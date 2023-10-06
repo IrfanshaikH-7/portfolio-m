@@ -44,12 +44,13 @@ const features = [
 ]
 
 const Portfolio = () => {
+     
     return (
         <>
             {/* <div className="h-96 w-full bg-orange-300"> room to scroll</div> */}
             <main className=" snap-mandatory lg:h-screen h-screen w-full flex justify-center items-center relative">
                 <section className="flex items-start gap-8 h-[90%] w-[90%] rounded-lg overflow-scroll">
-                    <div className="md:w-2/6 lg:w-4/6 py-[50vh] px-2 lg:px-16 ">
+                    <div className="md:w-2/6 lg:w-2/6 py-[50vh] px-2">
                         <ul>
                             {
                                 prj.map((feature) => (
@@ -62,8 +63,9 @@ const Portfolio = () => {
                             }
                         </ul>
                     </div>
-                    <div className=" w-full  px-24 sticky top-0 h-full flex items-center ">
-                        <div className=" relative w-full aspect-square lg:aspect-video bg-gray-200 rounded-lg overflow-hidden shadow-gray-400  shadow-md group transition-all duration-1000">
+                    <div className=" w-full px-8 sticky top-0 h-full flex items-center justify-center  ">
+                        <div className="h-full flex items-center w-3/5">
+                        <div  className=" relative w-full aspect-square lg:aspect-[12/9]  rounded-2xl hover:translate-x-48 group transition-all duration-500">
                             {
                                 prj.map((feature) => (
                                     <feature.card id={feature.id} key={feature.id} 
@@ -79,6 +81,8 @@ const Portfolio = () => {
                                 ))
                             }
                         </div>
+                        </div>
+                        
                     </div>
                 </section>
             </main>
@@ -90,7 +94,7 @@ const Portfolio = () => {
             <section className="snap-center h-screen w-full flex items-center justify-center">
                 <Skills />
             </section>
-            <div className="h-[80%] w-[80%] mx-auto">
+            <div className="h-[85%] w-[85%] mx-auto">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum culpa nesciunt beatae reiciendis possimus nulla, amet eos sapiente voluptatem nihil, deleniti fugit, incidunt laborum.
             </div>
             <footer className="h-64 w-full bg-emerald-500">

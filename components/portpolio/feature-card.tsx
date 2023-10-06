@@ -28,7 +28,7 @@ const FeatureCard = ({ children, gradient, id }: FeatureCardProps) => {
     const isInViewF = useFeatureStore((state) => state.inViewF)
 
     return (
-        <div className={cn(" absolute inset-0 h-full w-full bg-gradient-to-br transition-opacity p-1  ",
+        <div className={cn(" absolute inset-0 h-full w-full bg-gradient-to-br  p-1 border rounded-[50px] transition-all duration-300",
             gradient,
             isInViewF === id ? 'opacity-100' : 'opacity-0'
         )}>
@@ -39,7 +39,7 @@ const FeatureCard = ({ children, gradient, id }: FeatureCardProps) => {
 
 export const Discord = ({ id, title, imgUrl, note, tags, githublink, livelink, discription }: CardProps) => {
     return (
-        <FeatureCard id={id} gradient="from-white to-orange-400"
+        <FeatureCard id={id} gradient="from-black to-slate-700"
             title={title}
             imgUrl=""
             note={note}
@@ -48,43 +48,35 @@ export const Discord = ({ id, title, imgUrl, note, tags, githublink, livelink, d
             livelink={livelink}
             discription={discription}
         >
-            <div className="h-full w-full flex items-center justify-center  text-2xl font-semibold text-black font-syne case">
-
-                <div className="h-full w-full relative p-2 peer">
-                    <Image
+            <div className="h-full w-full flex items-center justify-center  text-2xl font-semibold text-black font-syne case !z-30 ">
+                <div className="absolute space-y-4 p-4 flex items-center justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100  group-hover:-translate-x-96 hover:-translate-x-96 transition-all duration-500 rounded-[50px]">
+                    <div className="h-full w-2/3 bg-white p-6 rounded-[50px]">
+                    <h3 className="text-sm font-mono text-slate-800">introduction -</h3>
+                        <p className="text-xs font-mono indent-6 break-words text-slate-700">
+                        {discription}
+                             </p>
+                    </div>
+                </div>
+                <section className="h-full w-full flex flex-col gap-4 justify-start items-center">
+                    <div className="w-5/6 h-4/6 bg-slate-400 rounded-xl mt-8 relative overflow-hidden p-2">
+                        <Image
                         src={imgUrl}
                         fill
-                        alt="img"
-                        className=" object-right-bottom peer bg-blue-300  rounded-md "
-                    />
-                </div>
-                {/* translate-x-[800px] group-hover:translate-x-0  | translate-x-[800px] group-hover:translate-x-0 */}
-                <div className=" flex flex-col items-end img-Con absolute z-10 bg-gradient-to-r from-orange-200/30 via-orange-300 to-orange-400 right-0 translate-x-[800px] group-hover:translate-x-0 w-full h-full  transition-all duration-200 ease-in-out py-4 xl:py-8 px-4 xl:px-12 ">
-                    <div className=" flex flex-col flex-1 gap-3">
-                        <Link target="_blank" href={githublink} >
-                            <GithubIcon className="text-black bg-orange-500 h-7 w-10 xl:h-9 xl:w-14 p-2 rounded-xl fill-black hover:bg-slate-50 hover:-translate-y-1  translate-x-[800px] group-hover:translate-x-0 delay-200 transition-all duration-300" />
-                        </Link>
-                        <Link target="_blank" href={livelink} >
-                            <ExternalLinkIcon className="text-black bg-orange-500 h-7 w-10 xl:h-9 xl:w-14 p-2 rounded-xl fill-black hover:bg-slate-50 hover:-translate-y-1 translate-x-[800px] group-hover:translate-x-0 delay-300 transition-all duration-300" />
-                        </Link>
+                        alt="project"
+                        className="p-[2px] rounded-xl"
+                        />
                     </div>
-                    <div className="flex-1 flex flex-col self-start justify-between">
-                    <p className=" text-white text-sm xl:text-xl">{note}</p>
-                        <div className="text-white xl:text-lg text-sm">
-                            Techs:
-                            <div className="flex flex-wrap">
-                                {
-                                    tags.map((tag) => (
-                                        <div key={tag} className=" text-zinc-900 text-[8px] leading-none self-center text-center xl:text-xs  capitalize px-2  bg-gradient-to-r from-transparent to-orange-200 rounded-md" >
-                                            #{tag}
-                                        </div>
-                                    ))
-                                }
-                            </div>
-                        </div>
+                    <div className="  flex gap-3 flex-wrap z-30">
+                        {
+                            tags.map((tag) => (
+                                <p className="text-xs text-indigo-800 bg-sky-400 px-2 rounded-md">{tag}</p>
+
+                            ))
+                        }
                     </div>
-                </div>
-            </div>
+                </section>
+
+            </div >
         </FeatureCard>
     );
 }
@@ -99,46 +91,7 @@ export const Saas = ({ id, title, imgUrl, note, tags, githublink, livelink, disc
             livelink={livelink}
             discription={discription}
         >
-            <div className="h-full w-full flex items-center justify-center   text-2xl font-semibold text-black font-syne case">
-                <div className="h-full w-full relative p-2 peer">
-                    <Image
-                        src={imgUrl}
-                        fill
-                        alt="img"
-                        className=" object-right-bottom peer bg-blue-300  rounded-md "
-                    />
-                </div>
-                {/* translate-x-[800px] group-hover:translate-x-0  | translate-x-[800px] group-hover:translate-x-0 */}
-                <div className=" flex flex-col items-end img-Con absolute z-10 bg-gradient-to-r from-orange-200/30 via-orange-300 to-orange-400 right-0 translate-x-[800px] group-hover:translate-x-0 w-full h-full  transition-all duration-200 ease-in-out py-4 xl:py-8 px-4 xl:px-12 ">
-                    <div className=" flex flex-col flex-1 gap-3">
-                        <Link target="_blank" href={githublink} >
-                            <GithubIcon className="text-black bg-orange-500 h-7 w-10 xl:h-9 xl:w-14 p-2 rounded-xl fill-black hover:bg-slate-50 hover:-translate-y-1  translate-x-[800px] group-hover:translate-x-0 delay-200 transition-all duration-300" />
-                        </Link>
-                        <Link target="_blank" href={livelink} >
-                            <ExternalLinkIcon className="text-black bg-orange-500 h-7 w-10 xl:h-9 xl:w-14 p-2 rounded-xl fill-black hover:bg-slate-50 hover:-translate-y-1 translate-x-[800px] group-hover:translate-x-0 delay-300 transition-all duration-300" />
-                        </Link>
-                    </div>
-                    <div className="flex-1 flex flex-col self-start justify-between">
-                    <p className=" text-white text-sm xl:text-xl">{note}</p>
-                        <div className="text-white xl:text-lg text-sm">
-                            Techs:
-                            <div className="flex flex-wrap">
 
-                                {
-                                    tags.map((tag) => (
-                                        <div key={tag} className=" text-zinc-900 text-[8px] leading-none self-center text-center xl:text-xs  capitalize px-2  bg-gradient-to-r from-transparent to-orange-200 rounded-md" >
-                                            #{tag}
-                                        </div>
-                                    ))
-                                }
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
         </FeatureCard>
     );
 }
@@ -153,47 +106,7 @@ export const NewLife = ({ id, title, imgUrl, note, tags, githublink, livelink, d
             livelink={livelink}
             discription={discription}
         >
-            <div className="h-full w-full flex items-center justify-center   text-2xl font-semibold text-black font-syne case">
 
-                <div className="h-full w-full relative p-2 peer">
-                    <Image
-                        src={imgUrl}
-                        fill
-                        alt="img"
-                        className=" object-right-bottom peer bg-blue-300  rounded-md "
-                    />
-                </div>
-                {/* translate-x-[800px] group-hover:translate-x-0  | translate-x-[800px] group-hover:translate-x-0 */}
-                <div className=" flex flex-col items-end img-Con absolute z-10 bg-gradient-to-r from-orange-200/30 via-orange-300 to-orange-400 right-0 translate-x-[800px] group-hover:translate-x-0 w-full h-full  transition-all duration-200 ease-in-out py-4 xl:py-8 px-4 xl:px-12 ">
-                    <div className=" flex flex-col flex-1 gap-3">
-                        <Link target="_blank" href={githublink} >
-                            <GithubIcon className="text-black bg-orange-500 h-7 w-10 xl:h-9 xl:w-14 p-2 rounded-xl fill-black hover:bg-slate-50 hover:-translate-y-1  translate-x-[800px] group-hover:translate-x-0 delay-200 transition-all duration-300" />
-                        </Link>
-                        <Link target="_blank" href={livelink} >
-                            <ExternalLinkIcon className="text-black bg-orange-500 h-7 w-10 xl:h-9 xl:w-14 p-2 rounded-xl fill-black hover:bg-slate-50 hover:-translate-y-1 translate-x-[800px] group-hover:translate-x-0 delay-300 transition-all duration-300" />
-                        </Link>
-                    </div>
-                    <div className="flex-1 flex flex-col self-start justify-between">
-                    <p className=" text-white text-sm xl:text-xl">{note}</p>
-                        <div className="text-white xl:text-lg text-sm">
-                            Techs:
-                            <div className="flex flex-wrap">
-
-                                {
-                                    tags.map((tag) => (
-                                        <div key={tag} className=" text-zinc-900 text-[8px] leading-none self-center text-center xl:text-xs  capitalize px-2  bg-gradient-to-r from-transparent to-orange-200 rounded-md" >
-                                            #{tag}
-                                        </div>
-                                    ))
-                                }
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
         </FeatureCard>
     );
 }
@@ -208,47 +121,7 @@ export const Port = ({ id, title, imgUrl, note, tags, githublink, livelink, disc
             livelink={livelink}
             discription={discription}
         >
-            <div className="h-full w-full flex items-center justify-center   text-2xl font-semibold text-black font-syne case">
 
-                <div className="h-full w-full relative p-2 peer">
-                    <Image
-                        src={imgUrl}
-                        fill
-                        alt="img"
-                        className=" object-right-bottom peer bg-blue-300  rounded-md "
-                    />
-                </div>
-                {/* translate-x-[800px] group-hover:translate-x-0  | translate-x-[800px] group-hover:translate-x-0 */}
-                <div className=" flex flex-col items-end img-Con absolute z-10 bg-gradient-to-r from-orange-200/30 via-orange-300 to-orange-400 right-0 translate-x-[800px] group-hover:translate-x-0 w-full h-full  transition-all duration-200 ease-in-out py-4 xl:py-8 px-4 xl:px-12 ">
-                    <div className=" flex flex-col flex-1 gap-3">
-                        <Link target="_blank" href={githublink} >
-                            <GithubIcon className="text-black bg-orange-500 h-7 w-10 xl:h-9 xl:w-14 p-2 rounded-xl fill-black hover:bg-slate-50 hover:-translate-y-1  translate-x-[800px] group-hover:translate-x-0 delay-200 transition-all duration-300" />
-                        </Link>
-                        <Link target="_blank" href={livelink} >
-                            <ExternalLinkIcon className="text-black bg-orange-500 h-7 w-10 xl:h-9 xl:w-14 p-2 rounded-xl fill-black hover:bg-slate-50 hover:-translate-y-1 translate-x-[800px] group-hover:translate-x-0 delay-300 transition-all duration-300" />
-                        </Link>
-                    </div>
-                    <div className="flex-1 flex flex-col self-start justify-between">
-                        <p className=" text-white text-sm xl:text-xl">{note}</p>
-                        <div className="text-white xl:text-lg text-sm">
-                            Techs:
-                            <div className="flex flex-wrap">
-
-                                {
-                                    tags.map((tag) => (
-                                        <div key={tag} className=" text-zinc-900 text-[8px] leading-none self-center text-center xl:text-xs  capitalize px-2  bg-gradient-to-r from-transparent to-orange-200 rounded-md" >
-                                            #{tag}
-                                        </div>
-                                    ))
-                                }
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
         </FeatureCard>
     );
 }
@@ -263,47 +136,7 @@ export const Animata = ({ id, title, imgUrl, note, tags, githublink, livelink, d
             livelink={livelink}
             discription={discription}
         >
-            <div className="h-full w-full flex items-center justify-center   text-2xl font-semibold text-black font-syne case">
 
-                <div className="h-full w-full relative p-2 peer">
-                    <Image
-                        src={imgUrl}
-                        fill
-                        alt="img"
-                        className=" object-right-bottom peer bg-blue-300  rounded-md "
-                    />
-                </div>
-                {/* translate-x-[800px] group-hover:translate-x-0  | translate-x-[800px] group-hover:translate-x-0 */}
-                <div className=" flex flex-col items-end img-Con absolute z-10 bg-gradient-to-r from-orange-200/30 via-orange-300 to-orange-400 right-0 translate-x-[800px] group-hover:translate-x-0 w-full h-full  transition-all duration-200 ease-in-out py-4 xl:py-8 px-4 xl:px-12 ">
-                    <div className=" flex flex-col flex-1 gap-3">
-                        <Link target="_blank" href={githublink} >
-                            <GithubIcon className="text-black bg-orange-500 h-7 w-10 xl:h-9 xl:w-14 p-2 rounded-xl fill-black hover:bg-slate-50 hover:-translate-y-1  translate-x-[800px] group-hover:translate-x-0 delay-200 transition-all duration-300" />
-                        </Link>
-                        <Link target="_blank" href={livelink} >
-                            <ExternalLinkIcon className="text-black bg-orange-500 h-7 w-10 xl:h-9 xl:w-14 p-2 rounded-xl fill-black hover:bg-slate-50 hover:-translate-y-1 translate-x-[800px] group-hover:translate-x-0 delay-300 transition-all duration-300" />
-                        </Link>
-                    </div>
-                    <div className="flex-1 flex flex-col self-start justify-between">
-                    <p className=" text-white text-sm xl:text-xl">{note}</p>
-                        <div className="text-white xl:text-lg text-sm">
-                            Techs:
-                            <div className="flex flex-wrap">
-
-                                {
-                                    tags.map((tag) => (
-                                        <div key={tag} className=" text-zinc-900 text-[8px] leading-none self-center text-center xl:text-xs  capitalize px-2  bg-gradient-to-r from-transparent to-orange-200 rounded-md" >
-                                            #{tag}
-                                        </div>
-                                    ))
-                                }
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
         </FeatureCard>
     );
 }
@@ -318,47 +151,7 @@ export const LMS = ({ id, title, imgUrl, note, tags, githublink, livelink, discr
             livelink={livelink}
             discription={discription}
         >
-            <div className="h-full w-full flex items-center justify-center   text-2xl font-semibold text-black font-syne case">
 
-                <div className="h-full w-full relative p-2 peer">
-                    <Image
-                        src={imgUrl}
-                        fill
-                        alt="img"
-                        className=" object-right-bottom peer bg-blue-300  rounded-md "
-                    />
-                </div>
-                {/* translate-x-[800px] group-hover:translate-x-0  | translate-x-[800px] group-hover:translate-x-0 */}
-                <div className=" flex flex-col items-end img-Con absolute z-10 bg-gradient-to-r from-orange-200/30 via-orange-300 to-orange-400 right-0 translate-x-[800px] group-hover:translate-x-0 w-full h-full  transition-all duration-200 ease-in-out py-4 xl:py-8 px-4 xl:px-12 ">
-                    <div className=" flex flex-col flex-1 gap-3">
-                        <Link target="_blank" href={githublink} >
-                            <GithubIcon className="text-black bg-orange-500 h-7 w-10 xl:h-9 xl:w-14 p-2 rounded-xl fill-black hover:bg-slate-50 hover:-translate-y-1  translate-x-[800px] group-hover:translate-x-0 delay-200 transition-all duration-300" />
-                        </Link>
-                        <Link target="_blank" href={livelink} >
-                            <ExternalLinkIcon className="text-black bg-orange-500 h-7 w-10 xl:h-9 xl:w-14 p-2 rounded-xl fill-black hover:bg-slate-50 hover:-translate-y-1 translate-x-[800px] group-hover:translate-x-0 delay-300 transition-all duration-300" />
-                        </Link>
-                    </div>
-                    <div className="flex-1 flex flex-col self-start justify-between">
-                    <p className=" text-white text-sm xl:text-xl">{note}</p>
-                        <div className="text-white xl:text-lg text-sm">
-                            Techs:
-                            <div className="flex flex-wrap">
-
-                                {
-                                    tags.map((tag) => (
-                                        <div key={tag} className=" text-zinc-900 text-[8px] leading-none self-center text-center xl:text-xs  capitalize px-2  bg-gradient-to-r from-transparent to-orange-200 rounded-md" >
-                                            #{tag}
-                                        </div>
-                                    ))
-                                }
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
         </FeatureCard>
     );
 }
@@ -373,47 +166,7 @@ export const Thread = ({ id, title, imgUrl, note, tags, githublink, livelink, di
             livelink={livelink}
             discription={discription}
         >
-            <div className="h-full w-full flex items-center justify-center   text-2xl font-semibold text-black font-syne case">
 
-                <div className="h-full w-full relative p-2 peer">
-                    <Image
-                        src={imgUrl}
-                        fill
-                        alt="img"
-                        className=" object-right-bottom peer bg-blue-300  rounded-md "
-                    />
-                </div>
-                {/* translate-x-[800px] group-hover:translate-x-0  | translate-x-[800px] group-hover:translate-x-0 */}
-                <div className=" flex flex-col items-end img-Con absolute z-10 bg-gradient-to-r from-orange-200/30 via-orange-300 to-orange-400 right-0 translate-x-[800px] group-hover:translate-x-0 w-full h-full  transition-all duration-200 ease-in-out py-4 xl:py-8 px-4 xl:px-12 ">
-                    <div className=" flex flex-col flex-1 gap-3">
-                        <Link target="_blank" href={githublink} >
-                            <GithubIcon className="text-black bg-orange-500 h-7 w-10 xl:h-9 xl:w-14 p-2 rounded-xl fill-black hover:bg-slate-50 hover:-translate-y-1  translate-x-[800px] group-hover:translate-x-0 delay-200 transition-all duration-300" />
-                        </Link>
-                        <Link target="_blank" href={livelink} >
-                            <ExternalLinkIcon className="text-black bg-orange-500 h-7 w-10 xl:h-9 xl:w-14 p-2 rounded-xl fill-black hover:bg-slate-50 hover:-translate-y-1 translate-x-[800px] group-hover:translate-x-0 delay-300 transition-all duration-300" />
-                        </Link>
-                    </div>
-                    <div className="flex-1 flex flex-col self-start justify-between">
-                    <p className=" text-white text-sm xl:text-xl">{note}</p>
-                        <div className="text-white xl:text-lg text-sm">
-                            Techs:
-                            <div className="flex flex-wrap">
-
-                                {
-                                    tags.map((tag) => (
-                                        <div key={tag} className=" text-zinc-900 text-[8px] leading-none self-center text-center xl:text-xs  capitalize px-2  bg-gradient-to-r from-transparent to-orange-200 rounded-md" >
-                                            #{tag}
-                                        </div>
-                                    ))
-                                }
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
         </FeatureCard>
     );
 }

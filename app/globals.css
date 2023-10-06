@@ -92,7 +92,7 @@
   border-radius: 50%;
   pointer-events: none;
   z-index: 999999;
-  mix-blend-mode:difference;
+  mix-blend-mode:normal;
   padding: 10px;
   display: flex;
   justify-content: center;

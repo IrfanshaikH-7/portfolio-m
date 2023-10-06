@@ -1,22 +1,40 @@
 import Link from "next/link";
+import { motion } from 'framer-motion'
 
 const LandingS = () => {
     return (
-        <div className="p-8">
-            <h1 className=" text-3xl text-blue-200 font-semibold">
-                Quicklinks...
-            </h1>
-            <section className="flex p-2 flex-col gap-2 w-1/2">
-            <Link href='/portfolio' className=" flex justify-center items-center w-full h-36 hover:scale-110  bg-gradient-to-r from-purple-400 to-purple-500 rounded-lg hover:border-white border-2 border-blue-200 transition-all duration-300 p-3"><p className=" p-2 transition-all text-base uppercase text-white">welcome</p></Link>
-            <div className=" w-full h-24 flex gap-2">
-                <Link href='/about' className="w-1/2 h-full hover:w-[400px] transition-all duration-300 bg-gradient-to-r from-rose-400 to-rose-500 rounded-lg"><p className=" p-2 transition-all text-base uppercase text-white">About</p></Link>
-            <Link href='/blog' className="w-1/2 h-full hover:w-[500px] transition-all duration-300 bg-gradient-to-r from-yellow-300 to-yellow-500 rounded-lg"><p className=" p-2 transition-all text-base uppercase text-white">Blog</p></Link>
-            </div>
-            
-            <Link href='/contact' className="w-2/3 h-32 hover:w-full transition-all bg-gradient-to-r from-emerald-300 to-emerald-500 rounded-lg"><p className=" p-2 transition-all text-base uppercase text-white">contact</p></Link>
+        <motion.div className="px-8 h-full w-full flex flex-col items-end justify-end relative "
+            initial={{ opacity: 0, }}
+            animate={{ opacity: 1, transition: { duration: 0.5 } }}
+        >
+            <section className="flex px-2 flex-col gap-4 w-1/2 py-2 ">
+                <div className=" text-4xl flex justify-center items-center text-white font-semibold py-4 px-2">
+                    Quicklinks <span className="h-[2px] w-full bg-white ml-2 mt-2 px-2" />
+                </div>
+                
+                <Link href='/portfolio' className="px-3 flex flex-col justify-center items-center w-full h-36 hover:scale-110  bg-gradient-to-r from-sky-400 to-emerald-500 rounded-full hover:border-white border-2 border-blue-200 transition-all duration-300 relative overflow-hidden group">
+                    <p className=" text-lg font-medium text-slate-200">projects skills and achievement</p>
+                    <p className=" p-2 text-[150px] -right-12 mt-12  uppercase text-white font-bold absolute opacity-0 group-hover:opacity-40 transition-all duration-700">Portfolio</p>
+                </Link>
+
+                <div className=" w-full h-24 flex gap-2">
+                    <Link href='/about' className="px-3 flex flex-col justify-center items-center w-1/2 h-24 hover:w-3/5 bg-gradient-to-r from-emerald-400 to-sky-500 rounded-full hover:border-white border-2 border-blue-200 transition-all duration-300 relative overflow-hidden group">
+                        <p className=" text-lg font-medium text-slate-200">Know more about me</p>
+                        <p className=" p-2 text-[150px] -right-20 mt-12  uppercase text-white font-bold absolute opacity-0 group-hover:opacity-40 transition-all duration-700">About</p>
+                    </Link>
+                    <Link href='/about' className="px-3 flex flex-col justify-center items-center w-1/2 h-24 hover:w-3/5  bg-gradient-to-r from-yellow-300 to-yellow-500 rounded-full hover:border-white border-2 border-blue-200 transition-all duration-300 relative overflow-hidden group">
+                        <p className=" text-lg font-medium text-slate-200">Currently not available</p>
+                        <p className=" p-2 text-[150px] -right-12 mt-12  uppercase text-white font-bold absolute opacity-0 group-hover:opacity-40 transition-all duration-700">Blog</p>
+                    </Link>
+                </div>
+
+                <Link href='/contact' className="px-3 flex flex-col justify-center items-center w-2/3 h-32 hover:w-full   bg-gradient-to-r from-indigo-400 to-sky-500 rounded-full hover:border-white border-2 border-blue-200 transition-all duration-300 relative overflow-hidden group">
+                    <p className=" text-lg font-medium text-slate-200">Get in touch</p>
+                    <p className=" p-2 text-[150px] -left-8 mt-16  uppercase text-white font-bold absolute opacity-0 group-hover:opacity-40 transition-all duration-700">Contact</p>
+                </Link>
             </section>
-            
-        </div>
+
+        </motion.div>
 
     );
 }

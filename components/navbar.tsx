@@ -17,10 +17,10 @@ const Navbar = () => {
   return (
     <>
    
-      <div className="w-full  flex items-center justify-between mx-auto mt-8 bg-gradient-to-r from-blue-400 dark:via-black dark:to-pink-300 via-white to-pink-300 rounded-lg px-4 py-2 shadow-md">
+      <div className="w-full h-12 flex items-center justify-between mx-auto mt-8 bg-gradient-to-r from-indigo-400 to-sky-500  border border-slate-400 rounded-[80px] px-8  py-2 shadow-md">
 
         <div onClick={()=> router.push('/')} className=" cursor-pointer flex justify-self-center items-center border border-slate-400 px-2 border-l-0 border-r-8">
-          <KanbanSquare className=" h-5 w-5 text-white" />
+          <KanbanSquare className=" h-6 w-6 text-white" />
           <p className="ml-1 capitalize text-sm font-semibold text-white">irfan</p>
         </div>
       <div className="flex items-center ">

@@ -1,11 +1,14 @@
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import { AnimatePresence, motion } from 'framer-motion'
+import React from "react";
+import Lottie from "lottie-react";
+import lottie from '@/components/Hero/lottie.json'
 
 const HeroR = () => {
     return (
         <>
-        <motion.div className=' h-full w-full snap-mandatory snap-start p-6'
+        {/* <motion.div className=' h-full w-full snap-mandatory snap-start p-6'
                     initial={{ opacity: 0, }}
                     whileInView={{ opacity: 1, }}
                     transition={{ delay: 0.5, duration: 0.7 }}
@@ -23,7 +26,17 @@ const HeroR = () => {
 
                 </div>
             </div>
-            </motion.div>
+            </motion.div> */}
+            <div className="h-full w-full snap-mandatory snap-start p-6">
+                    
+                    <motion.div
+                    initial={{scale:1.1}}
+                    animate={{scale:1}}
+                    transition={{duration:0.4}}
+                    >
+                    <Lottie animationData={lottie} loop={true} />    
+                    </motion.div>
+            </div>
         </>
     );
 }

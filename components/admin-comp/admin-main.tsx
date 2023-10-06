@@ -58,6 +58,7 @@ const AdminDB = () => {
                 <p className={cn("text-sm uppercase cursor-pointer h-full w-full  py-2 rounded-sm text-center ", state == 'project'? 'bg-gray-400': '')} onClick={() => setState('project')} >Projects</p>
                 <p className={cn("text-sm uppercase cursor-pointer h-full w-full  py-2 rounded-sm text-center ", state == 'achievement'? 'bg-gray-400': '')} onClick={() => setState('achievement')} >achievement</p>
 
+
             </div>
           </div>
 

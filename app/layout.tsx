@@ -2,11 +2,11 @@
 import Cursor from '@/components/cursor'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import { ThemeProvider } from '@/components/providers/theme-provider'
 import { ClerkProvider } from '@clerk/nextjs'
 
-const inter = Inter({ subsets: ['latin'] })
+const poppins = Poppins({ subsets: ['latin'] ,weight: ['400', '500','600']})
 
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function RootLayout({
     <ClerkProvider>
     <html lang="en" suppressHydrationWarning>
 
-      <body className={inter.className}>
+      <body className={poppins.className}>
 
         <ThemeProvider 
         attribute='class'
