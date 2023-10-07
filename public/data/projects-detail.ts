@@ -11,7 +11,7 @@ export const prj = [
         tags: ['NextJs', 'Typescript', 'Planet-Scale', 'socket.io', 'tailwind css'],
         githublink: 'https://github.com/IrfanshaikH-7/discord-clone',
         livelink: 'https://discord-clone-production-c39a.up.railway.app',
-        discription: 'Discord is a popular platform that allows users to communicate and socialize over text, voice, and video chat. It also enables users to create and join communities based on their interests, hobbies, and passions. However, discord has some limitations and challenges that can be improved by developing new applications.<br /> My discord clone application is a project that aims to replicate the core features and functionality of discord. It is built using Next.js, Socket.io, TypeScript, and SQL. Some of the features that my discord clone application offers are: <br /> A real-time chat system that uses Socket.io to enable fast and reliable communication between users. Users can send and receive messages, emojis, images, videos, and other media files in various channels and groups.<br /> - A user authentication and authorization system that uses Next.js API routes using Clerk and SQL database to store and manage user data. Users can register, login, logout, update their profile, and manage their settings securely.<br /> - A server management system that allows users to create, edit, delete, and join servers. Users can also set server-specific settings, such as name, description, icon etc <br /> My discord clone application is a project that I am passionate about and proud of. It is a result of my creativity, innovation, and hard work. I hope that my application will be useful and enjoyable for other discord users who want to have a similar experience as the original discord platform.'
+        discription: 'A real-time chat system users can send and receive messages, emojis, images, videos, and other media files in various channels and groups.A user authentication system using Clerk.A server and user management system that allows users to create, edit, delete, and join servers.video and audio call functionality, and much more.'
     },
     {
         title: 'AI-Saas',
@@ -54,7 +54,7 @@ export const prj = [
         title: 'Animata',
         id: 'animata',
         card: Animata,
-        imgUrl: '',
+        imgUrl: '/assets/projectImgs/port.png',
         note: 'Application for Anima and manga',
         tags: ['NextJs', 'Typescript', 'MongoDB', 'tailwind css'],
         githublink: 'https://github.com/IrfanshaikH-7/saas',
@@ -65,7 +65,7 @@ export const prj = [
         title: 'LMS',
         id: 'lms',
         card: LMS,
-        imgUrl: '',
+        imgUrl: '/assets/projectImgs/port.png',
         note: 'Udemy like LMS Application',
         tags: ['NextJs', 'Typescript', 'MongoDB', 'tailwind css'],
         githublink: 'https://github.com/IrfanshaikH-7/saas',

@@ -1,7 +1,9 @@
+import { FigmaIcon, Github, PenLine, Scan } from "lucide-react";
 
   export const languages = [
             {
                 lan:'Python'
+                
             },
             {
                 lan:'JavaScript'
@@ -62,15 +64,20 @@ export const Databases = [
 
 export const others = [
             {
-                skill:'Git'
+                skill:'Git',
+                icon: Github
             },
             {
-                skill:'Figma'
+                skill:'Figma',
+                icon: FigmaIcon
+
             },
             {
-                skill:'Adobe PS'
+                skill:'Adobe PS',
+                icon: Scan
             },
             {
-                skill:'Illustrator'
+                skill:'Illustrator',
+                icon: PenLine
             }
         ]

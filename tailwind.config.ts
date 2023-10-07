@@ -7,6 +7,12 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      'sm': '576px',
+      'md': '768px',
+      'lg': '1120px',
+      'xl': '1500px'
+    },
     extend: {
       fontFamily: {
         'cute': ['Cute Font'],

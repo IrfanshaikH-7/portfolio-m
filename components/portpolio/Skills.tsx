@@ -21,11 +21,11 @@ const Skills = () => {
                                 <TabsTrigger value="backend">Backend</TabsTrigger>
                                 <TabsTrigger value="others">others</TabsTrigger>
                             </TabsList>
-                            <TabsContent value="languages" className="mt-2">
-                                <div className="grid grid-cols-2 gap-2 aspect-square  p-1 ">
+                            {/* <TabsContent value="languages" className="mt-2">
+                                <div className="grid grid-cols-2 gap-2 aspect-square  p-2 ">
                                     {
                                         languages.map((lan) => (
-                                            <div className="bg-zinc-800 border border-gray-500 aspect-square first:h-32 lg:first:h-40 xl:first:h-44 first:self-end first:justify-self-end last:h-32 last:lg:h-40 xl:last:h-44 rounded-sm ">
+                                            <div className="flex justify-center items-center bg-zinc-800 border border-gray-500 aspect-square rounded-full first:h-32 first:justify-self-end first:self-end last:h-32 lg:last:h-28 lg:first:h-28 md:last:h-20 md:first:h-20 xl:last:h-52 xl:first:h-52">
                                                 <p>{lan.lan}</p>
                                             </div>
                                         ))
@@ -56,13 +56,14 @@ const Skills = () => {
                                     }
                                 </div>
 
-                            </TabsContent>
+                            </TabsContent> */}
                             <TabsContent value="others" className="mt-2">
-                                <div className="grid grid-cols-2 gap-2 aspect-square  p-1 ">
+                                <div className="grid grid-cols-2 gap-2 aspect-square p-1 md:p-7 ">
                                     {
                                         others.map((skill) => (
-                                            <div className="bg-zinc-800 border border-gray-500 aspect-square first:h-32 lg:first:h-40 xl:first:h-44 first:self-end first:justify-self-end last:h-32 last:lg:h-40 xl:last:h-44 rounded-sm ">
-                                                <p>{skill.skill}</p>
+                                            <div key={skill.skill} className=" relative text-2xl flex items-center justify-center rounded-md border border-white">
+                                                <skill.icon  className="h-full w-full absolute p-16 text-slate-600/40"/>
+                                                <p className="z-10 font-semibold uppercase">{skill.skill}</p>
                                             </div>
                                         ))
                                     }

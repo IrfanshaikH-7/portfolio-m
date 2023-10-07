@@ -50,7 +50,7 @@ const Portfolio = () => {
             {/* <div className="h-96 w-full bg-orange-300"> room to scroll</div> */}
             <main className=" snap-mandatory lg:h-screen h-screen w-full flex justify-center items-center relative">
                 <section className="flex items-start gap-8 h-[90%] w-[90%] rounded-lg overflow-scroll">
-                    <div className="md:w-2/6 lg:w-2/6 py-[50vh] px-2">
+                    <div className="md:w-2/6 lg:w-2/6 py-[50vh] px-2  ">
                         <ul>
                             {
                                 prj.map((feature) => (
@@ -64,8 +64,24 @@ const Portfolio = () => {
                         </ul>
                     </div>
                     <div className=" w-full px-8 sticky top-0 h-full flex items-center justify-center  ">
-                        <div className="h-full flex items-center w-3/5">
-                        <div  className=" relative w-full aspect-square lg:aspect-[12/9]  rounded-2xl hover:translate-x-48 group transition-all duration-500">
+                        <div className="h-full flex items-center w-3/5 min-w-[360px] lg:min-w-[400px] ">
+                        <div  className=" hidden xl:block relative w-full aspect-square lg:aspect-[12/9]  rounded-2xl hover:translate-x-44 group transition-all duration-500 ">
+                            {
+                                prj.map((feature) => (
+                                    <feature.card id={feature.id} key={feature.id} 
+                                    title={feature.title}
+                                    imgUrl={feature.imgUrl}
+                                    note={feature.note}
+                                    tags={feature.tags}
+                                    githublink={feature.githublink}
+                                    livelink={feature.livelink}
+                                    discription={feature.discription}
+
+                                    />
+                                ))
+                            }
+                        </div>
+                        <div  className=" relative w-full aspect-square lg:aspect-[12/9]  rounded-2xl xl:hidden  hover:-translate-y-24 group transition-all duration-500 ">
                             {
                                 prj.map((feature) => (
                                     <feature.card id={feature.id} key={feature.id} 
