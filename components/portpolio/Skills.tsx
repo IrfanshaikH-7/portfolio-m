@@ -1,5 +1,6 @@
-import { backend, frontend, languages, others } from "@/public/data/skills";
+import { backend, frontend, languages, others, techs } from "@/public/data/skills";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import Image from "next/image";
 const Skills = () => {
 
     return (
@@ -14,71 +15,93 @@ const Skills = () => {
 
                     <div className="flex-1 ">
 
-                        <Tabs defaultValue="languages" className=" h-full w-full relative p-2">
+                        <Tabs defaultValue="languages" className=" h-full w-full relative p-2 bg-blue-400">
                             <TabsList className="">
                                 <TabsTrigger className="" value="languages">Languages</TabsTrigger>
                                 <TabsTrigger value="frontend">Frontend</TabsTrigger>
                                 <TabsTrigger value="backend">Backend</TabsTrigger>
                                 <TabsTrigger value="others">others</TabsTrigger>
                             </TabsList>
-                            {/* <TabsContent value="languages" className="mt-2">
-                                <div className="grid grid-cols-2 gap-2 aspect-square  p-2 ">
+                            <TabsContent value="languages" className="mt-2">
+                                <div className="grid grid-cols-2 gap-2 aspect-square p-1 md:p-7  bg-blue-300">
                                     {
-                                        languages.map((lan) => (
-                                            <div className="flex justify-center items-center bg-zinc-800 border border-gray-500 aspect-square rounded-full first:h-32 first:justify-self-end first:self-end last:h-32 lg:last:h-28 lg:first:h-28 md:last:h-20 md:first:h-20 xl:last:h-52 xl:first:h-52">
-                                                <p>{lan.lan}</p>
+                                        languages.map((language) => (
+                                            <div key={language.lan} className=" relative text-2xl flex items-center justify-center rounded-md border border-white">
+                                                <Image
+                                                    src={language.img}
+                                                    alt="skill"
+                                                    fill
+                                                    className=" p-4 opacity-40 object-contain"
+                                                />
+                                                <p className="z-10 font-semibold uppercase">{language.lan}</p>
                                             </div>
                                         ))
                                     }
                                 </div>
-
                             </TabsContent>
+
                             <TabsContent value="frontend" className="mt-2">
-                                <div className="grid grid-cols-2 gap-2 aspect-square  p-1 ">
-                                    {
-                                        frontend.map((skill) => (
-                                            <div className="bg-zinc-800 border border-gray-500 aspect-square first:h-32 lg:first:h-40 xl:first:h-44 first:self-end first:justify-self-end last:h-32 last:lg:h-40 xl:last:h-44 rounded-sm ">
-                                                <p>{skill.skill}</p>
-                                            </div>
-                                        ))
-                                    }
-                                </div>
-
-                            </TabsContent>
-                            <TabsContent value="backend" className="mt-2">
-                                <div className="grid grid-cols-2 gap-2 aspect-square  p-1 ">
-                                    {
-                                        backend.map((skill) => (
-                                            <div className="bg-zinc-800 border border-gray-500 aspect-square first:h-32 lg:first:h-40 xl:first:h-44 first:self-end first:justify-self-end last:h-32 last:lg:h-40 xl:last:h-44 rounded-sm ">
-                                                <p>{skill.skill}</p>
-                                            </div>
-                                        ))
-                                    }
-                                </div>
-
-                            </TabsContent> */}
-                            <TabsContent value="others" className="mt-2">
                                 <div className="grid grid-cols-2 gap-2 aspect-square p-1 md:p-7 ">
                                     {
-                                        others.map((skill) => (
+                                        frontend.map((skill) => (
                                             <div key={skill.skill} className=" relative text-2xl flex items-center justify-center rounded-md border border-white">
-                                                <skill.icon  className="h-full w-full absolute p-16 text-slate-600/40"/>
+                                                <Image
+                                                    src={skill.img}
+                                                    alt="skill"
+                                                    fill
+                                                    className=" p-4 opacity-40 object-contain"
+                                                />
                                                 <p className="z-10 font-semibold uppercase">{skill.skill}</p>
                                             </div>
                                         ))
                                     }
                                 </div>
+                            </TabsContent>
 
+                            <TabsContent value="backend" className="mt-2">
+                                <div className="grid grid-cols-2 gap-2 aspect-square p-1 md:p-7 ">
+                                    {
+                                        backend.map((skill) => (
+                                            <div key={skill.skill} className=" relative text-2xl flex items-center justify-center rounded-md border border-white">
+                                                <Image
+                                                    src={skill.img}
+                                                    alt="skill"
+                                                    fill
+                                                    className=" p-4 opacity-40 object-contain"
+                                                />
+                                                <p className="z-10 font-semibold uppercase">{skill.skill}</p>
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+                            </TabsContent>
+
+                            <TabsContent value="others" className="mt-2">
+                                <div className="grid grid-cols-2 gap-2 aspect-square p-1 md:p-7 ">
+                                    {
+                                        others.map((skill) => (
+                                            <div key={skill.skill} className=" relative text-2xl flex items-center justify-center rounded-md border border-white">
+                                                <skill.icon className="h-full w-full absolute p-16 text-slate-600/40" />
+                                                <p className="z-10 font-semibold uppercase">{skill.skill}</p>
+                                            </div>
+                                        ))
+                                    }
+                                </div>
                             </TabsContent>
 
                         </Tabs>
                     </div>
-                    <div className="flex-1 flex flex-col p-2">
-                        <h3 className="text-sm md:text-base lg:text-lg self-center">Achievements</h3>
+                    <div className="flex-1 flex flex-col px-2 py-2 ">
+                        <div className="flex w-full items-center justify-center p-2 gap-4">
+                        <h3 className="text-sm md:text-base text-white lg:text-lg self-center capitalize">Techs I've been work with</h3>
+                            <svg height="2" width="180" className="">
+                                <line x1="0" y1="0" x2="200" y2="0" stroke="#34d399" strokeWidth={2} className="text-emerald-400" />
+                            </svg>
+                        </div>
+                       
+                        <div className="flex-1 flex-col items-center justify-center mt-2 relative overflow-hidden">
 
-                        <div className="flex flex-col items-center justify-center py-6  relative ">
-
-                            <div className="flex max-w-[300px] lg:max-w-md overflow-x-scroll gap-2 xl:max-w-xl px-2">
+                            {/* <div className="flex max-w-[300px] lg:max-w-md overflow-x-scroll gap-2 xl:max-w-xl px-2">
                                 <div className="aspect-video h-40 bg-zinc-700 lg:h-60 xl:h-64  ">
 
                                 </div>
@@ -94,12 +117,28 @@ const Skills = () => {
 
 
 
+                            </div> */}
+                            <div className="grid grid-cols-4 gap-3 aspect-square p-6 h-full">
+                                {
+                                techs.map((tech) => (
+                                    <div className="flex justify-center items-center bg-emerald-400 rounded-xl p-6 aspect-square">
+                                        <div className="bg-slate-500 h-full w-full relative">
+                                           <Image 
+                                           src={tech.tech}
+                                           alt="skill"
+                                           fill
+                                           className="object-contain"
+                                           />
+                                        </div>
+                                    </div>
+                                ))
+                            }
                             </div>
+                            
                         </div>
+
                     </div>
-
                 </div>
-
             </section>
         </main>
     );

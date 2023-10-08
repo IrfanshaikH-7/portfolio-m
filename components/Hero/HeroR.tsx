@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import { AnimatePresence, motion } from 'framer-motion'

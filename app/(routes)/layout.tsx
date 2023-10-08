@@ -2,7 +2,7 @@
 import Navbar from "@/components/navbar";
 import { motion } from "framer-motion";
 
-const RouteLayout = async({
+const RouteLayout = ({
     children
 }:{
     children: React.ReactNode;

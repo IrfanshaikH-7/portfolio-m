@@ -1,3 +1,4 @@
+"use client"
 import { KanbanSquare, Text } from "lucide-react";
 import {
   DropdownMenu,

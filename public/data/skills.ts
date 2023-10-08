@@ -1,64 +1,80 @@
-import { FigmaIcon, Github, PenLine, Scan } from "lucide-react";
+import { FigmaIcon, Github, PenLine, Scan, WatchIcon } from "lucide-react";
 
   export const languages = [
             {
-                lan:'Python'
+                lan:'Python',
+                img:'/assets/skills/python.png'
                 
             },
             {
-                lan:'JavaScript'
+                lan:'JavaScript',
+                img:'/assets/skills/javascript.png'
             },
             {
-                lan:'Java'
+                lan:'Java',
+                img:'/assets/skills/javascript.png'
             },
             {
-                lan:'c'
+                lan:'c',
+                img:'/assets/skills/react.png'
             }
         ]
   
 
 export const frontend = [
             {
-                skill:'React/Next Js'
+                skill:'React/Next Js',
+                img:'/assets/skills/react.png'
             },
             {
-                skill:'JavaScript'
+                skill:'JavaScript',
+                img:'/assets/skills/javascript.png'
             },
             {
-                skill:'TypeScript'
+                skill:'TypeScript',
+                img:'/assets/skills/typescript.png'
             },
             {
-                skill:'Tailwind'
+                skill:'Tailwind',
+                img:'/assets/skills/tailwind-css.png'
             }
         ]
 
 export const backend = [
             {
-                skill:'NodeJs'
+                skill:'NodeJs',
+                img:'/assets/skills/nodejs.png'
             },
             {
-                skill:'Express'
+                skill:'Express',
+                img:'/assets/skills/express.png'
             },
             {
-                skill:'Python'
+                skill:'Python',
+                img:'/assets/skills/python.png'
             },
             {
-                skill:'Django'
+                skill:'Django',
+                img:'/assets/skills/django.png'
             }
         ]
 
 export const Databases = [
             {
-                db:'MongoDB'
+                db:'MongoDB',
+                img:'/assets/skills/mongodb.png'
             },
             {
-                db:'Mysql'
+                db:'Mysql',
+                img:'/assets/skills/mysql.png'
             },
             {
-                db:'Firebase'
+                db:'Firebase',
+                img:'/assets/skills/firebase.png'
             },
             {
-                db:'Upcoming'
+                db:'Upcoming',
+                img:'/assets/skills/firebase.png'
             }
         ]
 
@@ -80,4 +96,35 @@ export const others = [
                 skill:'Illustrator',
                 icon: PenLine
             }
+        ]
+
+        export const techs = [
+            {
+                tech: '/assets/skills/techs/shadcn.jpeg'
+            },
+            {
+                tech: '/assets/skills/techs/shadcn.jpeg'
+            },
+            {
+                tech: '/assets/skills/techs/shadcn.jpeg'
+            },
+            {
+                tech: '/assets/skills/techs/shadcn.jpeg'
+            },
+            {
+                tech: '/assets/skills/techs/shadcn.jpeg'
+            },
+            {
+                tech: '/assets/skills/techs/shadcn.jpeg'
+            },
+            {
+                tech: '/assets/skills/techs/shadcn.jpeg'
+            },
+            {
+                tech: '/assets/skills/techs/shadcn.jpeg'
+            },
+            {
+                tech: '/assets/skills/techs/shadcn.jpeg'
+            },
+
         ]
