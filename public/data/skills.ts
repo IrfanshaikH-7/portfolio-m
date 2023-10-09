@@ -103,28 +103,33 @@ export const others = [
                 tech: '/assets/skills/techs/shadcn.jpeg'
             },
             {
-                tech: '/assets/skills/techs/shadcn.jpeg'
+                tech: '/assets/skills/techs/clerk.png'
             },
             {
-                tech: '/assets/skills/techs/shadcn.jpeg'
+                tech: '/assets/skills/techs/prisma.png'
             },
             {
-                tech: '/assets/skills/techs/shadcn.jpeg'
+                tech: '/assets/skills/techs/mongoose.png'
             },
             {
-                tech: '/assets/skills/techs/shadcn.jpeg'
+                tech: '/assets/skills/techs/uploadthing.png'
             },
             {
-                tech: '/assets/skills/techs/shadcn.jpeg'
+                tech: '/assets/skills/techs/gsap.png'
             },
             {
-                tech: '/assets/skills/techs/shadcn.jpeg'
+                tech: '/assets/skills/techs/framer-motion.png'
             },
             {
-                tech: '/assets/skills/techs/shadcn.jpeg'
+                tech: '/assets/skills/techs/zod.png'
             },
             {
-                tech: '/assets/skills/techs/shadcn.jpeg'
+                tech: '/assets/skills/techs/zustand.png'
             },
-
+            {
+                tech: '/assets/skills/techs/socket-io.webp'
+            },
+            {
+                tech: '/assets/skills/techs/stripe.webp'
+            },
         ]

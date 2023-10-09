@@ -14,7 +14,7 @@ const MoreProjects = () => {
                 </div>
             </div>
 
-            <div className="h-3/5 lg:h-full w-full mt-4  ">
+            <div className="h-5/6 lg:h-full w-full mt-4  ">
                 <Tabs defaultValue="fullstack" className="w-full h-full justify-end md:flex items-center ">
                     <TabsContent value="fullstack">
                         <section className="h-full w-full overflow-y-scroll bg-blue relative">

@@ -32,7 +32,7 @@ export default function RootLayout({
         storageKey='portfolio-m'
         >
           <Cursor />
-          <div className=' dark:bg-[#060608] h-screen w-full '>
+          <div className='  h-full lg:h-screen w-full '>
             {children}
           </div>
         </ThemeProvider>

@@ -8,7 +8,7 @@ const LandingS = () => {
             initial={{ opacity: 0, }}
             animate={{ opacity: 1, transition: { duration: 0.5 } }}
         >
-            <section className="flex px-2 flex-col gap-4 w-1/2 py-2 ">
+            <section className="flex px-2 flex-col gap-4 w-full lg:w-1/2 py-2 ">
                 <div className=" text-4xl flex justify-center items-center text-white font-semibold py-4 px-2">
                     Quicklinks <span className="h-[2px] w-full bg-white ml-2 mt-2 px-2" />
                 </div>

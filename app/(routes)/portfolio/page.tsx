@@ -107,7 +107,7 @@ const Portfolio = () => {
                         <MoreProjects />
                 </section>
             </main>
-            <section className="snap-center h-screen w-full flex items-center justify-center">
+            <section className="snap-center h-full md:h-screen w-full flex items-center justify-center">
                 <Skills />
             </section>
             <div className="h-[85%] w-[85%] mx-auto">

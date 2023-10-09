@@ -6,16 +6,16 @@ const Skills = () => {
     return (
         <main className="h-full w-full  flex justify-center items-center">
             <section className=" h-[80%] w-[80%] ">
-                <div className="flex md:flex-row flex-col h-full">
+                <div className="flex lg:flex-row flex-col h-full">
 
                     <div className="flex lg:flex-col justify-center items-center h-full">
                         <div className="h-60 hidden lg:block w-[2px] rounded-lg bg-emerald-400 ml-2 " />
                         <p className="xl:text-5xl lg:text-xl text-base font-syne lg:-rotate-90 mt-6 lg:mt-16 ">Skills</p>
                     </div>
+                    <div className="flex md:flex-row flex-col h-full">
+                      <div className="flex-1 ">
 
-                    <div className="flex-1 ">
-
-                        <Tabs defaultValue="languages" className=" h-full w-full relative p-2 bg-blue-400">
+                        <Tabs defaultValue="languages" className=" h-full w-full relative p-2 ">
                             <TabsList className="">
                                 <TabsTrigger className="" value="languages">Languages</TabsTrigger>
                                 <TabsTrigger value="frontend">Frontend</TabsTrigger>
@@ -23,7 +23,7 @@ const Skills = () => {
                                 <TabsTrigger value="others">others</TabsTrigger>
                             </TabsList>
                             <TabsContent value="languages" className="mt-2">
-                                <div className="grid grid-cols-2 gap-2 aspect-square p-1 md:p-7  bg-blue-300">
+                                <div className="grid grid-cols-2 gap-2 aspect-square p-1 md:p-7  ">
                                     {
                                         languages.map((language) => (
                                             <div key={language.lan} className=" relative text-2xl flex items-center justify-center rounded-md border border-white">
@@ -31,7 +31,7 @@ const Skills = () => {
                                                     src={language.img}
                                                     alt="skill"
                                                     fill
-                                                    className=" p-4 opacity-40 object-contain"
+                                                    className=" p-4 opacity-40 hover:opacity-100 object-contain transition-all duration-300"
                                                 />
                                                 <p className="z-10 font-semibold uppercase">{language.lan}</p>
                                             </div>
@@ -49,7 +49,7 @@ const Skills = () => {
                                                     src={skill.img}
                                                     alt="skill"
                                                     fill
-                                                    className=" p-4 opacity-40 object-contain"
+                                                    className=" p-4 opacity-40 hover:opacity-100 object-contain transition-all duration-300"
                                                 />
                                                 <p className="z-10 font-semibold uppercase">{skill.skill}</p>
                                             </div>
@@ -67,7 +67,7 @@ const Skills = () => {
                                                     src={skill.img}
                                                     alt="skill"
                                                     fill
-                                                    className=" p-4 opacity-40 object-contain"
+                                                    className=" p-4 opacity-40 hover:opacity-100 object-contain transition-all duration-300"
                                                 />
                                                 <p className="z-10 font-semibold uppercase">{skill.skill}</p>
                                             </div>
@@ -81,7 +81,7 @@ const Skills = () => {
                                     {
                                         others.map((skill) => (
                                             <div key={skill.skill} className=" relative text-2xl flex items-center justify-center rounded-md border border-white">
-                                                <skill.icon className="h-full w-full absolute p-16 text-slate-600/40" />
+                                                <skill.icon className="h-full w-full absolute p-16 text-slate-600/40 hover:text-slate-600 transition-all duration-300" />
                                                 <p className="z-10 font-semibold uppercase">{skill.skill}</p>
                                             </div>
                                         ))
@@ -118,26 +118,29 @@ const Skills = () => {
 
 
                             </div> */}
-                            <div className="grid grid-cols-4 gap-3 aspect-square p-6 h-full">
+                            <div className="grid grid-cols-4 grid-rows-4 gap-12 aspect-square p-6 ">
                                 {
+                                // hover:shadow-[0px_10px_20px_rgba(256,256,256)]
                                 techs.map((tech) => (
-                                    <div className="flex justify-center items-center bg-emerald-400 rounded-xl p-6 aspect-square">
-                                        <div className="bg-slate-500 h-full w-full relative">
+                                    <div className=" relative aspect-square rounded-3xl bg-slate-400/50  hover:-translate-y-[2px] hover:shadow-[0px_22px_24px_0px_#FFFFFF24] transition-all duration-300">
+                                        
                                            <Image 
                                            src={tech.tech}
                                            alt="skill"
                                            fill
-                                           className="object-contain"
+                                           className="object-contain p-2 "
                                            />
-                                        </div>
                                     </div>
                                 ))
                             }
+                            
                             </div>
                             
                         </div>
 
+                    </div>  
                     </div>
+                    
                 </div>
             </section>
         </main>
