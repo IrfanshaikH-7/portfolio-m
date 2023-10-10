@@ -4,7 +4,7 @@ import Image from "next/image";
 const Skills = () => {
 
     return (
-        <main className="h-full w-full  flex justify-center items-center">
+        <main className="h-full w-[90%]  flex justify-center items-center">
             <section className=" h-[80%] w-[80%] ">
                 <div className="flex lg:flex-row flex-col h-full">
 
@@ -12,7 +12,7 @@ const Skills = () => {
                         <div className="h-60 hidden lg:block w-[2px] rounded-lg bg-emerald-400 ml-2 " />
                         <p className="xl:text-5xl lg:text-xl text-base font-syne lg:-rotate-90 mt-6 lg:mt-16 ">Skills</p>
                     </div>
-                    <div className="flex md:flex-row flex-col h-full">
+                    <div className="flex md:flex-row flex-col h-full w-full">
                       <div className="flex-1 ">
 
                         <Tabs defaultValue="languages" className=" h-full w-full relative p-2 ">
@@ -118,7 +118,7 @@ const Skills = () => {
 
 
                             </div> */}
-                            <div className="grid grid-cols-4 grid-rows-4 gap-12 aspect-square p-6 ">
+                            <div className="grid grid-cols-4 grid-rows-4 gap-12 aspect-square p-16 ">
                                 {
                                 // hover:shadow-[0px_10px_20px_rgba(256,256,256)]
                                 techs.map((tech) => (
@@ -128,7 +128,7 @@ const Skills = () => {
                                            src={tech.tech}
                                            alt="skill"
                                            fill
-                                           className="object-contain p-2 "
+                                           className="object-contain p-4 "
                                            />
                                     </div>
                                 ))
