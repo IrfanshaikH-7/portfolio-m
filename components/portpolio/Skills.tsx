@@ -4,8 +4,8 @@ import Image from "next/image";
 const Skills = () => {
 
     return (
-        <main className="h-full w-[90%]  flex justify-center items-center">
-            <section className=" h-[80%] w-[80%] ">
+        <main className="h-full w-[90%]  flex justify-center items-center ">
+            <section className="h-full lg:h-[80%] w-[80%] ">
                 <div className="flex lg:flex-row flex-col h-full">
 
                     <div className="flex lg:flex-col justify-center items-center h-full">
@@ -118,7 +118,7 @@ const Skills = () => {
 
 
                             </div> */}
-                            <div className="grid grid-cols-4 grid-rows-4 gap-12 aspect-square p-16 ">
+                            <div className="grid grid-cols-4 grid-rows-4 gap-12 aspect-square p-2 lg:p-16">
                                 {
                                 // hover:shadow-[0px_10px_20px_rgba(256,256,256)]
                                 techs.map((tech) => (
@@ -128,7 +128,7 @@ const Skills = () => {
                                            src={tech.tech}
                                            alt="skill"
                                            fill
-                                           className="object-contain p-4 "
+                                           className="object-contain p-2 lg:p-4 "
                                            />
                                     </div>
                                 ))

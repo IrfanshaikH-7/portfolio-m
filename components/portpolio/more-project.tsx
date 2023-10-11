@@ -10,11 +10,12 @@ const MoreProjects = () => {
             <div className="md:w-full lg:w-20 lg:h-full p-2">
                 <div className="flex lg:flex-col justify-center items-center h-full">
                     <div className="h-60 hidden lg:block w-[2px] rounded-lg bg-emerald-400 ml-2 " />
-                    <p className="xl:text-5xl justify-self-start text-2xl font-syne lg:-rotate-90 mt-12 lg:mt-24">projects</p>
+                    <p className="xl:text-5xl justify-self-start text-2xl font-syne lg:-rotate-90  lg:mt-24">projects</p>
                 </div>
             </div>
 
             <div className="h-5/6 lg:h-full w-full mt-4  ">
+
                 <Tabs defaultValue="fullstack" className="w-full h-full justify-end md:flex items-center ">
                     <TabsContent value="fullstack">
                         <section className="h-full w-full overflow-y-scroll bg-blue relative">
