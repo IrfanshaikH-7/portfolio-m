@@ -93,7 +93,7 @@ const Skills = () => {
                     </div>
                     <div className="flex-1 flex flex-col px-2 py-2 ">
                         <div className="flex w-full items-center justify-center p-2 gap-4">
-                        <h3 className="text-sm md:text-base text-white lg:text-lg self-center capitalize">Techs I've been work with</h3>
+                        <h3 className="text-sm md:text-base text-white lg:text-lg self-center capitalize">Techs I&lsquo;ve been work with</h3>
                             <svg height="2" width="180" className="">
                                 <line x1="0" y1="0" x2="200" y2="0" stroke="#34d399" strokeWidth={2} className="text-emerald-400" />
                             </svg>
@@ -122,8 +122,7 @@ const Skills = () => {
                                 {
                                 // hover:shadow-[0px_10px_20px_rgba(256,256,256)]
                                 techs.map((tech) => (
-                                    <div className=" relative aspect-square rounded-3xl bg-slate-400/50  hover:-translate-y-[2px] hover:shadow-[0px_22px_24px_0px_#FFFFFF24] transition-all duration-300">
-                                        
+                                    <div key={tech.tech} className=" relative aspect-square rounded-3xl bg-slate-400/50  hover:-translate-y-[2px] hover:shadow-[0px_22px_24px_0px_#FFFFFF24] transition-all duration-300">
                                            <Image 
                                            src={tech.tech}
                                            alt="skill"

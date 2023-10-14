@@ -62,16 +62,13 @@ const AchievementForm = () => {
         setImages([])
         form.reset()
     }
-
-
     return (
-
         <Form {...form}>
             <form onSubmit={form.handleSubmit(ocnSubmit)} className="space-y-4">
 
                 <div className="h-64 w-96 relative mb-6 rounded-md self-center">
                     {images ? (
-                        <div className="">
+                        <div >
                             <UploadDropzone
                                 className="h-64 w-full mb-6 p-8 border border-zinc-500"
                                 endpoint="imageUploader"

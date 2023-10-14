@@ -62,12 +62,12 @@ const AdminDB = () => {
             </div>
           </div>
 
-          { state == 'project' &&
-            <div className=" flex justify-center items-center ml-2 w-full px-24 h-full bg-zinc-800/70 rounded-sm">
+          { state === "project" &&
+            <div className="flex justify-center items-center ml-2 w-full px-24 h-full bg-zinc-800/70 rounded-sm">
             <FormZone />
           </div>
           }
-          { state == 'achievement' &&
+          { state === "achievement" &&
             <div className="flex justify-center items-center ml-2 w-3/4 px-24 h-full bg-zinc-800/70 rounded-sm">
             <AchievementForm />
           </div>

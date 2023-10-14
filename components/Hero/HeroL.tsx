@@ -16,7 +16,7 @@ const HeroL = () => {
                 </h1>
                 
                 <p className="text-xs px-3  xl:text-base mt-4 text-slate-200 "> 
-                 I'm a Irfan a Full-Stack Developer based in Hyderabad, India. I enjoy working on every aspect of web development, from the user interface to the server logic.
+                 I&lsquo;m a Irfan a Full-Stack Developer based in Hyderabad, India. I enjoy working on every aspect of web development, from the user interface to the server logic.
                 </p>
 
                 </div>

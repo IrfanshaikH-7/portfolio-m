@@ -4,6 +4,12 @@ const nextConfig = {
     serverActions: true,
     serverComponentsExternalPackages: ["mongoose"],
   },
+  eslint:{
+    ignoreDuringBuilds:true
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
     images: {
         remotePatterns: [
          

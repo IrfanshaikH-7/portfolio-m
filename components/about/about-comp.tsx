@@ -62,13 +62,13 @@ const AboutComp = () => {
                         <h3 className="text-3xl lg:text-4xl font-semibold font-syne justify-self-start">Irfan shaikH</h3>
                         <div className=" mt-4">
                             <p className=" indent-8  text-xs lg:text-sm font-syne tracking-wider mt-6">
-                                The world of art, softwares 'n' technology always facinated me and I've never been afraid to just jump in and give it a go. whethers it's development, openSource contributions or AI/ML.
+                                The world of art, softwares &rsquo;n&rsquo; technology always facinated me and I&rsquo;ve never been afraid to just jump in and give it a go. whethers it&rsquo;s development, openSource contributions or AI/ML.
                             </p>
                             <p className="text-xs lg:text-sm font-syne tracking-wider mt-6">
-                                Fast forward to 2023 and I’ve tried it all, from Web Design to actually implementing them with code, Animation, HTML/CSS, Web Development by Creating various <Link href='/portfolio' className="text-base text-white">projects</Link> on them. Everything I have done, small or big, has been a vital stepping stone for where I am today.
+                                Fast forward to 2023 and I&rsquo;ve tried it all, from Web Design to actually implementing them with code, Animation, HTML/CSS, Web Development by Creating various <Link href='/portfolio' className="text-base text-white">projects</Link> on them. Everything I have done, small or big, has been a vital stepping stone for where I am today.
                             </p>
                             <p className="text-xs lg:text-sm font-syne tracking-wider mt-6">
-                                What excites me most about being a Web Developer is being able to design and create softwares that have a purpose and solve real problems. It goes beyond developing landing pages and websites and involves having a passion for designing experiences and solutions that help people, whether it's helping them make better audience, market themselves online, or buy something online. Leaning into customer insight and understanding their needs, finding the right problems to solve, delivering solutions as quickly as possible, learning from those and then iterating and improving that value over time is the key to great developer.
+                                What excites me most about being a Web Developer is being able to design and create softwares that have a purpose and solve real problems. It goes beyond developing landing pages and websites and involves having a passion for designing experiences and solutions that help people, whether it&rsquo;s helping them make better audience, market themselves online, or buy something online. Leaning into customer insight and understanding their needs, finding the right problems to solve, delivering solutions as quickly as possible, learning from those and then iterating and improving that value over time is the key to great developer.
                             </p>
                         </div>
                     </div>

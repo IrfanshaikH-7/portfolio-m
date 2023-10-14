@@ -110,9 +110,9 @@ sdmv
                           <p className='font-semibold'>{testimony.name}</p>
                           </div>
                           <p className='text-slate-300'>
-                            <span className='text-white font-bold text-lg'>"</span>{' '}
+                            <span className='text-white font-bold text-lg'>&ldquo;</span>{' '}
                             {testimony.testimony} Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, velit.
-                            {' '}<span className='text-white font-bold text-lg'>"</span>
+                            {' '}<span className='text-white font-bold text-lg'>&ldquo;</span>
                           </p>
 
                       </div>

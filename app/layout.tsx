@@ -6,7 +6,7 @@ import { Tilt_Neon } from 'next/font/google'
 import { ThemeProvider } from '@/components/providers/theme-provider'
 import { ClerkProvider } from '@clerk/nextjs'
 
-const poppins = Tilt_Neon({ subsets: ['latin'] ,weight: ['400']})
+const tilt_neon = Tilt_Neon({ subsets: ['latin'] ,weight: ['400']})
 
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function RootLayout({
     <ClerkProvider>
     <html lang="en" suppressHydrationWarning>
 
-      <body className={poppins.className}>
+      <body className={tilt_neon.className}>
 
         <ThemeProvider 
         attribute='class'
