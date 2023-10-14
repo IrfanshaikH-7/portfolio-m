@@ -9,14 +9,14 @@ const HeroL = () => {
         animate={{opacity: 1 , x : 0 }}
         transition={{duration:0.4, staggerChildren:0.4}}
         >
-            <div className="flex flex-col items-start justify-center p-8 w-full h-full">
+            <div className="flex flex-col items-center md:items-start justify-center p-8 w-full h-full">
                 <div className="">
-                <h1 className="font-medium  text-3xl xl:text-7xl text-start lg:self-start  ">
+                <h1 className="font-medium  text-3xl xl:text-7xl text-center md:text-start lg:self-start  ">
                     Greetings!!
                 </h1>
                 
-                <p className="text-xs px-3  xl:text-base mt-4 text-slate-200 "> 
-                 I&lsquo;m a Irfan a Full-Stack Developer based in Hyderabad, India. I enjoy working on every aspect of web development, from the user interface to the server logic.
+                <p className=" font-semibold md:font-normal text-xs px-3  xl:text-base mt-4 text-slate-200 "> 
+                 I&lsquo;m a Irfan a Full-Stack Developer based in Hyderabad, India.<br/><span className="font-normal ">I enjoy working on every aspect of web development, from the user interface to the server logic.</span>
                 </p>
 
                 </div>

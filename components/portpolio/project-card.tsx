@@ -2,7 +2,7 @@
 const ProjectCard = () => {
     return ( 
         <>
-        <section className="grid grid-cols-2 h-full gap-3 py-8 px-4">
+        <section className="grid sm:grid-cols-2 h-full gap-3 py-8 px-4">
 
         
         <div className=" flex items-center  justify-center rounded-lg shadow-md h-40 md:h-60  xl:h-68 w-full bg-slate-900 border border-slate-300">

@@ -27,7 +27,7 @@ const Navbar = () => {
       <div className="flex items-center ">
         <DropdownMenu >
           <DropdownMenuTrigger className="flex justify-center items-center"><span className="uppercase">Menu</span><Text className=" h-5 w-5  text-white" /></DropdownMenuTrigger>
-          <DropdownMenuContent className="flex mr-32 px-8 backdrop-blur-sm border-slate-600 bg-transparent">
+          <DropdownMenuContent className="flex mr-4 md:mr-32 px-4 md:px-8 backdrop-blur-sm border-slate-600 bg-transparent rounded-[50px]">
             <DropdownMenuSeparator />
             <DropdownMenuItem className= "group hover:bg-blue-300/80 hover:text-slate-900 transition-all duration-300">
               <a href='/portfolio' id="linnk" className="linnk uppercase text-xs font-semibold text-slate-300 group-hover:text-slate-900 transition-all duration-300">

@@ -5,7 +5,7 @@ const Skills = () => {
 
     return (
         <main className="h-full w-[90%]  flex justify-center items-center ">
-            <section className="h-full lg:h-[80%] w-[80%] ">
+            <section className="h-full lg:h-[80%] w-[90%] sm:w-[80%] ">
                 <div className="flex lg:flex-row flex-col h-full">
 
                     <div className="flex lg:flex-col justify-center items-center h-full">
@@ -16,7 +16,7 @@ const Skills = () => {
                       <div className="flex-1 ">
 
                         <Tabs defaultValue="languages" className=" h-full w-full relative p-2 ">
-                            <TabsList className="">
+                            <TabsList className="flex gap-2 w-">
                                 <TabsTrigger className="" value="languages">Languages</TabsTrigger>
                                 <TabsTrigger value="frontend">Frontend</TabsTrigger>
                                 <TabsTrigger value="backend">Backend</TabsTrigger>
@@ -33,7 +33,7 @@ const Skills = () => {
                                                     fill
                                                     className=" p-4 opacity-40 hover:opacity-100 object-contain transition-all duration-300"
                                                 />
-                                                <p className="z-10 font-semibold uppercase">{language.lan}</p>
+                                                <p className="z-10 font-semibold uppercase text-sm sm:text-base">{language.lan}</p>
                                             </div>
                                         ))
                                     }
@@ -41,17 +41,17 @@ const Skills = () => {
                             </TabsContent>
 
                             <TabsContent value="frontend" className="mt-2">
-                                <div className="grid grid-cols-2 gap-2 aspect-square p-1 md:p-7 ">
+                                <div className="grid grid-cols-2 gap-2 aspect-square p-1 md:p-7  ">
                                     {
-                                        frontend.map((skill) => (
-                                            <div key={skill.skill} className=" relative text-2xl flex items-center justify-center rounded-md border border-white">
+                                        frontend.map((language) => (
+                                            <div key={language.skill} className=" relative text-2xl flex items-center justify-center rounded-md border border-white">
                                                 <Image
-                                                    src={skill.img}
+                                                    src={language.img}
                                                     alt="skill"
                                                     fill
                                                     className=" p-4 opacity-40 hover:opacity-100 object-contain transition-all duration-300"
                                                 />
-                                                <p className="z-10 font-semibold uppercase">{skill.skill}</p>
+                                                <p className="z-10 font-semibold uppercase text-sm sm:text-base">{language.skill}</p>
                                             </div>
                                         ))
                                     }
@@ -69,7 +69,7 @@ const Skills = () => {
                                                     fill
                                                     className=" p-4 opacity-40 hover:opacity-100 object-contain transition-all duration-300"
                                                 />
-                                                <p className="z-10 font-semibold uppercase">{skill.skill}</p>
+                                                <p className="z-10 font-semibold uppercase text-sm sm:text-base">{skill.skill}</p>
                                             </div>
                                         ))
                                     }
@@ -82,12 +82,13 @@ const Skills = () => {
                                         others.map((skill) => (
                                             <div key={skill.skill} className=" relative text-2xl flex items-center justify-center rounded-md border border-white">
                                                 <skill.icon className="h-full w-full absolute p-16 text-slate-600/40 hover:text-slate-600 transition-all duration-300" />
-                                                <p className="z-10 font-semibold uppercase">{skill.skill}</p>
+                                                <p className="z-10 font-semibold uppercase text-sm sm:text-base">{skill.skill}</p>
                                             </div>
                                         ))
                                     }
                                 </div>
                             </TabsContent>
+                            
 
                         </Tabs>
                     </div>
@@ -118,7 +119,7 @@ const Skills = () => {
 
 
                             </div> */}
-                            <div className="grid grid-cols-4 grid-rows-4 gap-12 aspect-square p-2 lg:p-16">
+                            <div className="grid grid-cols-4 grid-rows-4 gap-4 md:gap-12 aspect-square p-2 lg:p-16">
                                 {
                                 // hover:shadow-[0px_10px_20px_rgba(256,256,256)]
                                 techs.map((tech) => (

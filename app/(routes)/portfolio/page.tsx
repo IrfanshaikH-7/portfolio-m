@@ -53,8 +53,8 @@ const Portfolio = () => {
             <SvgOne />
                 <main id="feat" className=" snap-mandatory lg:h-screen h-screen w-full flex justify-center items-center relative ">
 
-                    <section className="flex items-start gap-8 h-[90%] w-full px-20  overflow-y-scroll overflow-x-hidden bg-slate-900 relative rounded-[80px]">
-                        <div className="md:w-2/6 lg:w-2/6 py-[50vh] px-2  ">
+                    <section className="flex items-start gap-8 h-[90%] w-full px-1 md:px-20  overflow-y-scroll overflow-x-hidden bg-slate-900 relative rounded-[80px]">
+                        <div className="w-1/6 md:w-2/6 lg:w-2/6 py-[50vh] px-2  ">
                             <ul>
                                 {
                                     prj.map((feature) => (
@@ -92,7 +92,7 @@ const Portfolio = () => {
                                         ))
                                     }
                                 </div>
-                                <div className=" relative w-full aspect-square lg:aspect-[12/9]  rounded-2xl xl:hidden  hover:-translate-y-24 group transition-all duration-500">
+                                <div className=" relative w-64 sm:w-full aspect-square lg:aspect-[12/9]  rounded-2xl xl:hidden  hover:-translate-y-24 group transition-all duration-500">
 
 
                                     {
