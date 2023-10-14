@@ -5,13 +5,15 @@ import type { NextPage } from 'next';
 import Navbar from '@/components/navbar';
 import LandingS from '@/components/Hero/LandingS';
 import LottieHero from '@/components/portpolio/lottiehero';
+import { testimonials } from '@/public/data/testimonials';
+import Image from 'next/image';
 
 const Home: NextPage = () => {
   return (
     <>
       <section className=' h-full w-full '>
         <main className='h-full w-full flex justify-center'>
-          <div className=' w-96 flex mx-auto z-50 fixed bg-transparent  h-auto transition-opacity'>
+          <div className='w-96 lg:w-1/3 flex mx-auto z-50 fixed bg-transparent  h-auto transition-opacity'>
             <Navbar />
           </div>
           <section className='h-full w-full mx-auto flex-col justify-center items-center z-10 bg-gradient-to-t from-emerald-400 from-10% via-sky-500 via-60% to-indigo-500 to-90%  rounded-b-[80px] '>
@@ -86,8 +88,40 @@ const Home: NextPage = () => {
         <div className=' bg-transparent h-screen w-full'>
           <LandingS />
         </div>
-        <div className='h-12 bg-transparent w-full'>
-        </div>
+        <div className='h-20 bg-transparent w-full'></div>
+        <section className='h-screen w-full bg-slate-500 rounded-t-[80px] flex items-center justify-center'>
+          <div className='flex-col'>
+            <div className='flex-col md:flex-row'>
+sdmv 
+            </div>
+            <div className='flex'>
+                <div className='flex max-w-[300px] lg:max-w-7xl overflow-x-scroll gap-2  p-2"'>
+                  {
+                    testimonials.map((testimony) => (
+                      <div key={testimony.id} className=' flex flex-col justify-evenly items-center h-96 w-full aspect-square bg-black py-8 px-12 rounded-3xl'>
+                         
+                         <div className='flex justify-self-center self-start items-center gap-3 '>
+                           <Image 
+                          className='border-4 aspect-square object-cover rounded-full'
+                          src={testimony.imgUrl} alt="profile"
+                          height={128}
+                          width={128}
+                          />
+                          <p className='font-semibold'>{testimony.name}</p>
+                          </div>
+                          <p className='text-slate-300'>
+                            <span className='text-white font-bold text-lg'>"</span>{' '}
+                            {testimony.testimony} Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, velit.
+                            {' '}<span className='text-white font-bold text-lg'>"</span>
+                          </p>
+
+                      </div>
+                    ))
+                  }
+                </div>
+            </div>
+          </div>
+        </section>
       </section>
 
       <div className='flex flex-col fixed top-0 h-screen w-full  -z-50 '>

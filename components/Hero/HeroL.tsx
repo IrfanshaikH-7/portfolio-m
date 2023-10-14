@@ -9,17 +9,18 @@ const HeroL = () => {
         animate={{opacity: 1 , x : 0 }}
         transition={{duration:0.4, staggerChildren:0.4}}
         >
-            <div className="flex flex-col items-start justify-evenly p-8 w-full ">
-                <div>
+            <div className="flex flex-col items-start justify-center p-8 w-full h-full">
+                <div className="">
                 <h1 className="font-medium  text-3xl xl:text-7xl text-start lg:self-start  ">
                     Greetings!!
                 </h1>
-                <p className="indent-5 text-xs px-3  xl:text-base mt-4 "> 
+                
+                <p className="text-xs px-3  xl:text-base mt-4 text-slate-200 "> 
                  I'm a Irfan a Full-Stack Developer based in Hyderabad, India. I enjoy working on every aspect of web development, from the user interface to the server logic.
                 </p>
 
                 </div>
-                <div className="flex gap-8 p-2 relative">
+                <div className="flex  gap-8 p-2 relative">
                    <Link href='/contact' className="heroR-link w- group relative text-sm lg:px-8 px-6 py-4 font-semibold   bg-gradient-to-r from-emerald-400 bg-sky-500 hover:bg-indigo-400  text-slate-300 border border-slate-300">
                     Connect
                     <MoveRight className="absolute group-hover:-right-4 -right-3 transition-all duration-300" />

@@ -2,11 +2,11 @@
 import Cursor from '@/components/cursor'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Poppins } from 'next/font/google'
+import { Tilt_Neon } from 'next/font/google'
 import { ThemeProvider } from '@/components/providers/theme-provider'
 import { ClerkProvider } from '@clerk/nextjs'
 
-const poppins = Poppins({ subsets: ['latin'] ,weight: ['400', '500','600']})
+const poppins = Tilt_Neon({ subsets: ['latin'] ,weight: ['400']})
 
 
 export const metadata: Metadata = {
