@@ -5,8 +5,9 @@ import type { Metadata } from 'next'
 import { Tilt_Neon } from 'next/font/google'
 import { ThemeProvider } from '@/components/providers/theme-provider'
 import { ClerkProvider } from '@clerk/nextjs'
+import Social from '@/components/utility/Social'
 
-const tilt_neon = Tilt_Neon({ subsets: ['latin'] ,weight: ['400']})
+const tilt_neon = Tilt_Neon({ subsets: ['latin'], weight: ['400'] })
 
 
 export const metadata: Metadata = {
@@ -21,23 +22,25 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-    <html lang="en" suppressHydrationWarning>
+      <html lang="en" className='no-scrollbar' suppressHydrationWarning>
 
-      <body className={tilt_neon.className}>
+        <body className={`${tilt_neon.className} relative`}>
 
-        <ThemeProvider 
-        attribute='class'
-        defaultTheme='dark'
-        enableSystem
-        storageKey='portfolio-m'
-        >
-          <Cursor />
-          <div className='  h-full lg:h-screen w-full '>
-            {children}
-          </div>
-        </ThemeProvider>
-      </body>
-    </html>
+          <ThemeProvider
+            attribute='class'
+            defaultTheme='dark'
+            enableSystem
+            storageKey='portfolio-m'
+          >
+            <Cursor />
+            
+            <div className='  h-full lg:h-screen w-full no-scrollbar'>
+              {children}
+            </div>
+          </ThemeProvider>
+         
+        </body>
+      </html>
     </ClerkProvider>
   )
 }

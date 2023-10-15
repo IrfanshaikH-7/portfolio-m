@@ -18,7 +18,7 @@ const MoreProjects = () => {
 
                 <Tabs defaultValue="fullstack" className="w-full h-full justify-end md:flex items-center ">
                     <TabsContent value="fullstack">
-                        <section className="h-full w-full overflow-y-scroll bg-blue relative">
+                        <section className="h-full w-full overflow-y-scroll bg-blue relative no-scrollbar">
                             <div className="flex flex-col items-center justify-center mb-12 py-2">
                                 <h3 className="text-3xl text-center justify-center font-syne uppercase ">Fullstack</h3>
                                 <Triangle className="rotate-180 fill-black dark:fill-white h-4 w-4" />
@@ -27,7 +27,7 @@ const MoreProjects = () => {
                         </section>
                     </TabsContent>
                     <TabsContent value="frontend">
-                        <section className="h-full w-full overflow-y-scroll">
+                        <section className="h-full w-full overflow-y-scroll no-scrollbar">
                             <div className="flex flex-col items-center justify-center mb-12 py-2">
                                 <h3 className="text-3xl text-center justify-center font-syne uppercase ">frontend</h3>
                                 <Triangle className="rotate-180 fill-black dark:fill-white h-4 w-4" />
@@ -36,7 +36,7 @@ const MoreProjects = () => {
                         </section>
                     </TabsContent>
                     <TabsContent value="python">
-                        <section className="h-full w-full  overflow-y-scroll">
+                        <section className="h-full w-full  overflow-y-scroll no-scrollbar">
                             <div className="flex flex-col items-center justify-center mb-12 py-2">
                                 <h3 className="text-3xl text-center justify-center font-syne uppercase ">python</h3>
                                 <Triangle className="rotate-180 fill-black dark:fill-white h-4 w-4" />
@@ -45,7 +45,7 @@ const MoreProjects = () => {
                         </section>
                     </TabsContent>
                     <TabsContent value="others">
-                        <section className="h-full w-full  overflow-y-scroll">
+                        <section className="h-full w-full  overflow-y-scroll no-scrollbar">
                             <div className="flex flex-col items-center justify-center mb-12 py-2">
                                 <h3 className="text-3xl text-center justify-center font-syne uppercase ">Others</h3>
                                 <Triangle className="rotate-180 fill-black dark:fill-white h-4 w-4" />

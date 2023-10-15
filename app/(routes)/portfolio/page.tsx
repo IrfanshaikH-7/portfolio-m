@@ -2,7 +2,6 @@ import Skills from "@/components/portpolio/Skills";
 import { Animata, Discord, LMS, NewLife, Port, Saas, Thread } from "@/components/portpolio/feature-card";
 import { FeatureTitle } from "@/components/portpolio/feature-title";
 import MoreProjects from "@/components/portpolio/more-project";
-import Pnav from "@/components/portpolio/portfolioNav";
 import SvgOne from "@/components/svg1";
 import { prj } from "@/public/data/projects-detail";
 
@@ -53,7 +52,7 @@ const Portfolio = () => {
             <SvgOne />
                 <main id="feat" className=" snap-mandatory lg:h-screen h-screen w-full flex justify-center items-center relative ">
 
-                    <section className="flex items-start gap-8 h-[90%] w-full px-1 md:px-20  overflow-y-scroll overflow-x-hidden bg-slate-900 relative rounded-[80px]">
+                    <section className="flex items-start gap-8 h-[90%] w-full px-1 md:px-20  overflow-y-scroll overflow-x-hidden bg-slate-900 relative rounded-[80px] no-scrollbar">
                         <div className="w-1/6 md:w-2/6 lg:w-2/6 py-[50vh] px-2  ">
                             <ul>
                                 {

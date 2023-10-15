@@ -56,8 +56,8 @@ const AboutComp = () => {
             </div>  
             </div>
             
-            <div className="h-full w-full px-2 pt-2 pb-1 md:py-2 md:px-4 rounded-md">
-                <div className="h-full w-full  overflow-y-auto px-4 lg:px-10 xl:px-32 bg-slate-900 rounded-[50px] ">
+            <div className="h-full w-full px-2 pt-2 pb-1 md:py-2 md:px-4 rounded-md ">
+                <div className="h-full w-full  overflow-y-auto px-4 lg:px-10 xl:px-32 bg-slate-900 rounded-[50px] no-scrollbar">
                     <div id="abt" className="flex flex-col justify-center items-start h-full w-full">
                         <h3 className="text-3xl lg:text-4xl font-semibold font-syne justify-self-start">Irfan shaikH</h3>
                         <div className=" mt-4">
