@@ -117,15 +117,16 @@ const Portfolio = () => {
                 <main id="all" className="snap-center h-screen md:h-screen w-full mx-auto flex justify-center items-center -m-8 ">
                    
 
-                    <section className=" h-[80%] mx-auto w-[90%] lg:w-[72%] bg-transparent ">
+                    <section className=" h-[80%] mx-auto w-full md:w-[90%] lg:w-[72%] bg-transparent ">
                         <MoreProjects />
                     </section>
                 </main>
-                <section id="skill" className="snap-center h-screen md:h-screen w-full flex items-center justify-center mx-auto bg-slate-900 rounded-[80px]">
+                <section id="skill" className="snap-center h-full lg:h-screen md:h-screen w-full flex items-center justify-center mx-auto bg-slate-900 rounded-[80px]">
                     <Skills />
                 </section>
-                <div className="h-[85%] w-[85%] mx-auto">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum culpa nesciunt beatae reiciendis possimus nulla, amet eos sapiente voluptatem nihil, deleniti fugit, incidunt laborum.
+                <div className="w-[85%] h-[85%] mx-auto flex flex-col items-center justify-center py-24 space-y-8">
+                                        <h4 className="text-xl font-semibold underline">Quote of the day!!</h4>
+                                        <p className="text-2xl md:text-6xl font-semibold text-center">&ldquo;Don&lsquo;t worry if it doesn&lsquo;t work right. If everything did, you&lsquo;d be out of a job. hehe&rdquo;</p>
                 </div>
                 <footer className="h-64 w-full bg-emerald-500">
 

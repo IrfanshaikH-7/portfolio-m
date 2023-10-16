@@ -38,7 +38,7 @@ const ProjectCard = ({ cardDetails }: Props) => {
                                     <div className="flex gap-2 sm:gap-1 xl:gap-1 bg-white rounded-3xl px-2 py-1 sm:py-[2px] xl:py-1 ">
                                         {
                                             item.tags.map((tag) => (
-                                                <p className="text-sm sm:text-[9px] xl:text-[11px] text-slate-600 ">#{tag}</p>
+                                                <p className="text-[9px] xl:text-[11px] text-slate-600 ">#{tag}</p>
 
                                             ))
                                         }
