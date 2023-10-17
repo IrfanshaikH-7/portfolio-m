@@ -46,8 +46,12 @@ model Achievement {
 model Testimonials {
   id        String  @id @default(auto()) @map("_id") @db.ObjectId
   name      String 
-  testimony String
+  email     String
+  company   String
+  job_title String
+  message   String
   imgUrl    String 
+  anonymous Boolean
 }
 // model Tag {
 //   id        String  @id @default(auto()) @map("_id") @db.ObjectId

@@ -1,10 +1,13 @@
+'use client'
 import { Project } from "@prisma/client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 type Props = {
     cardDetails: Project[]
 }
 const ProjectCard = ({ cardDetails }: Props) => {
+    const router = useRouter()
     if (!cardDetails || cardDetails.length < 1) {
         return (
             <div className="h-full w-full flex items-center justify-center">
@@ -26,7 +29,7 @@ const ProjectCard = ({ cardDetails }: Props) => {
                             <div className=" bg-gray-900 rounded-lg h-full w-full px-2">
 
                                 <div className="relative h-full w-full space-y-1 md:space-y-3 py-2">
-                                    <div className="aspect-video w-full relative">
+                                    <div className="aspect-video w-full relative cursor-pointer" onClick={()=> router.push(`/portfolio/${item.id}`)}>
                                         <Image
                                             src={item.imgUrl[0]}
                                             alt="projectImg"
@@ -35,6 +38,7 @@ const ProjectCard = ({ cardDetails }: Props) => {
                                         />
                                         <div className="h-12 w-40 bg-white absolute rounded-xl bottom-1 right-1" />
                                     </div>
+                                    
                                     <div className="flex gap-2 sm:gap-1 xl:gap-1 bg-white rounded-3xl px-2 py-1 sm:py-[2px] xl:py-1 ">
                                         {
                                             item.tags.map((tag) => (
@@ -43,19 +47,15 @@ const ProjectCard = ({ cardDetails }: Props) => {
                                             ))
                                         }
                                     </div>
+
                                     <div >
-                                        <p className="px-4 text-slate-300 font-semibold text-center"><span className="font-semibold ">⪧{" "}</span>{item.note}</p>
+                                        <p className="px-4 text-xs xl:text-base text-slate-300 font-semibold text-center"><span className="font-semibold ">⪧{" "}</span>{item.note}</p>
                                     </div>
-
                                 </div>
-
                             </div>
                         </div>
                     ))
                 }
-
-
-
             </section>
         </>
 

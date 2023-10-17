@@ -7,6 +7,7 @@ import LandingS from '@/components/Hero/LandingS';
 import LottieHero from '@/components/portpolio/lottiehero';
 import { testimonials } from '@/public/data/testimonials';
 import Image from 'next/image';
+import TestimonialDialog from '@/components/Hero/TestimonialDialog';
 
 const Home: NextPage = () => {
   return (
@@ -95,7 +96,11 @@ const Home: NextPage = () => {
 sdmv 
             </div>
             <div className='flex'>
+            <div>
+                    <TestimonialDialog />
+                  </div>
                 <div className='flex max-w-[300px] lg:max-w-7xl overflow-x-scroll gap-2  p-2"'>
+                  
                   {
                     testimonials.map((testimony) => (
                       <div key={testimony.id} className=' flex flex-col justify-evenly items-center h-96 w-full aspect-square bg-black py-8 px-12 rounded-3xl'>

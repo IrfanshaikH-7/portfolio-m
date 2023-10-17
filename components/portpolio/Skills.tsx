@@ -4,15 +4,18 @@ import Image from "next/image";
 const Skills = () => {
 
     return (
-        <main className="h-full w-[90%]  flex justify-center items-center ">
-            <section className="h-full lg:h-[80%] w-[90%] sm:w-[80%] ">
-                <div className="flex lg:flex-row flex-col h-full">
+        <main className="h-full w-full  flex flex-col lg:flex-row justify-between items-center p-4 gap-2">
 
-                    <div className="flex lg:flex-col justify-center items-center h-full">
+        <div className=" md:w-full lg:w-20 lg:h-full ">
+            <div className="flex lg:flex-col justify-center items-center h-full ">
                         <div className="h-60 hidden lg:block w-[2px] rounded-lg bg-emerald-400 ml-2 " />
-                        <p className="xl:text-5xl lg:text-xl text-base font-syne lg:-rotate-90 mt-6 lg:mt-16 ">Skills</p>
-                    </div>
-                    <div className="flex md:flex-row flex-col h-full w-full">
+                        <p className="xl:text-5xl lg:text-xl text-4xl py-2 px-8 md:px-0 md:py-0 uppercase border-2 md:border-none md:rounded-none rounded-3xl lg:-rotate-90 mt-6 lg:mt-16 ">Skills</p>
+             </div>
+            </div>
+
+
+
+            <div className="flex flex-1 md:flex-row flex-col h-full w-full mt-4">
                       <div className="flex-1 ">
 
                         <Tabs defaultValue="languages" className=" h-full w-full relative p-2 ">
@@ -100,26 +103,10 @@ const Skills = () => {
                             </svg>
                         </div>
                        
-                        <div className="flex-1 flex-col items-center justify-center mt-2 relative overflow-hidden">
+                        <div className="flex-1 flex-col items-center justify-center mt-2 relative overflow-hidden px-3">
 
-                            {/* <div className="flex max-w-[300px] lg:max-w-md overflow-x-scroll gap-2 xl:max-w-xl px-2">
-                                <div className="aspect-video h-40 bg-zinc-700 lg:h-60 xl:h-64  ">
-
-                                </div>
-                                <div className="aspect-video h-40 bg-zinc-700 lg:h-60 xl:h-64 ">
-
-                                </div>
-                                <div className="aspect-video h-40 bg-zinc-700 lg:h-60 xl:h-64 ">
-
-                                </div>
-                                <div className="aspect-video bg-zinc-700 h-40 lg:h-60 xl:h-64 ">
-
-                                </div>
-
-
-
-                            </div> */}
-                            <div className="grid grid-cols-4 grid-rows-4 gap-4 md:gap-12 aspect-square p-2 lg:p-16">
+                            
+                            <div className="grid grid-cols-4 grid-rows-4 gap-6 md:gap-4 aspect-square p-2 lg:p-16 ">
                                 {
                                 // hover:shadow-[0px_10px_20px_rgba(256,256,256)]
                                 techs.map((tech) => (
@@ -140,9 +127,6 @@ const Skills = () => {
 
                     </div>  
                     </div>
-                    
-                </div>
-            </section>
         </main>
     );
 }
