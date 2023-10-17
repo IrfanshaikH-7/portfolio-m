@@ -15,7 +15,7 @@ const TestimonialDialog = () => {
   return (
     <div className='px-4'>
       <Dialog>
-  <DialogTrigger>Add a testimony</DialogTrigger>
+  <DialogTrigger className='text-xs'>Add a testimony</DialogTrigger>
   <DialogContent className=''>
     <DialogHeader>
       <DialogTitle>Add a testimony</DialogTitle>

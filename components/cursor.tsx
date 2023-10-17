@@ -58,7 +58,7 @@ const Cursor = () => {
     
 
     return (
-        <div id='custom-cursor' className='custom-cursor'>
+        <div id='custom-cursor' className='custom-cursor hidden sm:block'>
             <span className='cursor-text'><Link height={8} width={8}/></span>
         </div>
     )

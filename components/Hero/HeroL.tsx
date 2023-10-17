@@ -1,5 +1,5 @@
 "use client"
-import { FileText, MoveRight } from "lucide-react";
+import { FileText, Github, Linkedin, MoveRight, Twitter } from "lucide-react";
 import Link from "next/link";
 import {motion} from 'framer-motion'
 const HeroL = () => {
@@ -9,8 +9,9 @@ const HeroL = () => {
         animate={{opacity: 1 , x : 0 }}
         transition={{duration:0.4, staggerChildren:0.4}}
         >
-            <div className="flex flex-col items-center md:items-start justify-center p-8 w-full h-full">
-                <div className="">
+            <div className="flex flex-col justify-center  w-full h-full">
+                <div className="flex flex-col items-center md:items-start justify-center p-8 w-full h-full">
+                <div >
                 <h1 className="font-medium  text-3xl xl:text-7xl text-center md:text-start lg:self-start  ">
                     Greetings!!
                 </h1>
@@ -29,6 +30,13 @@ const HeroL = () => {
                     Resume
                     <FileText className="absolute group-hover:-right-6 invisible group-hover:visible -right-5 transition-all ease-out" />
                 </Link> 
+                </div>
+                </div>
+                <div className="lg:hidden flex justify-center gap-8 ">
+                    <Link href='https://github.com/IrfanshaikH-7' className=" p-1 rounded-full border-2 border-dotted hover:border-solid border-white hover:-translate-y-px group transition-all duration-300"><Github className="h-7 w-7 fill-emerald-400 stroke-1 text-slate-200 group-hover:fill-white transition-all duration-300"/></Link>
+                    <Link href='https://github.com/IrfanshaikH-7' className=" p-1 rounded-full border-2 border-dotted hover:border-solid border-white hover:-translate-y-px group transition-all duration-300"><Linkedin className="h-7 w-7 fill-emerald-400 stroke-1 text-slate-200 group-hover:fill-white transition-all duration-300"/></Link>
+                    <Link href='https://github.com/IrfanshaikH-7' className=" p-1 rounded-full border-2 border-dotted hover:border-solid border-white hover:-translate-y-px group transition-all duration-300"><Twitter className="h-7 w-7 fill-emerald-400 stroke-1 text-slate-200 group-hover:fill-white transition-all duration-300"/></Link>
+                    
                 </div>
                 
             </div>

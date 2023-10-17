@@ -5,11 +5,14 @@ import type { NextPage } from 'next';
 import Navbar from '@/components/navbar';
 import LandingS from '@/components/Hero/LandingS';
 import LottieHero from '@/components/portpolio/lottiehero';
-import { testimonials } from '@/public/data/testimonials';
+// import { testimonials } from '@/public/data/testimonials';
 import Image from 'next/image';
 import TestimonialDialog from '@/components/Hero/TestimonialDialog';
+import { db } from '@/lib/db';
 
-const Home: NextPage = () => {
+const Home: NextPage = async() => {
+  const testimonials = await db.testimonials.findMany({where: {anonymous: false}})
+  
   return (
     <>
       <section className=' h-full w-full overflow-x-hidden'>
@@ -41,12 +44,13 @@ const Home: NextPage = () => {
               </div>
             </div>
 
-            <section className='hidden lg:block bg-gradient-to-t from-emerald-400 via-emerald-400 h-60 mt-24 lg:-mt-8 rounded-b-[80px] pointer-events-none md:px-32 py-4 '>
+            <section className='hidden lg:block bg-gradient-to-t from-emerald-400 via-emerald-400 h-60 mt-24 lg:-mt-8 rounded-b-[80px] pointer-events-none md:px-16 xl:px-32 py-4 '>
               <div className='h-full w-full flex-col justify-center items-center bg-white rounded-[80px] overflow-hidden py-2'>
                 <h1 className='text-center text-black font-semibold font-syne'>Exploring...</h1>
-                <div className='h-full w-full flex justify-evenly items-start mt-6 '>
 
-                  <div className=' flex flex-col justify-start items-center px-28'>
+                <div className='h-full w-full flex justify-evenly items-start gap-4 xl:gap-8 mt-6 '>
+
+                  <div className='h-full w-1/3 flex flex-col justify-start items-center'>
 
                     <div className=' text-black text-lg font-extrabold font-syne relative z-30'>
                       <svg className='absolute -z-10 -top-11' viewBox="20 30 150 140" xmlns="http://www.w3.org/2000/svg" width={100} height={100}>
@@ -54,30 +58,31 @@ const Home: NextPage = () => {
                       </svg>
                       Development
                     </div>
-                    <p className='text-slate-600 text-center mt-2'>
+                    <p className='text-slate-600 text-sm px-4 lg:px-16 text-center mt-2'>
                       I Love developing new websites and discovering new technologies
                     </p>
                   </div>
-                  <div className=' flex flex-col justify-start items-center px-28'>
+
+                  <div className='h-full w-1/3 flex flex-col justify-start items-center  '>
                     <div className=' text-black text-lg font-bold font-syne relative z-30'>
                       <svg className='absolute -z-10 -top-14' viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width={140} height={140}>
                         <path fill="#34d39995" d="M66.1,-20.6C72.1,-3.1,53.9,23.1,33.4,35.6C12.8,48.1,-10.2,46.9,-28.2,34.8C-46.1,22.7,-59,-0.3,-53.5,-17.2C-47.9,-34.2,-24,-45,3.1,-46C30.1,-46.9,60.2,-38.1,66.1,-20.6Z" transform="translate(100 100)" />
                       </svg>
                       Opensource
                     </div>
-                    <p className='text-slate-600 text-center mt-2'>
-                      I Love developing new websites and discovering new technologies
+                    <p className='text-slate-600 text-sm px-4 lg:px-16 text-center mt-2'>
+                      In true open source Development, theres lots of visibility all the way through the development process.
                     </p>
                   </div>
-                  <div className=' flex flex-col justify-start items-center px-28'>
+                  <div className='h-full w-1/3 flex flex-col justify-start items-center  '>
                     <div className=' text-black text-lg font-bold font-syne relative z-30'>
                       <svg className='absolute -z-10 -top-14' viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width={140} height={140}>
                         <path fill="#34d39995" d="M66.4,-23.1C71.8,-5,52.1,19.7,30.6,33.2C9.2,46.7,-14,48.9,-35.1,36.3C-56.2,23.8,-75.3,-3.4,-69.1,-22.6C-63,-41.8,-31.5,-52.8,-0.5,-52.7C30.5,-52.5,61,-41.1,66.4,-23.1Z" transform="translate(100 100)" />
                       </svg>
-                      Software Engineer
+                      DSA
                     </div>
-                    <p className='text-slate-600 text-center mt-2'>
-                      I Love developing new websites and discovering new technologies
+                    <p className='text-slate-600 text-sm text-center mt-2 px-4 lg:px-16'>
+                      Data dominates.! If you&lsquo;ve chosen the right data structures and organized things well..
                     </p>
                   </div>
 
@@ -90,41 +95,44 @@ const Home: NextPage = () => {
           <LandingS />
         </div>
         <div className='h-20 bg-transparent w-full'></div>
-        <section className='h-screen w-full bg-slate-500 rounded-t-[80px] flex items-center justify-center'>
-          <div className='flex-col'>
-            <div className='flex-col md:flex-row'>
-sdmv 
-            </div>
-            <div className='flex'>
-            <div>
+
+        <section className='h-screen w-full bg-slate-900 rounded-t-[80px] flex items-center justify-center relative'>
+          <div className='flex justify-center items-center flex-col gap-4 w-full px-4'>
+                <div className='bg-slate-800 flex justify-between items-center w-full py-2 px-24 rounded-3xl relative'>
+                  <h2 className='text-2xl'>Testimonials...</h2>
+                  
+                  <div className=' rounded-full border border-white'>
+                    
                     <TestimonialDialog />
                   </div>
-                <div className='flex max-w-[300px] lg:max-w-7xl overflow-x-scroll gap-2  p-2"'>
                   
-                  {
-                    testimonials.map((testimony) => (
-                      <div key={testimony.id} className=' flex flex-col justify-evenly items-center h-96 w-full aspect-square bg-black py-8 px-12 rounded-3xl'>
-                         
-                         <div className='flex justify-self-center self-start items-center gap-3 '>
-                           <Image 
+
+                </div>
+              <div className='flex  max-w-xs md:max-w-2xl lg:max-w-5xl xl:max-w-6xl overflow-x-scroll gap-2  p-2 no-scrollbar'>
+
+                {
+                  testimonials.map((testimony) => (
+                    <div key={testimony.id} className=' flex flex-col justify-evenly items-center h-96 w-full aspect-square bg-gradient-to-t from-slate-800 to-slate-700 py-8 px-12 rounded-3xl'>
+
+                      <div className='flex justify-self-center self-start items-center gap-3 '>
+                        <Image
                           className='border-4 aspect-square object-cover rounded-full'
                           src={testimony.imgUrl} alt="profile"
                           height={128}
                           width={128}
-                          />
-                          <p className='font-semibold'>{testimony.name}</p>
-                          </div>
-                          <p className='text-slate-300'>
-                            <span className='text-white font-bold text-lg'>&ldquo;</span>{' '}
-                            {testimony.testimony} Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, velit.
-                            {' '}<span className='text-white font-bold text-lg'>&ldquo;</span>
-                          </p>
-
+                        />
+                        <p className='font-semibold'>{testimony.name}</p>
                       </div>
-                    ))
-                  }
-                </div>
-            </div>
+                      <p className='text-slate-300'>
+                        <span className='text-white font-bold text-lg'>&ldquo;</span>{' '}
+                        {testimony.message}
+                        {' '}<span className='text-white font-bold text-lg'>&ldquo;</span>
+                      </p>
+
+                    </div>
+                  ))
+                }
+              </div>
           </div>
         </section>
       </section>
