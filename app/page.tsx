@@ -98,14 +98,12 @@ const Home: NextPage = async () => {
         </div>
         <div className='h-20 bg-transparent w-full'></div>
 
-        <section className='h-screen w-full bg-slate-900 rounded-t-[80px] flex flex-col items-center justify-center relative'>
+        <section className='h-full md:h-screen w-full bg-emerald-300 dark:bg-slate-900 rounded-t-[80px] flex flex-col items-center justify-center relative'>
           {/* <TestimonialCurosel testimonials={testimonials} anonymous={false}/> */}
           
 
-          <div>
             <TestimonialCurosel testimonials={testimonials} anonymousTestimonials={anonymousTestimonials}/>
-          </div>
-
+        
         </section>
       </section>
 

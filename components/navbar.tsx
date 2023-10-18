@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <>
    
-      <div className="w-full h-12 flex items-center justify-between mx-auto mt-8 bg-transparent  border-2 backdrop-blur-sm border-white rounded-[80px] px-8  py-2 shadow-md">
+      <div className="w-full h-12 flex items-center justify-between mx-auto mt-8 bg-transparent  border-2 backdrop-blur-sm border-slate-500 dark:border-white rounded-[80px] px-8  py-2 shadow-md">
 
         <div onClick={()=> router.push('/')} className=" cursor-pointer flex justify-self-center items-center border border-slate-400 px-2 border-l-0 border-r-8">
           <KanbanSquare className=" h-6 w-6 text-white" />
@@ -26,7 +26,7 @@ const Navbar = () => {
         </div>
       <div className="flex items-center ">
         <DropdownMenu >
-          <DropdownMenuTrigger className="flex justify-center items-center"><span className="uppercase">Menu</span><Text className=" h-5 w-5  text-white" /></DropdownMenuTrigger>
+          <DropdownMenuTrigger className="flex justify-center items-center"><span className="uppercase border-slate-500 dark:text-white">Menu</span><Text className=" h-5 w-5  border-slate-500 dark:text-white" /></DropdownMenuTrigger>
           <DropdownMenuContent className="flex mr-4 md:mr-32 px-4 md:px-8 backdrop-blur-sm border-slate-600 bg-transparent rounded-[50px]">
             <DropdownMenuSeparator />
             <DropdownMenuItem className= "group hover:bg-blue-300/80 hover:text-slate-900 transition-all duration-300">

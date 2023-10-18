@@ -12,7 +12,7 @@ const HeroL = () => {
             <div className="flex flex-col justify-center  w-full h-full">
                 <div className="flex flex-col items-center md:items-start justify-center p-8 w-full h-full">
                 <div >
-                <h1 className="font-medium  text-3xl xl:text-7xl text-center md:text-start lg:self-start  ">
+                <h1 className="font-medium text-white text-3xl xl:text-7xl text-center md:text-start lg:self-start  ">
                     Greetings!!
                 </h1>
                 
@@ -33,9 +33,9 @@ const HeroL = () => {
                 </div>
                 </div>
                 <div className="lg:hidden flex justify-center gap-8 ">
-                    <Link href='https://github.com/IrfanshaikH-7' className=" p-1 rounded-full border-2 border-dotted hover:border-solid border-white hover:-translate-y-px group transition-all duration-300"><Github className="h-7 w-7 fill-emerald-400 stroke-1 text-slate-200 group-hover:fill-white transition-all duration-300"/></Link>
-                    <Link href='https://github.com/IrfanshaikH-7' className=" p-1 rounded-full border-2 border-dotted hover:border-solid border-white hover:-translate-y-px group transition-all duration-300"><Linkedin className="h-7 w-7 fill-emerald-400 stroke-1 text-slate-200 group-hover:fill-white transition-all duration-300"/></Link>
-                    <Link href='https://github.com/IrfanshaikH-7' className=" p-1 rounded-full border-2 border-dotted hover:border-solid border-white hover:-translate-y-px group transition-all duration-300"><Twitter className="h-7 w-7 fill-emerald-400 stroke-1 text-slate-200 group-hover:fill-white transition-all duration-300"/></Link>
+                    <Link href='https://github.com/IrfanshaikH-7' target="_blank" className=" p-1 rounded-full border-2 border-dotted hover:border-solid border-white hover:-translate-y-px group transition-all duration-300"><Github className="h-7 w-7 fill-emerald-400 stroke-1 text-slate-200 group-hover:fill-white transition-all duration-300"/></Link>
+                    <Link href='https://github.com/IrfanshaikH-7' target="_blank"  className=" p-1 rounded-full border-2 border-dotted hover:border-solid border-white hover:-translate-y-px group transition-all duration-300"><Linkedin className="h-7 w-7 fill-emerald-400 stroke-1 text-slate-200 group-hover:fill-white transition-all duration-300"/></Link>
+                    <Link href='https://github.com/IrfanshaikH-7' target="_blank"  className=" p-1 rounded-full border-2 border-dotted hover:border-solid border-white hover:-translate-y-px group transition-all duration-300"><Twitter className="h-7 w-7 fill-emerald-400 stroke-1 text-slate-200 group-hover:fill-white transition-all duration-300"/></Link>
                     
                 </div>
                 

@@ -52,7 +52,7 @@ const Portfolio = () => {
             <SvgOne />
                 <main id="feat" className=" snap-mandatory lg:h-screen h-screen w-full flex justify-center items-center relative ">
 
-                    <section className="flex items-start gap-8 h-[90%] w-full px-1 md:px-20  overflow-y-scroll overflow-x-hidden bg-slate-900 relative rounded-[80px] no-scrollbar">
+                    <section className="flex items-start gap-8 h-[90%] w-full px-1 md:px-20  overflow-y-scroll overflow-x-hidden bg-emerald-300 dark:bg-slate-900 relative rounded-[80px] no-scrollbar">
                         <div className="w-1/6 md:w-2/6 lg:w-2/6 py-[50vh] px-2  ">
                             <ul>
                                 {
@@ -124,7 +124,7 @@ const Portfolio = () => {
                 {/* <section id="skill" className="snap-center h-full lg:h-screen  w-full flex items-center justify-center mx-auto bg-slate-900 rounded-[80px]">
                     <Skills />
                 </section> */}
-                <section id="skill" className="snap-center h-full  md:py-16 xl:py-28 py-8  w-full flex items-center justify-center mx-auto bg-slate-900 rounded-[80px] overflow-hidden">
+                <section id="skill" className="snap-center h-full  md:py-16 xl:py-28 py-8  w-full flex items-center justify-center mx-auto bg-emerald-300 dark:bg-slate-900 rounded-[80px] overflow-hidden">
                 <div className=" h-[80%] mx-auto w-full md:w-[90%] xl:w-[72%] ">
                 <Skills />
                     </div>

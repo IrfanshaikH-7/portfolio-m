@@ -9,7 +9,7 @@ const LandingS = () => {
             animate={{ opacity: 1, transition: { duration: 0.5 } }}
         >
             <section className="flex px-2 flex-col gap-2 md:gap-4 w-full lg:w-1/2 py-2 ">
-                <div className=" text-4xl flex justify-center items-center text-white font-semibold py-4 px-2">
+                <div className=" text-4xl flex justify-center items-center text-black dark:text-white font-semibold py-4 px-2">
                     Quicklinks <span className="h-[2px] w-full bg-white ml-2 mt-2 px-2" />
                 </div>
                 
@@ -31,7 +31,7 @@ const LandingS = () => {
 
                 <Link href='/contact' className="px-1 md:px-3 flex flex-col justify-center items-center w-2/3 h-24 md:h-32 hover:w-full   bg-gradient-to-r from-indigo-400 to-sky-500 rounded-full hover:border-white border-2 border-blue-200 transition-all duration-300 relative overflow-hidden group">
                     <p className="text-sm md:text-lg font-medium text-slate-200">Get in touch</p>
-                    {/* <p className=" p-2 text-[150px] -left-8 mt-16  uppercase text-white font-bold absolute opacity-0 group-hover:opacity-40 transition-all duration-700">Contact</p> */}
+                    <p className=" p-2 text-[150px] -left-8 mt-16  uppercase text-white font-bold absolute opacity-0 group-hover:opacity-40 transition-all duration-700">Contact</p>
                 </Link>
             </section>
 

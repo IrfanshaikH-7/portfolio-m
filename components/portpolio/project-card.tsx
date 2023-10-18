@@ -26,7 +26,7 @@ const ProjectCard = ({ cardDetails }: Props) => {
                     // h-40 md:h-60  xl:h-68 
                     cardDetails.map((item) => (
                         <div key={item.id} className=" flex items-center  justify-center rounded-lg shadow-md w-full bg-slate-900 border border-slate-300  md:aspect-square relative">
-                            <div className=" bg-gray-900 rounded-lg h-full w-full px-2">
+                            <div className=" bg-slate-300 dark:bg-slate-800 rounded-lg h-full w-full px-2">
 
                                 <div className="relative h-full w-full space-y-1 md:space-y-3 py-2">
                                     <div className="aspect-video w-full relative cursor-pointer" onClick={()=> router.push(`/portfolio/${item.id}`)}>
@@ -49,7 +49,7 @@ const ProjectCard = ({ cardDetails }: Props) => {
                                     </div>
 
                                     <div >
-                                        <p className="px-4 text-xs xl:text-base text-slate-300 font-semibold text-center"><span className="font-semibold ">⪧{" "}</span>{item.note}</p>
+                                        <p className="px-4 text-xs xl:text-base text-slate-700 dark:text-slate-300 font-semibold text-center"><span className="font-semibold ">⪧{" "}</span>{item.note}</p>
                                     </div>
                                 </div>
                             </div>

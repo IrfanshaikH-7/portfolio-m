@@ -29,14 +29,14 @@ const Skills = () => {
                                 <div className="grid grid-cols-2 gap-2 aspect-square p-1 md:p-7  ">
                                     {
                                         languages.map((language) => (
-                                            <div key={language.lan} className=" relative text-2xl flex items-center justify-center rounded-md border border-white">
+                                            <div key={language.lan} className=" relative text-2xl flex items-center justify-center rounded-md border-2  dark:border border-white">
                                                 <Image
                                                     src={language.img}
                                                     alt="skill"
                                                     fill
                                                     className=" p-4 opacity-40 hover:opacity-100 object-contain transition-all duration-300"
                                                 />
-                                                <p className="z-10 font-semibold uppercase text-sm sm:text-base">{language.lan}</p>
+                                                <p className="z-10 font-semibold uppercase text-sm sm:text-base text-white">{language.lan}</p>
                                             </div>
                                         ))
                                     }
@@ -47,14 +47,14 @@ const Skills = () => {
                                 <div className="grid grid-cols-2 gap-2 aspect-square p-1 md:p-7  ">
                                     {
                                         frontend.map((language) => (
-                                            <div key={language.skill} className=" relative text-2xl flex items-center justify-center rounded-md border border-white">
+                                            <div key={language.skill} className=" relative text-2xl flex items-center justify-center rounded-md border-2  dark:border border-white">
                                                 <Image
                                                     src={language.img}
                                                     alt="skill"
                                                     fill
                                                     className=" p-4 opacity-40 hover:opacity-100 object-contain transition-all duration-300"
                                                 />
-                                                <p className="z-10 font-semibold uppercase text-sm sm:text-base">{language.skill}</p>
+                                                <p className="z-10 font-semibold uppercase text-sm sm:text-base text-white">{language.skill}</p>
                                             </div>
                                         ))
                                     }
@@ -65,14 +65,14 @@ const Skills = () => {
                                 <div className="grid grid-cols-2 gap-2 aspect-square p-1 md:p-7 ">
                                     {
                                         backend.map((skill) => (
-                                            <div key={skill.skill} className=" relative text-2xl flex items-center justify-center rounded-md border border-white">
+                                            <div key={skill.skill} className=" relative text-2xl flex items-center justify-center rounded-md border-2  dark:border border-white">
                                                 <Image
                                                     src={skill.img}
                                                     alt="skill"
                                                     fill
                                                     className=" p-4 opacity-40 hover:opacity-100 object-contain transition-all duration-300"
                                                 />
-                                                <p className="z-10 font-semibold uppercase text-sm sm:text-base">{skill.skill}</p>
+                                                <p className="z-10 font-semibold uppercase text-sm sm:text-base text-white">{skill.skill}</p>
                                             </div>
                                         ))
                                     }
@@ -83,9 +83,9 @@ const Skills = () => {
                                 <div className="grid grid-cols-2 gap-2 aspect-square p-1 md:p-7 ">
                                     {
                                         others.map((skill) => (
-                                            <div key={skill.skill} className=" relative text-2xl flex items-center justify-center rounded-md border border-white">
+                                            <div key={skill.skill} className=" relative text-2xl flex items-center justify-center rounded-md border-2  dark:border border-white">
                                                 <skill.icon className="h-full w-full absolute p-16 text-slate-600/40 hover:text-slate-600 transition-all duration-300" />
-                                                <p className="z-10 font-semibold uppercase text-sm sm:text-base">{skill.skill}</p>
+                                                <p className="z-10 font-semibold uppercase text-sm sm:text-base text-white">{skill.skill}</p>
                                             </div>
                                         ))
                                     }
@@ -110,7 +110,7 @@ const Skills = () => {
                                 {
                                 // hover:shadow-[0px_10px_20px_rgba(256,256,256)]
                                 techs.map((tech) => (
-                                    <div key={tech.tech} className=" relative aspect-square rounded-3xl bg-slate-400/50  hover:-translate-y-[2px] hover:shadow-[0px_22px_24px_0px_#FFFFFF24] transition-all duration-300">
+                                    <div key={tech.tech} className=" relative aspect-square rounded-3xl bg-white dark:bg-slate-400/50  hover:-translate-y-[2px] hover:shadow-[0px_22px_24px_0px_#FFFFFF24] transition-all duration-300">
                                            <Image 
                                            src={tech.tech}
                                            alt="skill"
