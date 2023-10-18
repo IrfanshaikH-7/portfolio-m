@@ -9,10 +9,12 @@ import LottieHero from '@/components/portpolio/lottiehero';
 import Image from 'next/image';
 import TestimonialDialog from '@/components/Hero/TestimonialDialog';
 import { db } from '@/lib/db';
+import TestimonialCurosel from '@/components/Hero/TestimonialCurosel';
 
-const Home: NextPage = async() => {
-  const testimonials = await db.testimonials.findMany({where: {anonymous: false}})
-  
+const Home: NextPage = async () => {
+  const testimonials = await db.testimonials.findMany({ where: { anonymous: false } })
+  const anonymousTestimonials = await db.testimonials.findMany({ where: { anonymous: true } })
+
   return (
     <>
       <section className=' h-full w-full overflow-x-hidden'>
@@ -96,44 +98,14 @@ const Home: NextPage = async() => {
         </div>
         <div className='h-20 bg-transparent w-full'></div>
 
-        <section className='h-screen w-full bg-slate-900 rounded-t-[80px] flex items-center justify-center relative'>
-          <div className='flex justify-center items-center flex-col gap-4 w-full px-4'>
-                <div className='bg-slate-800 flex justify-between items-center w-full py-2 px-24 rounded-3xl relative'>
-                  <h2 className='text-2xl'>Testimonials...</h2>
-                  
-                  <div className=' rounded-full border border-white'>
-                    
-                    <TestimonialDialog />
-                  </div>
-                  
+        <section className='h-screen w-full bg-slate-900 rounded-t-[80px] flex flex-col items-center justify-center relative'>
+          {/* <TestimonialCurosel testimonials={testimonials} anonymous={false}/> */}
+          
 
-                </div>
-              <div className='flex  max-w-xs md:max-w-2xl lg:max-w-5xl xl:max-w-6xl overflow-x-scroll gap-2  p-2 no-scrollbar'>
-
-                {
-                  testimonials.map((testimony) => (
-                    <div key={testimony.id} className=' flex flex-col justify-evenly items-center h-96 w-full aspect-square bg-gradient-to-t from-slate-800 to-slate-700 py-8 px-12 rounded-3xl'>
-
-                      <div className='flex justify-self-center self-start items-center gap-3 '>
-                        <Image
-                          className='border-4 aspect-square object-cover rounded-full'
-                          src={testimony.imgUrl} alt="profile"
-                          height={128}
-                          width={128}
-                        />
-                        <p className='font-semibold'>{testimony.name}</p>
-                      </div>
-                      <p className='text-slate-300'>
-                        <span className='text-white font-bold text-lg'>&ldquo;</span>{' '}
-                        {testimony.message}
-                        {' '}<span className='text-white font-bold text-lg'>&ldquo;</span>
-                      </p>
-
-                    </div>
-                  ))
-                }
-              </div>
+          <div>
+            <TestimonialCurosel testimonials={testimonials} anonymousTestimonials={anonymousTestimonials}/>
           </div>
+
         </section>
       </section>
 

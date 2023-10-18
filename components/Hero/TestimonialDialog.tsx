@@ -33,6 +33,8 @@ const TestimonialDialog = () => {
       <DialogTitle>Anonymous</DialogTitle>
       <DialogDescription>
         You can also add anonymous testimony.I appreciate a real testimony
+        <p className='font-semibold text-green-400 '>Note : Your name and email wont be shown</p>
+
       </DialogDescription>
     </DialogHeader>
     <div className='h-full w-full'>

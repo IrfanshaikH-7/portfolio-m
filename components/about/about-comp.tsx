@@ -23,7 +23,7 @@ const AboutComp = () => {
                 <div className="h-20 w-40 bg-white absolute top-6 -left-6 border-8 border-slate-950 rounded-[50px]">
 
                 </div>
-             <div className="flex flex-col xl:ml-16 px-2  gap-4 items-start justify-center w-full h-fit ">
+             <div className="flex flex-col xl:ml-16 px-2  gap-3 items-start justify-center w-full h-fit ">
                 <div className="flex justify-center items-center group ">
                     <div className="md:w-6 lg:w-12 h-[1px] bg-zinc-900  md:group-hover:w-10 lg:group-hover:w-20 transition-all duration-300" />
                     <Link href='#abt' className="px-2 text-xs text-black dark:text-white uppercase" onClick={handleScroll}>About</Link>
@@ -40,18 +40,18 @@ const AboutComp = () => {
                 </div>
             </div>   
             </div>
-            <div className="md:hidden flex absolute top-3 left-10 right-10 font-semibold min-w-fit  bg-gradient-to-t from-emerald-400 from-10% via-sky-500 via-60% to-indigo-500 py-2 rounded-[50px]">
-            <div className="flex  xl:ml-16 px-2  gap-4 items-start justify-center w-full h-fit ">
+            <div className="md:hidden flex absolute top-3 left-10 right-10 font-semibold min-w-fit  bg-transparent backdrop-blur-sm border border-violet-300 py-2 rounded-[50px]">
+            <div className="flex  xl:ml-16 px-2  gap-1 items-start justify-center w-full h-fit ">
                 <div className="flex justify-center items-center group ">
-                    <Link href='#abt' className="px-2 text-xs text-black dark:text-white uppercase hover:-translate-y-[2px] transition-all duration-300" onClick={handleScroll}>About</Link>
+                    <Link href='#abt' className="px-2 text-[10px] text-black dark:text-white uppercase hover:-translate-y-[2px] transition-all duration-300" onClick={handleScroll}>About</Link>
 
                 </div>
                 <div className="flex justify-center items-center group ">
-                    <Link href='#edu' className="px-2 text-xs text-black dark:text-white uppercase hover:-translate-y-[2px] transition-all duration-300" onClick={handleScroll}>Education</Link>
+                    <Link href='#edu' className="px-2 text-[10px] text-black dark:text-white uppercase hover:-translate-y-[2px] transition-all duration-300" onClick={handleScroll}>Education</Link>
 
                 </div>
                 <div className="flex justify-center items-center group ">
-                    <Link href='#exp' className="px-2 text-xs text-black dark:text-white uppercase hover:-translate-y-[2px] transition-all duration-300" onClick={handleScroll}>Experience</Link>
+                    <Link href='#exp' className="px-2 text-[10px] text-black dark:text-white uppercase hover:-translate-y-[2px] transition-all duration-300" onClick={handleScroll}>Experience</Link>
                 </div>
             </div>  
             </div>

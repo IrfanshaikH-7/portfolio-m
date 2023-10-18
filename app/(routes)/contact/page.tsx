@@ -7,23 +7,20 @@ import Link from "next/link";
 const Page = () => {
 
     return (
-        <div className=" flex justify-center items-center h-screen w-full">
-            <section className="flex md:flex-row flex-col h-[85%] lg:h-[90%] md:h-[80%] w-[90%] md:w-[85%] md:mt-12 mt-16  rounded-[50px]  bg-gradient-to-t from-emerald-400 from-10% via-sky-500 via-60% to-indigo-500 relative px-4 sm:px-0">
+        <div className=" flex justify-center items-center h-full md:h-screen w-full ">
+            <section className="flex md:flex-row flex-col h-full lg:h-[90%] md:h-[80%] w-[90%] md:w-[85%] md:mt-12 mt-16  rounded-[50px]  bg-gradient-to-t from-emerald-400 from-10% via-sky-500 via-60% to-indigo-500 relative px-4 sm:px-0">
 
-                <div className="hidden md:flex flex-col justify-center items-center flex-1">
-                    {/* <p className=" text-7xl font-semibold text-white">Hey there!!</p>
-                    <div className=" w-1/2 flex gap-4 justify-center px-6 py-2 rounded-[50px] border border-white">
-                        <Mail className="" />
-
-                    </div> */}
-                    <div className=" h-4/5 aspect-square self-start border-[12px] border-l-[20px] border-slate-950 rounded-[80px] rounded-l-none ">
+                <div className=" flex flex-col justify-center px-8 md:px-0 items-center md:flex-1">
+                    <div className=" xl:h-4/6 md:h-auto aspect-square self-start border-[12px] border-t-[20px] md:border-t-[12px] md:border-l-[20px]  border-slate-950 rounded-[80px] rounded-t-none md:rounded-tr-[80px]  md:rounded-l-none ">
                        <ContactAnimation /> 
                     </div>
-                    
                 </div>
-                <div className="flex-1 relative">
+                <div className="md:flex-1 relative">
                     <ContactForm />
                 </div>
+                {/* <div className="h-60 w-full bg-emerald-400">
+
+                </div> */}
             </section>
         </div>
     );

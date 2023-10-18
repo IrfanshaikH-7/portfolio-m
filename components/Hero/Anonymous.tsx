@@ -23,8 +23,6 @@ const Anonymous = () => {
     const TestimonySchema = z.object({
         name: z.string().min(3, { message: "name must be atleast 3 characters." }),
         email: z.string().email(),
-        company: z.string().min(2),
-        job_title: z.string().min(2),
         message: z.string().min(8),
     })
 
@@ -33,8 +31,6 @@ const Anonymous = () => {
         defaultValues: {
             name: '',
             email: '',
-            company: 'IT',
-            job_title: '',
             message: '',
         }
     })
@@ -42,8 +38,6 @@ const Anonymous = () => {
         const testimony = await axios.post('/api/testimonial', {
             name: values.name,
             email: values.email,
-            company: values.company,
-            job_title: values.job_title,
             message: values.message,
             imgUrl: image,
             anonymous: true
@@ -91,35 +85,7 @@ const Anonymous = () => {
                                 </FormItem>
                             )}
                         />
-                        <div className='flex justify-between'>
-                            <FormField
-                                control={form.control}
-                                name="company"
-                                render={({ field }) => (
-                                    <FormItem className='relative'>
-                                        <FormLabel className='absolute -top-[5px] ml-2 bg-white text-xs text-black px-2 py-px z-10 rounded-3xl'>Company</FormLabel>
-                                        <FormControl>
-                                            <Input placeholder="company" {...field} className='w-full placeholder:text-white/70 bg-transparent backdrop-blur-sm border-2 border-white text-white rounded-3xl ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 ' />
-                                        </FormControl>
-                                        <FormMessage />
-                                    </FormItem>
-                                )}
-                            />
-
-                            <FormField
-                                control={form.control}
-                                name="job_title"
-                                render={({ field }) => (
-                                    <FormItem className='relative'>
-                                        <FormLabel className='absolute -top-[5px] ml-2 bg-white text-xs text-black px-2 py-px z-10 rounded-3xl'>Job title</FormLabel>
-                                        <FormControl>
-                                            <Input placeholder="job title" {...field} className='w-full placeholder:text-white/70 bg-transparent backdrop-blur-sm border-2 border-white text-white rounded-3xl ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 ' />
-                                        </FormControl>
-                                        <FormMessage />
-                                    </FormItem>
-                                )}
-                            />
-                        </div>
+                        
                         <FormField
                             control={form.control}
                             name="message"
@@ -137,7 +103,6 @@ const Anonymous = () => {
                             <Button type="reset" onClick={() => form.reset()} className='rounded-3xl w-full font-semibold hover:-translate-y-[2px] hover:shadow-md transition-all duration-300'>Cancel</Button>
                             <Button type="submit" className='rounded-3xl w-full font-semibold hover:-translate-y-[2px] hover:shadow-md transition-all duration-300'>Submit</Button>
                         </div>
-
                     </form>
                 </Form>
             </div>

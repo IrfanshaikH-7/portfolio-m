@@ -6,17 +6,21 @@ export async function POST(request: NextRequest) {
     try {
         connectToDB();
         const body = await request.json()
-        const testimony = await db.testimonials.create({
+        const { name, email, company, job_title, message, imgUrl , anonymous } = body
+       
+            const testimony = await db.testimonials.create({
             data: {
-                name: body.name,
-                email: body.email,
-                company: body.company,
-                job_title: body.job_title,
-                message: body.message,
-                imgUrl:body.imgUrl,
-                anonymous: body.anonymous
+                name: name,
+                email: email,
+                company: company || '',
+                job_title: job_title || '',
+                message: message,
+                imgUrl: imgUrl,
+                anonymous: anonymous
             }
         })
+        
+        
         if(testimony){
             console.log(testimony)
         }
