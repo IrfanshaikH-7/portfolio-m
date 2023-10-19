@@ -63,7 +63,7 @@ const TestimonialCurosel = ({ testimonials, anonymousTestimonials }: Props) => {
                   <div className='flex justify-self-center self-start items-center gap-3'>
                     <Image
                       className='border-4 aspect-square object-cover border-slate-600 dark:bg-slate-200  rounded-full'
-                      src={testimony.imgUrl} alt="profile"
+                      src={testimony.imgUrl !== '' ? testimony.imgUrl : '/assets/maleUser.jpeg'} alt="profile"
                       height={128}
                       width={128}
                     />

@@ -46,8 +46,8 @@ const ContactForm = () => {
 
     return (
         <div className='flex flex-col h-full w-full gap-10 md:gap-24 justify-end items-center px-4 sm:px-8 lg:px-16 xl:px-28 xl py-28 '>
-            <div className='flex justify-center items-center h-36 md:h-48 w-full md:absolute md:left-6 lg:left-12 top-24 bg-white rounded-full border-8 border-slate-950'>
-                <p className='text-3xl md:text-5xl xl:text-7xl text-black font-semibold'>Get In Touch</p>
+            <div className='flex justify-center items-center h-36 md:h-48 w-full md:absolute md:left-6 lg:left-12 top-24 bg-transparent dark:bg-white rounded-full border-8 border-white dark:border-slate-950'>
+                <p className='text-3xl md:text-5xl xl:text-7xl text-white dark:text-black font-semibold'>Get In Touch</p>
             </div>
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-4 w-full'>
@@ -58,7 +58,7 @@ const ContactForm = () => {
                             <FormItem className='relative'>
                                 <FormLabel className='absolute -top-[9px] ml-2 bg-white text-xs text-black px-2 py-[2px] z-10 rounded-3xl'>Name</FormLabel>
                                 <FormControl>
-                                    <Input placeholder="Enter your name" {...field} name='user_name' className='w-full placeholder:text-white/70 bg-transparent backdrop-blur-sm border-2 border-white text-white rounded-3xl ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 ' />
+                                    <Input placeholder="Enter your name" {...field} name='user_name' className='w-full placeholder:text-white/70 bg-transparent backdrop-blur-sm border-2 border-white  text-white rounded-3xl ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 ' />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
@@ -91,8 +91,8 @@ const ContactForm = () => {
                         )}
                     />
                     <div className='flex gap-4'>
-                       <Button type="reset" onClick={()=> form.reset()} className='rounded-3xl w-full font-semibold hover:-translate-y-[2px] hover:shadow-md transition-all duration-300'>Cancel</Button>
-                    <Button type="submit" className='rounded-3xl w-full font-semibold hover:-translate-y-[2px] hover:shadow-md transition-all duration-300'>Submit</Button> 
+                       <Button type="reset" onClick={()=> form.reset()} className='rounded-3xl w-full font-semibold hover:-translate-y-[2px] hover:shadow-md transition-all duration-300 bg-white text-black/80'>Cancel</Button>
+                    <Button type="submit" className='rounded-3xl w-full font-semibold hover:-translate-y-[2px] hover:shadow-md transition-all duration-300 bg-white text-black/80'>Submit</Button> 
                     </div>
                     
                 </form>

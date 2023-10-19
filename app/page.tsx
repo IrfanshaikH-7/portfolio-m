@@ -10,6 +10,7 @@ import Image from 'next/image';
 import TestimonialDialog from '@/components/Hero/TestimonialDialog';
 import { db } from '@/lib/db';
 import TestimonialCurosel from '@/components/Hero/TestimonialCurosel';
+import Footer from '@/components/Footer';
 
 const Home: NextPage = async () => {
   const testimonials = await db.testimonials.findMany({ where: { anonymous: false } })
@@ -105,6 +106,10 @@ const Home: NextPage = async () => {
             <TestimonialCurosel testimonials={testimonials} anonymousTestimonials={anonymousTestimonials}/>
         
         </section>
+        <div className='h-auto w-full bg-white dark:bg-slate-950 py-6'>
+                <div className='h-px w-[80%] bg-black mx-auto'></div>
+                       <Footer />       
+              </div>
       </section>
 
       <div className='flex flex-col fixed top-0 h-screen w-full  -z-50 '>
@@ -118,6 +123,7 @@ const Home: NextPage = async () => {
           <LottieHero />
         </div>
       </div>
+      
     </>
   );
 };

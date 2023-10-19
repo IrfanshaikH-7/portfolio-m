@@ -76,6 +76,7 @@
 @layer base {
   * {
     @apply border-border;
+    scroll-behavior: smooth
   }
   body {
     @apply bg-background text-foreground;
@@ -95,10 +96,7 @@
   z-index: 999999;
   mix-blend-mode:normal;
   padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff; /*rgb(248, 243, 243)*/
+  background-color: transparent; /*rgb(248, 243, 243)*/
   color: black;
 
 }

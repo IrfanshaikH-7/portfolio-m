@@ -1,18 +1,20 @@
 "use client"
 import Link from "next/link";
 import { motion } from 'framer-motion'
+import { type } from "os";
 
 const LandingS = () => {
     return (
-        <motion.div className="px-8 h-full w-full flex flex-col items-end justify-end relative "
-            initial={{ opacity: 0, }}
-            animate={{ opacity: 1, transition: { duration: 0.5 } }}
-        >
-            <section className="flex px-2 flex-col gap-2 md:gap-4 w-full lg:w-1/2 py-2 ">
+        <div className="px-8 h-full w-full flex flex-col items-end justify-end relative ">
+            <motion.section className="flex px-2 flex-col gap-2 md:gap-4 w-full lg:w-1/2 py-2 "
+            initial={{ translateY: "-40", opacity:0 }}
+            whileInView={{ translateY: "-40",opacity:1 , transition:{type:'tween', duration:0.4, staggerChildren:1}  }}
+            
+            >
                 <div className=" text-4xl flex justify-center items-center text-black dark:text-white font-semibold py-4 px-2">
                     Quicklinks <span className="h-[2px] w-full bg-white ml-2 mt-2 px-2" />
                 </div>
-                
+
                 <Link href='/portfolio' className="px-1 md:px-3 flex flex-col justify-center items-center w-full h-24 md:h-36 hover:scale-110  bg-gradient-to-r from-sky-400 to-emerald-500 rounded-full hover:border-white border-2 border-blue-200 transition-all duration-300 relative overflow-hidden group">
                     <p className="text-sm md:text-lg font-medium text-slate-200">projects skills and achievement</p>
                     <p className=" p-2 text-[150px] -right-12 mt-12  uppercase text-white font-bold absolute opacity-0 group-hover:opacity-40 transition-all duration-700">Portfolio</p>
@@ -33,9 +35,9 @@ const LandingS = () => {
                     <p className="text-sm md:text-lg font-medium text-slate-200">Get in touch</p>
                     <p className=" p-2 text-[150px] -left-8 mt-16  uppercase text-white font-bold absolute opacity-0 group-hover:opacity-40 transition-all duration-700">Contact</p>
                 </Link>
-            </section>
+            </motion.section>
 
-        </motion.div>
+        </div>
 
     );
 }

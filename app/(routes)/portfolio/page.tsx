@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Skills from "@/components/portpolio/Skills";
 import { Animata, Discord, LMS, NewLife, Port, Saas, Thread } from "@/components/portpolio/feature-card";
 import { FeatureTitle } from "@/components/portpolio/feature-title";
@@ -133,10 +134,12 @@ const Portfolio = () => {
                                         <h4 className="text-xl font-semibold underline">Quote of the day!!</h4>
                                         <p className="text-2xl md:text-6xl font-semibold text-center">&ldquo;Don&lsquo;t worry if it doesn&lsquo;t work right. If everything did, you&lsquo;d be out of a job. hehe&rdquo;</p>
                 </div>
-                <footer className="h-64 w-full bg-emerald-500">
-
-                </footer>
+                
             </section>
+            <div className='h-auto w-full bg-white dark:bg-slate-950 py-6'>
+        <div className='h-px w-[80%] bg-black mx-auto'></div>
+               <Footer />       
+      </div>
         </>
     );
 }

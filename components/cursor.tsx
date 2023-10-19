@@ -58,8 +58,8 @@ const Cursor = () => {
     
 
     return (
-        <div id='custom-cursor' className='custom-cursor hidden sm:block'>
-            <span className='cursor-text'><Link height={8} width={8}/></span>
+        <div id='custom-cursor' className='custom-cursor hidden sm:flex border-slate-00 border-2 dark:border-white items-center justify-center  '>
+            <span className='cursor-text flex justify-center items-center'><Link height={8} width={8}/></span>
         </div>
     )
 }

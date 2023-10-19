@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-      <html lang="en" className='no-scrollbar' suppressHydrationWarning>
+      <html lang="en" className='no-scrollbar scroll-pt-72 scroll-smooth' suppressHydrationWarning>
 
         <body className={`${tilt_neon.className} relative`}>
 
@@ -36,7 +36,10 @@ export default function RootLayout({
             
             <div className='  h-full lg:h-screen w-full no-scrollbar'>
               {children}
+              
+
             </div>
+            
           </ThemeProvider>
          
         </body>
