@@ -18,7 +18,7 @@ const Home: NextPage = async () => {
 
   return (
     <>
-      <section className=' h-full w-full overflow-x-hidden'>
+      <section className=' h-full w-full overflow-x-hidden no-scrollbar'>
         <main className='h-full w-full flex justify-center'>
           <div className='w-80 lg:w-1/3 flex mx-auto z-50 fixed bg-transparent  h-auto transition-opacity'>
             <Navbar />

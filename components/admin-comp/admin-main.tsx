@@ -14,61 +14,37 @@ import Link from "next/link";
 import FormZone from "../upload-things/upload-zone";
 import { cn } from "@/lib/utils";
 import AchievementForm from "./achievement-form";
+import Navbar from "../navbar";
 
 
 const AdminDB = () => {
     const [state, setState ] = useState('')
     return ( 
-        <section className="flex  justify-center items-center w-11/12 h-[90%] ">
-          <div className="w-1/4 h-full rounded-sm bg-zinc-800/70">
-            <div className=" m-2 flex flex-col justify-center items-center h-auto w-auto space-y-3 rounded-md bg-zinc-800/70 p-5">
+      <>
+      <div className='w-80 lg:w-1/3 flex mx-auto z-50 fixed bg-transparent h-auto transition-opacity'>
+            <Navbar />
+          </div>
+        <section className="flex gap-4 py-24 flex-col md:flex-row  justify-center items-center w-full  h-full md:h-screen px-4">
+          
+          <div className="w-full md:w-1/4   h-full rounded-3xl bg-slate-400/70 dark:bg-zinc-800/70">
+            <div className=" m-2  md:mt-0  flex flex-col justify-center items-center h-auto w-auto space-y-3 rounded-3xl bg-slate-300 dark:bg-zinc-800/70 p-5">
               <UserButton afterSignOutUrl="/portfolio" />
-
-              <DropdownMenu >
-                <DropdownMenuTrigger className="flex uppercase items-center">menu<Text className=" h-5 w-5  text-white" /></DropdownMenuTrigger>
-                <DropdownMenuContent className="flex  px-8 backdrop-blur-sm border-slate-600 bg-transparent">
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem className="group hover:bg-blue-300/80 hover:text-slate-900 transition-all duration-300">
-                    <Link href='/portfolio' id="linnk" className="linnk uppercase text-xs font-semibold text-slate-300 group-hover:text-slate-900 transition-all duration-300">
-                      Portfolio
-                    </Link>
-                  </DropdownMenuItem>
-
-                  <DropdownMenuItem className="group hover:bg-amber-200/80 hover:text-slate-900 transition-all duration-300">
-                    <Link href='/about' id="linnk1" className="linnk uppercase text-xs font-semibold text-slate-300 group-hover:text-slate-900 transition-all duration-300">
-                      About
-                    </Link>
-                  </DropdownMenuItem>
-
-                  <DropdownMenuItem className="group hover:bg-purple-300/80 hover:text-slate-900 transition-all duration-300">
-                    <Link href='/contact' id="linnk2" className="linnk uppercase text-xs font-semibold text-slate-300 group-hover:text-slate-900 transition-all duration-300">
-                      Contact
-                    </Link>
-                  </DropdownMenuItem>
-
-                  <DropdownMenuItem className="group hover:bg-pink-300/80 hover:text-slate-900 transition-all duration-300">
-                    <Link href='/blog' id="linnk3" className="linnk uppercase text-xs font-semibold text-slate-300 group-hover:text-slate-900 transition-all duration-300">
-                      Blog
-                    </Link>
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
             </div>
-            <div className="m-2 flex flex-col justify-center items-center h-auto w-auto space-y-3 rounded-md bg-zinc-800/70 p-5">
-                <p className={cn("text-sm uppercase cursor-pointer h-full w-full  py-2 rounded-sm text-center ", state == 'project'? 'bg-gray-400': '')} onClick={() => setState('project')} >Projects</p>
-                <p className={cn("text-sm uppercase cursor-pointer h-full w-full  py-2 rounded-sm text-center ", state == 'achievement'? 'bg-gray-400': '')} onClick={() => setState('achievement')} >achievement</p>
+            <div className="m-2 flex flex-col justify-center items-center h-auto w-auto space-y-3 rounded-3xl bg-slate-300 dark:bg-zinc-800/70 p-5">
+                <p className={cn("text-sm uppercase cursor-pointer h-full w-full  py-2 rounded-3xl text-center ", state == 'project'? 'bg-slate-400/70': '')} onClick={() => setState('project')} >Projects</p>
+                <p className={cn("text-sm uppercase cursor-pointer h-full w-full  py-2 rounded-3xl text-center ", state == 'achievement'? 'bg-slate-400/70': '')} onClick={() => setState('achievement')} >achievement</p>
 
 
             </div>
           </div>
 
           { state === "project" &&
-            <div className="flex justify-center items-center ml-2 w-full px-24 h-full bg-zinc-800/70 rounded-sm">
+            <div className="flex justify-center items-center w-full md:w-3/4  h-full  rounded-sm bg-white/30">
             <FormZone />
           </div>
           }
           { state === "achievement" &&
-            <div className="flex justify-center items-center ml-2 w-3/4 px-24 h-full bg-zinc-800/70 rounded-sm">
+            <div className="flex justify-center items-center  w-full md:w-3/4 md:p-24  h-full  rounded-sm">
             <AchievementForm />
           </div>
           }
@@ -77,6 +53,7 @@ const AdminDB = () => {
          
           
         </section>
+        </>
      );
 }
  

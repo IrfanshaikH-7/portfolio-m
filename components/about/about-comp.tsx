@@ -1,6 +1,9 @@
 "use client"
 import Link from "next/link";
 import { useRef, useState } from "react";
+import { motion } from 'framer-motion'
+import Lottie from "lottie-react";
+import WaveAnimation from "./WaveAnimation";
 
 const AboutComp = () => {
     const [state, setState] = useState('')
@@ -18,10 +21,31 @@ const AboutComp = () => {
         });
         return false
     };
+
+    const container = {
+        hidden: { opacity: 0 },
+        show: {
+          opacity: 1,
+          transition: {
+            staggerChildren: 0.2,
+            duration: 0.2,
+            type: 'tween'
+          }
+        }
+      }
+      const item = {
+        hidden: { opacity: 0 },
+        show: { opacity: 1 }
+      }
     return (
         <section className="flex md:flex-row flex-col h-[85%] lg:h-[90%] md:h-[80%] w-[90%] md:w-[85%] md:mt-12 mt-16  rounded-[50px]  bg-gradient-to-t from-emerald-400 from-10% via-sky-500 via-60% to-indigo-500 relative">
             <div className="hidden md:flex w-2/6 items-center justify-center bg-gradient-to-t from-emerald-400 from-10% via-sky-500 via-60% to-indigo-500 relative rounded-[50px] ">
-                <div className="h-20 w-40 bg-white absolute top-6 -left-6 border-8 border-slate-950 rounded-[50px]"></div>
+                <div className=" h-20 w-40 bg-slate-100 dark:bg-white absolute top-6 -left-6 border-8 border-white dark:border-slate-950 rounded-[50px] overflow-hidden">
+                   
+                   <div className="relative h-full w-full flex justify-center items-center">
+                    <WaveAnimation />
+                    </div> 
+                </div>
              <div className="flex flex-col xl:ml-16 px-2  gap-3 items-start justify-center w-full h-fit ">
                 <div className="flex justify-center items-center group ">
                     <div className="md:w-6 lg:w-12 h-[1px] bg-zinc-900  md:group-hover:w-10 lg:group-hover:w-20 transition-all duration-300" />
@@ -56,10 +80,16 @@ const AboutComp = () => {
             </div>
             
             <div className="h-full w-full px-2 pt-2 pb-1 md:py-2 md:px-4 rounded-md ">
-                <div className="h-full w-full  overflow-y-auto px-4 lg:px-10 xl:px-32 bg-white dark:bg-slate-900 rounded-[50px] no-scrollbar">
-                    <div id="abt" className="flex flex-col justify-center items-start h-full w-full">
+                <div className="h-full w-full  overflow-y-auto px-4 lg:px-10 xl:px-32 bg-white dark:bg-slate-900 rounded-[50px] no-scrollbar"
+                
+                >
+                    <div id="abt" className="flex flex-col justify-center items-start h-full w-full"
+                    >
                         <h3 className="text-3xl lg:text-4xl font-semibold font-syne justify-self-start">Irfan shaikH</h3>
-                        <div className=" mt-4 text-slate-600 dark:text-white/90">
+                        <motion.div className=" mt-4 text-slate-600 dark:text-white/90"
+                        initial={{opacity:0}}
+                        animate={{ opacity: 1, transition:{duration:0.5,}}}
+                        >
                             <p className=" indent-8  text-xs lg:text-sm font-syne tracking-wider mt-6">
                                 The world of art, softwares &rsquo;n&rsquo; technology always facinated me and I&rsquo;ve never been afraid to just jump in and give it a go. whethers it&rsquo;s development, openSource contributions or AI/ML.
                             </p>
@@ -69,7 +99,7 @@ const AboutComp = () => {
                             <p className="text-xs lg:text-sm font-syne tracking-wider mt-6">
                                 What excites me most about being a Web Developer is being able to design and create softwares that have a purpose and solve real problems. It goes beyond developing landing pages and websites and involves having a passion for designing experiences and solutions that help people, whether it&rsquo;s helping them make better audience, market themselves online, or buy something online. Leaning into customer insight and understanding their needs, finding the right problems to solve, delivering solutions as quickly as possible, learning from those and then iterating and improving that value over time is the key to great developer.
                             </p>
-                        </div>
+                        </motion.div>
                     </div>
 
                     <div id="edu" className="flex flex-col justify-center items-start h-full w-full">

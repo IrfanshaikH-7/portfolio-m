@@ -1,8 +1,10 @@
 import Footer from "@/components/Footer";
+import Quote from "@/components/portpolio/Quote";
 import Skills from "@/components/portpolio/Skills";
 import { Animata, Discord, LMS, NewLife, Port, Saas, Thread } from "@/components/portpolio/feature-card";
 import { FeatureTitle } from "@/components/portpolio/feature-title";
 import MoreProjects from "@/components/portpolio/more-project";
+import PageWrapper from "@/components/providers/PageWrapper";
 import SvgOne from "@/components/svg1";
 import { prj } from "@/public/data/projects-detail";
 
@@ -49,6 +51,7 @@ const Portfolio = () => {
 
     return (
         <>
+        <PageWrapper classname="">
             <section className="relative " >
             <SvgOne />
                 <main id="feat" className=" snap-mandatory lg:h-screen h-screen w-full flex justify-center items-center relative ">
@@ -130,16 +133,14 @@ const Portfolio = () => {
                 <Skills />
                     </div>
                     </section>
-                <div className="w-[85%] h-[85%] mx-auto flex flex-col items-center justify-center py-24 space-y-8">
-                                        <h4 className="text-xl font-semibold underline">Quote of the day!!</h4>
-                                        <p className="text-2xl md:text-6xl font-semibold text-center">&ldquo;Don&lsquo;t worry if it doesn&lsquo;t work right. If everything did, you&lsquo;d be out of a job. hehe&rdquo;</p>
-                </div>
+                <Quote />
                 
             </section>
             <div className='h-auto w-full bg-white dark:bg-slate-950 py-6'>
         <div className='h-px w-[80%] bg-black mx-auto'></div>
                <Footer />       
       </div>
+      </PageWrapper>
         </>
     );
 }

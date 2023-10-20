@@ -30,6 +30,7 @@ const FeatureCard = ({ children, gradient, id }: FeatureCardProps) => {
             gradient,
             isInViewF === id ? 'opacity-100' : 'opacity-0'
             )}
+            
         >
             {children}
         </div>
@@ -47,7 +48,9 @@ export const Discord = ({ id, title, imgUrl, note, tags, githublink, livelink, d
             livelink={livelink}
             discription={discription}
         >
-            <div className="h-full w-full flex items-center justify-center  text-2xl font-semibold text-black case !z-30 ">
+            <div className="h-full w-full flex items-center justify-center  text-2xl font-semibold text-black case !z-30 "
+            
+            >
             <div className="flex flex-col items-center justify-center p-2 gap-2 absolute top-1/4 -right-3 sm:-right-7 h-20 sm:h-28 w-8 sm:w-14 bg-white z-50 rounded-[50px]">
                     <Link href={githublink} className="h-4 sm:h-8 w-4 sm:w-8 flex items-center justify-center"><GithubIcon className="fill-black text-black"/></Link>
                     <Link href={livelink} className="h-4 sm:h-8 w-4 sm:w-8 flex items-center justify-center"><ListVideo className="text-black"/></Link>

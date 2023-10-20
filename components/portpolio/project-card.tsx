@@ -2,6 +2,7 @@
 import { Project } from "@prisma/client";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { motion } from 'framer-motion'
 
 type Props = {
     cardDetails: Project[]
@@ -17,7 +18,11 @@ const ProjectCard = ({ cardDetails }: Props) => {
     }
     return (
         <>
-            <section className="grid sm:grid-cols-2 h-full gap-3 py-8 px-4">
+            <motion.section className="grid sm:grid-cols-2 h-full gap-3 py-8 px-4"
+                initial={{ opacity: 0, y: 100}}
+                whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.3, type: 'tween', delayChildren:2, staggerChildren:3 }  }}
+                viewport={{ once: true }}
+            >
 
 
 
@@ -25,11 +30,15 @@ const ProjectCard = ({ cardDetails }: Props) => {
                 {
                     // h-40 md:h-60  xl:h-68 
                     cardDetails.map((item) => (
-                        <div key={item.id} className=" flex items-center  justify-center rounded-lg shadow-md w-full bg-slate-900 border border-slate-300  md:aspect-square relative">
+                        <motion.div key={item.id} className=" flex items-center  justify-center rounded-lg shadow-md w-full bg-slate-900 border border-slate-300  md:aspect-square relative"
+                        initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1, transition: { duration: 0.3, delay: 0.3, type: 'tween', delayChildren:1, staggerChildren:2 } }}
+                
+                        >
                             <div className=" bg-slate-300 dark:bg-slate-800 rounded-lg h-full w-full px-2">
 
                                 <div className="relative h-full w-full space-y-1 md:space-y-3 py-2">
-                                    <div className="aspect-video w-full relative cursor-pointer" onClick={()=> router.push(`/portfolio/${item.id}`)}>
+                                    <div className="aspect-video w-full relative cursor-pointer" onClick={() => router.push(`/portfolio/${item.id}`)}>
                                         <Image
                                             src={item.imgUrl[0]}
                                             alt="projectImg"
@@ -38,7 +47,7 @@ const ProjectCard = ({ cardDetails }: Props) => {
                                         />
                                         <div className="h-12 w-40 bg-white absolute rounded-xl bottom-1 right-1" />
                                     </div>
-                                    
+
                                     <div className="flex gap-2 sm:gap-1 xl:gap-1 bg-white rounded-3xl px-2 py-1 sm:py-[2px] xl:py-1 ">
                                         {
                                             item.tags.map((tag) => (
@@ -53,10 +62,10 @@ const ProjectCard = ({ cardDetails }: Props) => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     ))
                 }
-            </section>
+            </motion.section>
         </>
 
     );

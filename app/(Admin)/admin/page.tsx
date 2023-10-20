@@ -38,7 +38,7 @@ const Page = async () => {
   if (admin1) {
     
     return (
-      <main className="flex  justify-center items-center h-full w-full">
+      <main className="flex justify-center h-full w-full">
         <AdminDB />
       </main>
     )

@@ -64,13 +64,13 @@ const AchievementForm = () => {
     }
     return (
         <Form {...form}>
-            <form onSubmit={form.handleSubmit(ocnSubmit)} className="space-y-4">
+            <form onSubmit={form.handleSubmit(ocnSubmit)} className="space-y-4 px-4">
 
-                <div className="h-64 w-96 relative mb-6 rounded-md self-center">
+                <div className="relative mb-6 rounded-md self-center">
                     {images ? (
                         <div >
                             <UploadDropzone
-                                className="h-64 w-full mb-6 p-8 border border-zinc-500"
+                                className="h-64 w-64 mx-auto mb-6 border  border-zinc-500"
                                 endpoint="imageUploader"
                                 onClientUploadComplete={(res) => {
                                     // Do something with the response
@@ -112,12 +112,12 @@ const AchievementForm = () => {
                     name="title"
                     render={({ field }) => (
                         <FormItem className="relative flex-1">
-                            <FormLabel className="absolute -top-1.5 ml-3 px-3 bg-[#060608] rounded-md shadow-md text-[11px]  uppercase font-syne font-semibold ">
+                            <FormLabel className="absolute -top-1.5 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase font-syne font-semibold ">
                                 Title
                             </FormLabel>
                             <FormControl>
                                 <Input placeholder="Enter title" {...field}
-                                    className='bg-zinc-900 border border-white text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0'
+                                    className='bg-slate-300 dark:bg-slate-950 border border-black dark:border-white text-slate-700 dark:text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 rounded-3xl'
                                 />
                             </FormControl>
                             <FormMessage />
@@ -130,7 +130,7 @@ const AchievementForm = () => {
                         <Button
                             variant={"outline"}
                             className={cn(
-                                "w-[280px] justify-start text-left font-normal",
+                                "w-[280px] justify-start text-left font-normal rounded-3xl",
                                 !date && "text-muted-foreground"
                             )}
                         >
@@ -148,7 +148,7 @@ const AchievementForm = () => {
                     </PopoverContent>
                 </Popover>
 
-                <Button className="w-full bg-gradient-to-t from-orange-400 opacity-80  to-orange-500 hover:opacity-100 hover:-translate-y-1 transition-all" type="submit">Submit</Button>
+                <Button className="w-full bg-gradient-to-t from-emerald-400 opacity-80  to-emerald-400/90  hover:opacity-100 hover:-translate-y-1 transition-all rounded-3xl" type="submit">Submit</Button>
 
             </form>
         </Form>

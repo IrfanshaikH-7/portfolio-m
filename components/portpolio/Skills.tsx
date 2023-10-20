@@ -1,10 +1,16 @@
+"use client"
 import { backend, frontend, languages, others, techs } from "@/public/data/skills";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Image from "next/image";
+import { motion } from 'framer-motion'
+
 const Skills = () => {
 
     return (
-        <main className="h-full w-full  flex flex-col lg:flex-row justify-between items-center p-4 gap-2">
+        <motion.main className="h-full w-full  flex flex-col lg:flex-row justify-between items-center p-4 gap-2"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.3, type: 'tween' } }}
+        >
 
             <div className=" md:w-full lg:w-20 lg:h-full ">
                 <div className="flex lg:flex-col justify-center items-center h-full ">
@@ -121,7 +127,7 @@ const Skills = () => {
                     </div>
                 </div>
             </div>
-        </main>
+        </motion.main>
     );
 }
 

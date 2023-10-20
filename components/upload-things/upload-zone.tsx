@@ -19,9 +19,8 @@ import { toast } from "../ui/use-toast"
 import { Input } from "../ui/input"
 import { Textarea } from "../ui/textarea"
 import { UploadDropzone } from "@/utils/uploadthing"
-import { UploadButton } from "@uploadthing/react"
 import Image from "next/image"
-import { POST } from "@/app/api/projects/route"
+// import { POST } from "@/app/api/projects/route"
 import { CreateProject } from '@/lib/server-actions'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select'
 
@@ -47,7 +46,7 @@ const FormZone = () => {
     resolver: zodResolver(FormSchema),
     defaultValues: {
       tag: [],
-      category: "",
+      category: "others",
       pointers: '',
       title: '',
       githubLink: '',
@@ -86,12 +85,12 @@ const FormZone = () => {
   }
 
   return (
-    <div className=" flex flex-col justify-center h-full w-full max-w-3xl  ">
+    <div className=" flex flex-col md:flex-row md:gap-8 md:items-center justify-center h-full w-full max-w-3xl px-4 md:px-12">
       <div className="h-64 w-96 relative mb-6 rounded-md self-center">
         {images ? (
-          <div className="">
+          <div className="flex justify-center">
             <UploadDropzone
-              className="h-64 w-full mb-6 p-8 border border-zinc-500"
+              className="h-full w-64 md:w-56 lg:w-72 mb-6 p-8 border border-zinc-500"
               endpoint="imageUploader"
               onClientUploadComplete={(res) => {
                 // Do something with the response
@@ -129,7 +128,7 @@ const FormZone = () => {
       </div>
 
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 w-full">
 
 
 
@@ -139,12 +138,12 @@ const FormZone = () => {
               name="title"
               render={({ field }) => (
                 <FormItem className="relative flex-1">
-                  <FormLabel className="absolute -top-1.5 ml-3 px-3 bg-[#060608] rounded-md shadow-md text-[11px]  uppercase font-syne font-semibold ">
+                  <FormLabel className="absolute -top-1.5 ml-3 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase font-syne font-semibold ">
                     Title
                   </FormLabel>
                   <FormControl>
                     <Input placeholder="Enter title" {...field}
-                      className='bg-zinc-900 border border-white text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0'
+                      className='bg-slate-300 dark:bg-slate-950 border border-black dark:border-white text-slate-700 dark:text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 rounded-3xl'
                     />
                   </FormControl>
                   <FormMessage />
@@ -156,14 +155,14 @@ const FormZone = () => {
               name="category"
               render={({ field }) => (
                 <FormItem className="relative flex-1">
-                  <FormLabel className="absolute  -top-1 ml-3 px-3 bg-[#060608] rounded-md shadow-md text-[11px]  uppercase font-syne font-semibold ">
+                  <FormLabel className="absolute  -top-1 ml-3 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase font-syne font-semibold ">
                     category
                   </FormLabel>
                   <FormControl>
                     <div className=''>
                       <Select  onValueChange={field.onChange} defaultValue={field.value}>
-                        <SelectTrigger className="bg-zinc-900 border border-white">
-                          <SelectValue placeholder="Theme" />
+                        <SelectTrigger className="bg-slate-300 dark:bg-slate-950 border border-black dark:border-white text-slate-700 dark:text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 rounded-3xl">
+                          <SelectValue placeholder="others" />
                         </SelectTrigger>
                         <SelectContent>
                           <SelectItem value="fullstack" >fullstack</SelectItem>
@@ -187,12 +186,12 @@ const FormZone = () => {
             name="note"
             render={({ field }) => (
               <FormItem className="relative flex-1">
-                <FormLabel className="absolute  -top-1 ml-3 px-3 bg-[#060608] rounded-md shadow-md text-[11px]  uppercase font-syne font-semibold ">
+                <FormLabel className="absolute  -top-1 ml-3 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase font-syne font-semibold ">
                   Project note
                 </FormLabel>
                 <FormControl>
                   <Input placeholder="Add a short note" {...field}
-                    className='bg-zinc-900 border border-white text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0'
+                    className='bg-slate-300 dark:bg-slate-950 border border-black dark:border-white text-slate-700 dark:text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 rounded-3xl'
                   />
                 </FormControl>
                 <FormMessage />
@@ -205,14 +204,14 @@ const FormZone = () => {
             name="tag"
             render={({ field }) => (
               <FormItem className="relative w-full">
-                <FormLabel className="absolute -top-1.5 ml-3 px-3 bg-[#060608] rounded-md shadow-md text-[11px]  uppercase font-syne font-semibold ">Techs</FormLabel>
+                <FormLabel className="absolute -top-1.5 ml-3 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase font-syne font-semibold ">Techs</FormLabel>
 
                 <FormControl>
                   <TagInput
                     {...field}
                     placeholder="Press Enter to add #tag"
                     tags={tags}
-                    className='bg-zinc-900 border border-white text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0'
+                    className='bg-slate-300 dark:bg-slate-950 border border-black dark:border-white text-slate-700 dark:text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 rounded-3xl'
                     setTags={(newTags) => {
                       setTags(newTags);
                       setValue("tag", newTags as [string, ...string[]]);
@@ -231,12 +230,12 @@ const FormZone = () => {
             name="githubLink"
             render={({ field }) => (
               <FormItem className="relative flex-1">
-                <FormLabel className="absolute  -top-1 ml-3 px-3 bg-[#060608] rounded-md shadow-md text-[11px]  uppercase font-syne font-semibold ">
+                <FormLabel className="absolute  -top-1 ml-3 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase font-syne font-semibold ">
                   Github link
                 </FormLabel>
                 <FormControl>
                   <Input placeholder="Add a short note" {...field}
-                    className='bg-zinc-900 border border-white text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0'
+                    className='bg-slate-300 dark:bg-slate-950 border border-black dark:border-white text-slate-700 dark:text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 rounded-3xl'
                   />
                 </FormControl>
                 <FormMessage />
@@ -249,12 +248,12 @@ const FormZone = () => {
             name="liveLink"
             render={({ field }) => (
               <FormItem className="relative flex-1">
-                <FormLabel className="absolute  -top-1 ml-3 px-3 bg-[#060608] rounded-md shadow-md text-[11px]  uppercase font-syne font-semibold ">
+                <FormLabel className="absolute  -top-1 ml-3 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase font-syne font-semibold ">
                   Live link
                 </FormLabel>
                 <FormControl>
                   <Input placeholder="Add a short note" {...field}
-                    className='bg-zinc-900 border border-white text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0'
+                    className='bg-slate-300 dark:bg-slate-950 border border-black dark:border-white text-slate-700 dark:text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 rounded-3xl'
                   />
                 </FormControl>
                 <FormMessage />
@@ -267,19 +266,19 @@ const FormZone = () => {
             name="pointers"
             render={({ field }) => (
               <FormItem className="relative">
-                <FormLabel className="absolute -top-1.5 ml-3 px-3 bg-[#060608] rounded-md shadow-md text-[11px]  uppercase font-syne font-semibold ">
+                <FormLabel className="absolute -top-1.5 ml-3 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase font-syne font-semibold ">
                   Pointers
                 </FormLabel>
                 <FormControl>
                   <Textarea rows={4} placeholder="Enter pointers saperated by '.'" {...field}
-                    className='bg-zinc-900 border border-white text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0'
+                    className='bg-slate-300 dark:bg-slate-950 border border-black dark:border-white text-slate-700 dark:text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 rounded-3xl'
                   />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
-          <Button className="w-full bg-gradient-to-t from-orange-400 opacity-80  to-orange-500 hover:opacity-100 hover:-translate-y-1 transition-all" type="submit">Submit</Button>
+          <Button className="w-full bg-gradient-to-t from-emerald-400 opacity-80  to-emerald-400/90 hover:opacity-100 hover:-translate-y-1 transition-all rounded-3xl" type="submit">Submit</Button>
         </form>
       </Form>
     </div>
