@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
         const EMAIL = process.env.NODEMAIL_EMAIL
         const NODEMAIL_PASS = process.env.NODEMAIL_PASSWORD
 
-        const transporter = nodemailer.createTransport({
+        const transporter = await nodemailer.createTransport({
             port: 465,
             host: "smtp.gmail.com",
             auth: {
@@ -32,7 +32,7 @@ export async function POST(req: NextRequest) {
             <p><b>Sent by:</b> ${name}, ${email}</p>`
         }
 
-        const mail =  transporter.sendMail(mailData, function (err: any, info: any) {
+        const mail = await transporter.sendMail(mailData, function (err: any, info: any) {
             if (err)
                 console.log(err)
             else
