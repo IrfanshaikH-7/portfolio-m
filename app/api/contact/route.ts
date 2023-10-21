@@ -32,13 +32,20 @@ export async function POST(req: NextRequest) {
             <p><b>Sent by:</b> ${name}, ${email}</p>`
         }
 
-        const mail = await transporter.sendMail(mailData, function (err: any, info: any) {
-            if (err)
-                console.log(err)
-            else
-                console.log(info)
-        })
-        return new NextResponse(mail, { status: 200 });
+        await new Promise((resolve, reject) => {
+            // send mail
+            transporter.sendMail(mailData, (err: any, info: any) => {
+                if (err) {
+                    console.error(err);
+                    reject(err);
+                } else {
+                    console.log(info);
+                    resolve(info);
+                }
+            });
+        });
+        
+        return new NextResponse('ok mail sent', { status: 200 });
 
     } catch (error) {
         return new NextResponse('Email sent error', { status: 500 })
