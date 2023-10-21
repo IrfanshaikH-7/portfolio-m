@@ -2,7 +2,6 @@
 import { useFeatureStore } from "@/lib/store";
 import { cn } from "@/lib/utils"
 import Image from "next/image";
-import { motion } from 'framer-motion'
 import { GithubIcon,ListVideo } from "lucide-react";
 import Link from "next/link";
 

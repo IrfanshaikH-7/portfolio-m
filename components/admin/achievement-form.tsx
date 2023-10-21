@@ -18,7 +18,6 @@ import {
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
 import { useForm } from "react-hook-form"
-import { toast } from "../ui/use-toast"
 import { Input } from "../ui/input"
 import { useState } from "react"
 import Image from "next/image"
@@ -49,15 +48,6 @@ const AchievementForm = () => {
             title: values.title,
             imgUrl:images,
             date: date
-        })
-
-        toast({
-            title: "You submitted the following values:",
-            description: (
-                <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-                    <code className="text-white">{JSON.stringify(values, null, 2)}</code>
-                </pre>
-            ),
         })
         setImages([])
         form.reset()

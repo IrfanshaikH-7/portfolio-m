@@ -1,9 +1,7 @@
 "use client"
-import axios from 'axios'
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -15,7 +13,6 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
 import { useForm } from "react-hook-form"
 import { Button } from "../ui/button"
-import { toast } from "../ui/use-toast"
 import { Input } from "../ui/input"
 import { Textarea } from "../ui/textarea"
 import { UploadDropzone } from "@/utils/uploadthing"
@@ -70,16 +67,6 @@ const FormZone = () => {
       pointers: values.pointers
     })
     setImages([])
-
-
-    toast({
-      title: "You submitted the following values:",
-      description: (
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(values, null, 2)}</code>
-        </pre>
-      ),
-    })
     setTags([])
     form.reset()
   }

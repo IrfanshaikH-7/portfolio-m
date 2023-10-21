@@ -49,8 +49,8 @@ const Page = async () => {
 
   return (
     <div className="flex flex-col justify-center items-center h-full w-full">
-      <p className="text-white text-5xl font-cute text-center" ><span className="text-8xl text-yellow-600 font-cute ">Congrats!</span><br /> You have been pranked.</p>
-      <p className=" text-center text-xl text-red-800  font-cute font-extrabold">
+      <p className="text-white text-5xl  text-center" ><span className="text-8xl text-yellow-600  ">Congrats!</span><br /> You have been pranked.</p>
+      <p className=" text-center text-xl text-red-800   font-extrabold">
         <span className="bg-red-300 px-5 rounded-md">i.e. you are not the admin!!</span><br /><span className="text-4xl ">😒</span>
       </p>
 

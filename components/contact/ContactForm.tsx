@@ -1,8 +1,6 @@
 "use client"
-import React, { useRef } from 'react'
-import emailjs from '@emailjs/browser';
-
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '../ui/form'
+import React from 'react';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '../ui/form'
 import * as z from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -12,7 +10,6 @@ import { Textarea } from '../ui/textarea'
 import axios from 'axios';
 
 const ContactForm = () => {
-    // const form = useRef();
     const contactSchema = z.object({
         name: z.string().min(3, { message: "name must be atleast 3 characters." }),
         email: z.string().email(),

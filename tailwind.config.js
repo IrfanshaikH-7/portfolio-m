@@ -19,9 +19,6 @@ module.exports = {
       },
     },
     extend: {
-      fontFamily: {
-        'cute': ['Cute Font'],
-      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

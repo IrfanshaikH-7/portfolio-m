@@ -2,8 +2,6 @@
 import { cn } from '@/lib/utils'
 import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Loader2Icon } from 'lucide-react'
-import { type } from 'os'
 type Props = {
     children: React.ReactNode,
     classname: string

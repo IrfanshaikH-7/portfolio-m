@@ -1,51 +1,11 @@
 import Footer from "@/components/Footer";
 import Quote from "@/components/portpolio/Quote";
 import Skills from "@/components/portpolio/Skills";
-import { Animata, Discord, LMS, NewLife, Port, Saas, Thread } from "@/components/portpolio/Feature-card";
 import { FeatureTitle } from "@/components/portpolio/Feature-title";
 import MoreProjects from "@/components/portpolio/More-project";
 import PageWrapper from "@/components/providers/PageWrapper";
 import SvgOne from "@/components/svg1";
 import { FeatureprojectData } from "@/public/data/projects-detail";
-
-
-const features = [
-    {
-        title: "Discord-clone: a messaging application",
-        id: "discord",
-        card: Discord
-    },
-    {
-        title: "AI-Saas: an ai as a server application",
-        id: "saas",
-        card: Saas
-    },
-    {
-        title: "New Life: a bussiness application for client",
-        id: "newlife",
-        card: NewLife
-    },
-    {
-        title: "Port: application using Google Map Api",
-        id: "port",
-        card: Port
-    },
-    {
-        title: "Animata: an anime and manga platform",
-        id: "animata",
-        card: Animata
-    },
-    {
-        title: "LMS: Udemy like lms application",
-        id: "lms",
-        card: LMS
-    },
-    {
-        title: "Thread-clone: a Social media application",
-        id: "thread",
-        card: Thread
-    },
-]
 
 const Portfolio = () => {
 

@@ -14,9 +14,6 @@ const config: Config = {
       'xl': '1500px'
     },
     extend: {
-      fontFamily: {
-        'cute': ['Cute Font'],
-      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

@@ -1,6 +1,5 @@
-
 import { Project } from '@prisma/client'
-import { ArrowBigLeft, ArrowBigLeftDash, ArrowLeft, LucideArrowBigLeftDash, LucideArrowBigRightDash } from 'lucide-react'
+import { LucideArrowBigLeftDash, LucideArrowBigRightDash } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
 type Props = {
@@ -24,8 +23,6 @@ const AllProjects = ({ projects }: Props) => {
                                         <p className='text-slate-900 dark:text-slate-300 capitalize px-2 py-px border-l-2 border-r-2 border-0 border-slate-900 dark:border-slate-300'>{project?.category}</p>
                                     </div>
                                 </div>
-
-
                             </section>
                         </>
                     ))
