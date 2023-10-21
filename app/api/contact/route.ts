@@ -6,7 +6,7 @@ export async function POST(req: NextRequest) {
         let nodemailer = require('nodemailer')
 
         const body = await req.json()
-        const { name, email, message } = body
+        const { name, email, message } = body;
 
         console.log(name,email,message)
         const EMAIL = process.env.NODEMAIL_EMAIL
