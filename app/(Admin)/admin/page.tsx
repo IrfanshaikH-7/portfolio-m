@@ -13,8 +13,8 @@ import { useEffect, useState } from "react";
 import { currentUser, redirectToSignIn } from "@clerk/nextjs";
 import { db } from "@/lib/db";
 import Link from "next/link";
-import FormZone from "@/components/upload-things/upload-zone";
-import AdminDB from "@/components/admin-comp/admin-main";
+import FormZone from "@/components/admin/upload-zone";
+import AdminDB from "@/components/admin/admin-main";
 const Page = async () => {
 
   const user = await currentUser();

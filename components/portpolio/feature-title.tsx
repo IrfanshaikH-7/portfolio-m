@@ -24,7 +24,7 @@ export const FeatureTitle = ({children, id}: props) => {
 
 
     return (
-        <p ref={(ref)} className={cn(" text-xs lg:text-2xl py-16 font-bold font-syne transition-all duration-300",
+        <p ref={(ref)} className={cn(" text-xs lg:text-2xl py-16 font-bold  transition-all duration-300",
         isInView ? "text-white dark:text-white text-xs lg:text-4xl md:ml-4 " : "text-slate-300 dark:text-slate-500 blur-[1px] "
         )}>
             {children}

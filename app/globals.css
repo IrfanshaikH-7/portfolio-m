@@ -1,7 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Cute+Font&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Arizonia&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
 
 @tailwind base;
@@ -159,79 +156,6 @@ a {
     display: none;
   }
 }
-.keyframee {
-  animation: 5s loop infinite linear;
-  white-space: nowrap;
-}
-@keyframes loop {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100);
-  }
-  
-}
-/* 
-.scroller {
-  max-width: 1200px;
-}
-
-
-.scroller_inner {
-  padding-block: 1rem;
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.scroller[data-animated=] {
-  overflow: hidden;
-}
-
-.scroller[data-animated='true'] .scroller_inner {
-  flex-wrap: nowrap;
-
-} */
-
-
-/* .slider {
-  height: 250px;
-  margin: auto;
-  position: relative;
-  width: 80%;
-  display: grid;
-  place-items: center;
-  background: #000;
-}
-.slider-track {
-  background: #000;
-  display: flex;
-  width: 100%;
-  animation:scroll 40s linear infinite ;
-}
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(150px*));
-  }
-}
-.slide {
-  height: 60px;
-  width: 150px;
-  display: flex;
-  align-items: center;
-  padding: 15px;
-} */
-
-/* ---------------------------? */
-/* .logos {
-  overflow: hidden;
-  padding: 60px 0;
-  white-space: nowrap;
-} */
 .slider  {
   animation: 60s scroll infinite linear;
 }

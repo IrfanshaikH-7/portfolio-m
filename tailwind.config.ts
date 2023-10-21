@@ -16,8 +16,6 @@ const config: Config = {
     extend: {
       fontFamily: {
         'cute': ['Cute Font'],
-        'syne' : ['Syne', 'sans-serif'],
-        'arizona': ['Arizonia', 'cursive']
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

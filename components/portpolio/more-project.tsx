@@ -1,4 +1,3 @@
-import ProjectCard from "./project-card";
 import { Triangle } from "lucide-react";
 import { db } from "@/lib/db";
 import Projectabs from "./Projectabs";

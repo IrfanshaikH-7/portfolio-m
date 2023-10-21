@@ -1,7 +1,7 @@
-import { Animata, Discord, LMS, NewLife, Port, Saas, Thread } from "@/components/portpolio/feature-card";
+import { Animata, Discord, LMS, NewLife, Port, Saas, Thread } from "@/components/portpolio/Feature-card";
 
 // 'Users can create an account, log in and log out.Has role system ADMIN,MODRATOR,GUEST.Users can create and join servers, as well as invite other users to join their servers.Users can send direct messages to other users, or create group chats with multiple participants.Users can make voice and video calls with other users.Users can customize their settings, such as changing their username,profile picture, theme.',
-export const prj = [
+export const FeatureprojectData = [
     {
         title: 'Discord-Clone',
         id: 'discord',

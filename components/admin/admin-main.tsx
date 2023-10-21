@@ -11,10 +11,10 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import FormZone from "../upload-things/upload-zone";
 import { cn } from "@/lib/utils";
 import AchievementForm from "./achievement-form";
 import Navbar from "../navbar";
+import FormZone from "./upload-zone";
 
 
 const AdminDB = () => {

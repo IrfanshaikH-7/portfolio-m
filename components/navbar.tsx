@@ -12,6 +12,7 @@ import Link from 'next/link'
 import {redirect} from 'next/navigation'
 import { ModeToggle } from "./ui/mode-toggle";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const Navbar = () => {
   const router = useRouter();
@@ -21,9 +22,8 @@ const Navbar = () => {
     <>
       <div className="w-full h-12 flex items-center justify-between mx-auto mt-8 bg-transparent  border-2 backdrop-blur-sm border-slate-500 dark:border-white rounded-[80px] px-8  py-2 shadow-md">
 
-        <div onClick={()=> router.push('/')} className=" cursor-pointer flex justify-self-center items-center border border-slate-400 px-2 border-l-0 border-r-8">
-          <KanbanSquare className=" h-6 w-6 text-white" />
-          <p className="ml-1 capitalize text-sm font-semibold text-white">irfan</p>
+        <div onClick={()=> router.push('/')} className=" h-10 w-28 cursor-pointer flex justify-self-center items-center relative">
+          <p className="capitalize"><span className="text-rose-600 text-xl">I</span><span className="text-rose-600">rf</span>anshaikH-7</p>
         </div>
       <div className="flex items-center ">
         <DropdownMenu >

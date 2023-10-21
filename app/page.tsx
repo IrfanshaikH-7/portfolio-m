@@ -4,13 +4,11 @@ import HeroR from '@/components/Hero/HeroR';
 import type { NextPage } from 'next';
 import Navbar from '@/components/navbar';
 import LandingS from '@/components/Hero/LandingS';
-import LottieHero from '@/components/portpolio/lottiehero';
 // import { testimonials } from '@/public/data/testimonials';
-import Image from 'next/image';
-import TestimonialDialog from '@/components/Hero/TestimonialDialog';
 import { db } from '@/lib/db';
 import TestimonialCurosel from '@/components/Hero/TestimonialCurosel';
 import Footer from '@/components/Footer';
+import LottieHero from '@/components/Hero/Lottiehero';
 
 const Home: NextPage = async () => {
   const testimonials = await db.testimonials.findMany({ where: { anonymous: false } })
@@ -24,7 +22,7 @@ const Home: NextPage = async () => {
             <Navbar />
           </div>
           <section className='h-full w-full mx-auto flex-col justify-center items-center z-10 bg-gradient-to-t from-emerald-400 from-10% via-sky-500 via-60% to-indigo-500 to-90%  rounded-b-[80px] '>
-
+            {/* -----------------Hero section-------------------------- */}
             <div className='hidden lg:flex relative mt-12  lg:flex-row flex-col gap-x-2  h-[80%] w-[90%] mx-auto my-auto -z-20 '>
               <HeroL />
               <div className='flex justify-center items-center flex-1 h-full w-full '>
@@ -36,9 +34,8 @@ const Home: NextPage = async () => {
                 </div>
               </div>
             </div>
-            {/* Mobile */}
+            {/*--------------Hero for mobile resolutions---------------- */}
             <div className='flex flex-col justify-center items-center lg:hidden relative mt-12 h-full w-[90%] mx-auto my-auto -z-20  '>
-
               <div className='h-1/3 w-2/3  '>
                 <HeroR />
               </div>
@@ -46,16 +43,16 @@ const Home: NextPage = async () => {
                 <HeroL />
               </div>
             </div>
-
+            {/* ----------------XL: Exploring section------------------ */}
             <section className='hidden lg:block bg-gradient-to-t from-emerald-400 via-emerald-400 h-60 mt-24 lg:-mt-8 rounded-b-[80px] pointer-events-none md:px-16 xl:px-32 py-4 '>
               <div className='h-full w-full flex-col justify-center items-center bg-white rounded-[80px] overflow-hidden py-2'>
-                <h1 className='text-center text-black font-semibold font-syne'>Exploring...</h1>
+                <h1 className='text-center text-black font-semibold '>Exploring...</h1>
 
                 <div className='h-full w-full flex justify-evenly items-start gap-4 xl:gap-8 mt-6 '>
 
                   <div className='h-full w-1/3 flex flex-col justify-start items-center'>
 
-                    <div className=' text-black text-lg font-extrabold font-syne relative z-30'>
+                    <div className=' text-black text-lg font-extrabold  relative z-30'>
                       <svg className='absolute -z-10 -top-11' viewBox="20 30 150 140" xmlns="http://www.w3.org/2000/svg" width={100} height={100}>
                         <path fill="#34d39995" d="M65,-16.8C73.7,5.6,62.8,38.6,42.5,51.8C22.2,65,-7.7,58.3,-31,41.6C-54.3,24.9,-71.1,-1.8,-64.8,-20.8C-58.6,-39.9,-29.3,-51.2,-0.6,-51C28.2,-50.8,56.3,-39.1,65,-16.8Z" transform="translate(100 100)" />
                       </svg>
@@ -67,7 +64,7 @@ const Home: NextPage = async () => {
                   </div>
 
                   <div className='h-full w-1/3 flex flex-col justify-start items-center  '>
-                    <div className=' text-black text-lg font-bold font-syne relative z-30'>
+                    <div className=' text-black text-lg font-bold  relative z-30'>
                       <svg className='absolute -z-10 -top-14' viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width={140} height={140}>
                         <path fill="#34d39995" d="M66.1,-20.6C72.1,-3.1,53.9,23.1,33.4,35.6C12.8,48.1,-10.2,46.9,-28.2,34.8C-46.1,22.7,-59,-0.3,-53.5,-17.2C-47.9,-34.2,-24,-45,3.1,-46C30.1,-46.9,60.2,-38.1,66.1,-20.6Z" transform="translate(100 100)" />
                       </svg>
@@ -78,7 +75,7 @@ const Home: NextPage = async () => {
                     </p>
                   </div>
                   <div className='h-full w-1/3 flex flex-col justify-start items-center  '>
-                    <div className=' text-black text-lg font-bold font-syne relative z-30'>
+                    <div className=' text-black text-lg font-bold  relative z-30'>
                       <svg className='absolute -z-10 -top-14' viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width={140} height={140}>
                         <path fill="#34d39995" d="M66.4,-23.1C71.8,-5,52.1,19.7,30.6,33.2C9.2,46.7,-14,48.9,-35.1,36.3C-56.2,23.8,-75.3,-3.4,-69.1,-22.6C-63,-41.8,-31.5,-52.8,-0.5,-52.7C30.5,-52.5,61,-41.1,66.4,-23.1Z" transform="translate(100 100)" />
                       </svg>
@@ -94,24 +91,23 @@ const Home: NextPage = async () => {
             </section>
           </section>
         </main>
+        {/* ------------------LandingS------------------ */}
         <div className=' bg-transparent h-screen w-full'>
           <LandingS />
         </div>
         <div className='h-20 bg-transparent w-full'></div>
-
-        <section className='h-full md:h-screen w-full bg-emerald-300 dark:bg-slate-900 rounded-t-[80px] flex flex-col items-center justify-center relative'>
+        {/* --------------testimonials-------------- */}
+        <div className='h-full md:h-screen w-full bg-emerald-300 dark:bg-slate-900 rounded-t-[80px] flex flex-col items-center justify-center relative'>
           {/* <TestimonialCurosel testimonials={testimonials} anonymous={false}/> */}
-          
-
-            <TestimonialCurosel testimonials={testimonials} anonymousTestimonials={anonymousTestimonials}/>
-        
-        </section>
-        <div className='h-auto w-full bg-white dark:bg-slate-950 py-6'>
-                <div className='h-px w-[80%] bg-black mx-auto'></div>
-                       <Footer />       
-              </div>
+          <TestimonialCurosel testimonials={testimonials} anonymousTestimonials={anonymousTestimonials} />
+        </div>
+        {/* ----------------Footer--------------------- */}
+        <div className='h-auto w-full bg-white dark:bg-slate-950 py-6 group'>
+          <div className='h-px w-[80%] bg-black dark:bg-white mx-auto group-hover:animate-pulse'></div>
+          <Footer />
+        </div>
       </section>
-
+      {/* -------------------Fixed screen-------------------- */}
       <div className='flex flex-col fixed top-0 h-screen w-full  -z-50 '>
         <div className='z-[999] w-full flex items-center justify-center'>
           <h1 className='text-5xl font-bold text-center mt-12 pt-20  max-w-5xl'> <span>“</span>Experience is the name everyone gives to their mistakes.<span>“</span></h1>
@@ -123,7 +119,7 @@ const Home: NextPage = async () => {
           <LottieHero />
         </div>
       </div>
-      
+
     </>
   );
 };

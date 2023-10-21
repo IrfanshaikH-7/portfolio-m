@@ -113,7 +113,7 @@ const Skills = () => {
                             {
                                 // hover:shadow-[0px_10px_20px_rgba(256,256,256)]
                                 techs.map((tech) => (
-                                    <div key={tech.tech} className=" relative aspect-square rounded-3xl bg-white dark:bg-slate-400/50  hover:-translate-y-[2px] hover:shadow-[0px_22px_24px_0px_#FFFFFF24] transition-all duration-300">
+                                    <div key={tech.tech} className=" relative aspect-square rounded-full border border-slate-400  hover:-translate-y-[2px] hover:shadow-[0px_22px_24px_0px_#FFFFFF24] transition-all duration-300">
                                         <Image
                                             src={tech.tech}
                                             alt="skill"

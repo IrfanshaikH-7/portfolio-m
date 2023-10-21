@@ -2,7 +2,6 @@
 
 import { connectToDB } from "@/lib/connectToDB";
 import { db } from "@/lib/db";
-import { currentUser } from "@clerk/nextjs";
 import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import { NextResponse } from "next/server";
 
@@ -17,21 +16,6 @@ export const CreateAchievement = async ({ title, imgUrl,date }: Params) => {
             }
         })
         console.log("Achievement project")
-
-        console.log("Achievement project")
-
-        console.log("Achievement project")
-
-        console.log("Achievement project")
-
-        console.log("Achievement project")
-
-        console.log("Achievement project")
-
-        console.log("Achievement project")
-
-        console.log("Achievement project")
-
         return JSON.stringify({ Achievement });
 
     } catch (error: any) {

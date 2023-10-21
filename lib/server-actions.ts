@@ -23,21 +23,6 @@ export const CreateProject = async ({ title, category, note, tag,imgUrl, githubl
             }
         })
         console.log("Created project")
-
-        console.log("Created project")
-
-        console.log("Created project")
-
-        console.log("Created project")
-
-        console.log("Created project")
-
-        console.log("Created project")
-
-        console.log("Created project")
-
-        console.log("Created project")
-
         return NextResponse.json({ project }, { status: 200 });
 
     } catch (error: any) {

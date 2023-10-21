@@ -10,7 +10,7 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import React, { useState } from 'react'
-import { TagInput } from '@/components/admin-comp/tag-input'
+import { TagInput } from '@/components/admin/tag-input'
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
 import { useForm } from "react-hook-form"
@@ -138,7 +138,7 @@ const FormZone = () => {
               name="title"
               render={({ field }) => (
                 <FormItem className="relative flex-1">
-                  <FormLabel className="absolute -top-1.5 ml-3 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase font-syne font-semibold ">
+                  <FormLabel className="absolute -top-1.5 ml-3 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase  font-semibold ">
                     Title
                   </FormLabel>
                   <FormControl>
@@ -155,7 +155,7 @@ const FormZone = () => {
               name="category"
               render={({ field }) => (
                 <FormItem className="relative flex-1">
-                  <FormLabel className="absolute  -top-1 ml-3 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase font-syne font-semibold ">
+                  <FormLabel className="absolute  -top-1 ml-3 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase  font-semibold ">
                     category
                   </FormLabel>
                   <FormControl>
@@ -186,7 +186,7 @@ const FormZone = () => {
             name="note"
             render={({ field }) => (
               <FormItem className="relative flex-1">
-                <FormLabel className="absolute  -top-1 ml-3 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase font-syne font-semibold ">
+                <FormLabel className="absolute  -top-1 ml-3 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase  font-semibold ">
                   Project note
                 </FormLabel>
                 <FormControl>
@@ -204,7 +204,7 @@ const FormZone = () => {
             name="tag"
             render={({ field }) => (
               <FormItem className="relative w-full">
-                <FormLabel className="absolute -top-1.5 ml-3 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase font-syne font-semibold ">Techs</FormLabel>
+                <FormLabel className="absolute -top-1.5 ml-3 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase  font-semibold ">Techs</FormLabel>
 
                 <FormControl>
                   <TagInput
@@ -230,7 +230,7 @@ const FormZone = () => {
             name="githubLink"
             render={({ field }) => (
               <FormItem className="relative flex-1">
-                <FormLabel className="absolute  -top-1 ml-3 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase font-syne font-semibold ">
+                <FormLabel className="absolute  -top-1 ml-3 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase  font-semibold ">
                   Github link
                 </FormLabel>
                 <FormControl>
@@ -248,7 +248,7 @@ const FormZone = () => {
             name="liveLink"
             render={({ field }) => (
               <FormItem className="relative flex-1">
-                <FormLabel className="absolute  -top-1 ml-3 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase font-syne font-semibold ">
+                <FormLabel className="absolute  -top-1 ml-3 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase  font-semibold ">
                   Live link
                 </FormLabel>
                 <FormControl>
@@ -266,7 +266,7 @@ const FormZone = () => {
             name="pointers"
             render={({ field }) => (
               <FormItem className="relative">
-                <FormLabel className="absolute -top-1.5 ml-3 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase font-syne font-semibold ">
+                <FormLabel className="absolute -top-1.5 ml-3 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase  font-semibold ">
                   Pointers
                 </FormLabel>
                 <FormControl>

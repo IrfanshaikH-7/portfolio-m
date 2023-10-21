@@ -1,10 +1,10 @@
 "use client"
 import React from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import ProjectCard from "./project-card";
 import { Triangle } from "lucide-react";
 import { Project } from '@prisma/client';
 import { motion } from 'framer-motion'
+import ProjectCard from './Project-card';
 
 type Props = {
     fullstack: Project[],
@@ -27,7 +27,7 @@ const Projectabs = ({
                 <TabsContent value="fullstack">
                     <section className="h-full w-full overflow-y-scroll bg-blue relative no-scrollbar">
                         <div className="flex flex-col items-center justify-center mb-12 py-2">
-                            <h3 className="text-3xl text-center justify-center font-syne uppercase ">Fullstack</h3>
+                            <h3 className="text-3xl text-center justify-center  uppercase ">Fullstack</h3>
                             <Triangle className="rotate-180 fill-black dark:fill-white h-4 w-4" />
                         </div>
                         <ProjectCard cardDetails={fullstack} />
@@ -36,7 +36,7 @@ const Projectabs = ({
                 <TabsContent value="frontend">
                     <section className="h-full w-full overflow-y-scroll no-scrollbar">
                         <div className="flex flex-col items-center justify-center mb-12 py-2">
-                            <h3 className="text-3xl text-center justify-center font-syne uppercase ">frontend</h3>
+                            <h3 className="text-3xl text-center justify-center  uppercase ">frontend</h3>
                             <Triangle className="rotate-180 fill-black dark:fill-white h-4 w-4" />
                         </div>
                         <ProjectCard cardDetails={frontend} />
@@ -46,7 +46,7 @@ const Projectabs = ({
                     <section className="h-full w-full  overflow-y-scroll no-scrollbar">
                         <div className="flex flex-col items-center justify-center mb-12 py-2">
                             <h3 className="text-3xl text-center justif
-                                center font-syne uppercase ">python</h3>
+                                center  uppercase ">python</h3>
                             <Triangle className="rotate-180 fill-black dark:fill-white h-4 w-4" />
                         </div>
                         <ProjectCard cardDetails={backend} />
@@ -55,7 +55,7 @@ const Projectabs = ({
                 <TabsContent value="others">
                     <section className="h-full w-full  overflow-y-scroll no-scrollbar">
                         <div className="flex flex-col items-center justify-center mb-12 py-2">
-                            <h3 className="text-3xl text-center justify-center font-syne uppercase ">Others</h3>
+                            <h3 className="text-3xl text-center justify-center  uppercase ">Others</h3>
                             <Triangle className="rotate-180 fill-black dark:fill-white h-4 w-4" />
                         </div>
 

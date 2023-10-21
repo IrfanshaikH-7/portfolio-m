@@ -112,7 +112,7 @@ const AchievementForm = () => {
                     name="title"
                     render={({ field }) => (
                         <FormItem className="relative flex-1">
-                            <FormLabel className="absolute -top-1.5 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase font-syne font-semibold ">
+                            <FormLabel className="absolute -top-1.5 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase  font-semibold ">
                                 Title
                             </FormLabel>
                             <FormControl>
