@@ -159,6 +159,9 @@ a {
 .slider  {
   animation: 60s scroll infinite linear;
 }
+.slider:hover  {
+  -webkit-animation-play-state: paused;
+}
 
 @keyframes scroll {
   from {

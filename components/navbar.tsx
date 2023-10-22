@@ -1,5 +1,5 @@
 "use client"
-import { KanbanSquare, Text } from "lucide-react";
+import { Code2, KanbanSquare, Text } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -25,6 +25,7 @@ const Navbar = () => {
         <div onClick={()=> router.push('/')} className=" h-10 w-28 cursor-pointer flex justify-self-center items-center relative">
           <p className="capitalize"><span className="text-rose-600 text-xl">I</span><span className="text-rose-600">rf</span>anshaikH-7</p>
         </div>
+         <Code2 className=" text-slate-700 dark:text-white h-7 w-7 animate-pulse" />
       <div className="flex items-center ">
         <DropdownMenu >
           <DropdownMenuTrigger className="flex justify-center items-center"><div className="flex justify-center items-center"><span className="uppercase text-slate-600 dark:text-white">Menu</span><Text className=" h-5 w-5  text-slate-600 dark:text-white" /></div></DropdownMenuTrigger>

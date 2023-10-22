@@ -3,6 +3,7 @@ import { Testimonials } from '@prisma/client'
 import Image from 'next/image'
 import React from 'react'
 import TestimonialDialog from './TestimonialDialog'
+import { ListTreeIcon } from 'lucide-react'
 type Props = {
   testimonials: Testimonials[],
   anonymousTestimonials: Testimonials[]
@@ -19,7 +20,7 @@ const TestimonialCurosel = ({ testimonials, anonymousTestimonials }: Props) => {
 
             {
               anonymousTestimonials.map((testimony) => (
-                <div key={testimony.id} className=' flex flex-col justify-start items-start h-40 w-full aspect-video bg-gradient-to-t from-slate-300 to-white dark:bg-gradient-to-t dark:from-slate-800 dark:to-slate-700 py-4 px-4 rounded-3xl'>
+                <div key={testimony.id} className=' flex flex-col justify-start items-start h-40 w-full aspect-video bg-gradient-to-t from-slate-300 to-white dark:bg-gradient-to-t dark:from-slate-800 dark:to-slate-700 py-4 px-4 rounded-3xl hover:scale-105 transition-transform duration-300'>
 
                   <div className='flex justify-self-start self-start items-center gap-3'>
                     <Image
@@ -44,8 +45,8 @@ const TestimonialCurosel = ({ testimonials, anonymousTestimonials }: Props) => {
 
 
         <div className='flex justify-center items-center flex-col gap-4 w-full px-4 py-4'>
-          <div className='bg-white dark:bg-slate-800 flex justify-between items-center w-full py-2 px-4 md:px-24 rounded-3xl relative'>
-            <h2 className='text-2xl text-black dark:text-white'>Testimonials...</h2>
+          <div className='bg-white dark:bg-slate-800 flex justify-between items-center w-full py-2 px-4 md:px-24 rounded-3xl relative group'>
+            <div className='text-2xl text-black dark:text-white'>Testimonials <ListTreeIcon className='h-12 w 12 text-white inline-block group-hover:rotate-180 transition-transform duration-300' /> </div>
 
             <div className=' rounded-full border border-black dark:border-white'>
 
@@ -58,7 +59,7 @@ const TestimonialCurosel = ({ testimonials, anonymousTestimonials }: Props) => {
 
             {
               testimonials.map((testimony) => (
-                <div key={testimony.id} className=' flex flex-col justify-start items-center h-96 w-full aspect-square bg-gradient-to-t from-slate-300 to-white border border-slate-300   dark:bg-gradient-to-t dark:from-slate-800 dark:to-slate-700 py-8 px-12 rounded-3xl shadow-md'>
+                <div key={testimony.id} className=' flex flex-col justify-start items-center h-96 w-full aspect-square bg-gradient-to-t from-slate-300 to-white  border border-slate-500 hover:border-slate-300  dark:bg-gradient-to-t dark:from-slate-800 dark:to-slate-700 py-8 px-12 transition-all duration-300 rounded-3xl shadow-md'>
 
                   <div className='flex justify-self-center self-start items-center gap-3'>
                     <Image

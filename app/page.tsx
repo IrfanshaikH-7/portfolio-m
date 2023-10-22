@@ -9,8 +9,16 @@ import Footer from '@/components/Footer';
 import LottieHero from '@/components/Hero/Lottiehero';
 
 const Home: NextPage = async () => {
-  const testimonials = await db.testimonials.findMany({ where: { anonymous: false } })
-  const anonymousTestimonials = await db.testimonials.findMany({ where: { anonymous: true } })
+  const testimonials = (await db.testimonials.findMany({
+    where: {
+      anonymous: false
+    },
+    orderBy: {
+      createdAt:'desc'
+    },
+  }
+  ))
+  const anonymousTestimonials = await db.testimonials.findMany({ where: { anonymous: true },orderBy: {createdAt: 'desc'} })
 
   return (
     <>

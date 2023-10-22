@@ -11,11 +11,13 @@ import Image from 'next/image'
 import { cn } from '@/lib/utils'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
+import { Loader } from 'lucide-react'
 
 const maleUser = 'https://utfs.io/f/2f148ac7-2952-4937-acd7-94c8a27269c5-156r20.jpeg'
 const femaleUser = 'https://utfs.io/f/86eb14e9-c696-4fcd-9ae7-6037ddb819c1-azpgi1.png'
 
 const Anonymous = () => {
+    const [loading, setLoading] = useState(false)
     const router = useRouter()
 
     const [image, setImage] = useState('')
@@ -35,6 +37,7 @@ const Anonymous = () => {
         }
     })
     const onSubmitt = async (values: z.infer<typeof TestimonySchema>) => {
+        setLoading(true)
         const testimony = await axios.post('/api/testimonial', {
             name: values.name,
             email: values.email,
@@ -44,8 +47,12 @@ const Anonymous = () => {
         })
         if (testimony) {
             form.reset()
+            setImage('')
             router.push('/')
+            
         }
+        
+        setLoading(false)
     }
 
     return (
@@ -101,7 +108,14 @@ const Anonymous = () => {
                         />
                         <div className='flex gap-4'>
                             <Button type="reset" onClick={() => form.reset()} className='rounded-3xl w-full font-semibold hover:-translate-y-[2px] hover:shadow-md transition-all duration-300'>Cancel</Button>
-                            <Button type="submit" className='rounded-3xl w-full font-semibold hover:-translate-y-[2px] hover:shadow-md transition-all duration-300'>Submit</Button>
+                            
+                            {
+                            loading ? (
+                                <Button type="submit" className='rounded-3xl w-full font-semibold hover:-translate-y-[2px] hover:shadow-md transition-all duration-300'><Loader className='h-4 w-4 text-black animate-spin transition-all' /></Button>
+                            ) : (
+                                <Button type="submit" className='rounded-3xl w-full font-semibold hover:-translate-y-[2px] hover:shadow-md transition-all duration-300'>submit</Button>
+                            )
+                            } 
                         </div>
                     </form>
                 </Form>

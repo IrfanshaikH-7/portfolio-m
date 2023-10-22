@@ -41,6 +41,7 @@ model Achievement {
   title     String? 
   imgUrl    String[]
   date      DateTime
+  createdAt DateTime  @default(now())
 }
 
 model Testimonials {
@@ -52,6 +53,7 @@ model Testimonials {
   message   String
   imgUrl    String 
   anonymous Boolean
+  createdAt DateTime  @default(now())
 }
 // model Tag {
 //   id        String  @id @default(auto()) @map("_id") @db.ObjectId

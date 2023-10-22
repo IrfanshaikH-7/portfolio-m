@@ -20,7 +20,7 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
         <>
             <section className="h-full md:h-screen w-full px-4 md:px-12">
                 <div className="px-4 pt-24 md:py-0 h-full min-w-full flex flex-col md:flex-row items-center gap-2 ">
-                    <div className=" relative md:w-4/5 w-full aspect-video bg-slate-400 rounded-2xl overflow-hidden min-w-max">
+                    <div className=" relative md:min-w-min md:w-3/5 w-full  aspect-video bg-slate-400 rounded-2xl overflow-hidden border-2">
                         <Image
                             src={project?.imgUrl[0]!}
                             alt="project img"
@@ -28,7 +28,8 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
                             className="object-fill"
                         />
                     </div>
-                    <div className="md:px-12 py-8 md:py-0 group">
+                    
+                    <div className="md:px-12 py-8 md:py-0 group md:w-2/5 w-auto md:self-auto self-start">
                         <h1 className="text-4xl">{project?.title} <LucideArrowBigLeftDash size={24} className="group-hover:rotate-180 inline-block fill-black dark:fill-white transition-all duration-300" /></h1>
                         <h3 className="text-2xl text-slate-700 dark:text-slate-400">{project?.note}</h3>
                         <div className="flex gap-6">

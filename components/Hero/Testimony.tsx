@@ -11,12 +11,14 @@ import Image from 'next/image'
 import { cn } from '@/lib/utils'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
+import { Loader, Loader2 } from 'lucide-react'
 
 const mProfile = 'https://utfs.io/f/d6e753d7-ec12-4eea-8871-cd589a29f471-5482fr.png'
 const mProfile2 = 'https://utfs.io/f/2971b2c9-095b-496a-ba0f-67fcb68f6772-2558r.png'
 const fProfile = 'https://utfs.io/f/181eb60d-2df8-482f-aae9-2d7ea337cbad-8iqged.jpg'
 const fProfile2 = 'https://utfs.io/f/0ecb3b0f-5daf-42aa-a5dd-e2096c90f5c4-1nbmel.png'
 const Testimony = () => {
+    const [loading, setLoading] = useState(false)
     const router = useRouter()
 
     const [activeImg, setActiveImg] = useState('')
@@ -40,6 +42,7 @@ const Testimony = () => {
         }
     })
     const onSubmitt = async (values: z.infer<typeof TestimonySchema>) => {
+        setLoading(true)
         const testimony = await axios.post('/api/testimonial', {
             name: values.name,
             email: values.email,
@@ -51,10 +54,11 @@ const Testimony = () => {
         })
         if (testimony) {
             form.reset()
+            setActiveImg('')
             router.push('/')
         }
+        setLoading(false)
     }
-
     return (
         <>
             <div className=' flex justify-center items-center gap-2 h-24 w-full bg-slate-800 rounded-3xl'>
@@ -137,7 +141,13 @@ const Testimony = () => {
                         />
                         <div className='flex gap-4'>
                             <Button type="reset" onClick={() => form.reset()} className='rounded-3xl w-full font-semibold hover:-translate-y-[2px] hover:shadow-md transition-all duration-300'>Cancel</Button>
-                            <Button type="submit" className='rounded-3xl w-full font-semibold hover:-translate-y-[2px] hover:shadow-md transition-all duration-300'>Submit</Button>
+                            {
+                            loading ? (
+                                <Button type="submit" className='rounded-3xl w-full font-semibold hover:-translate-y-[2px] hover:shadow-md transition-all duration-300'><Loader className='h-4 w-4 text-black animate-spin transition-all' /></Button>
+                            ) : (
+                                <Button type="submit" className='rounded-3xl w-full font-semibold hover:-translate-y-[2px] hover:shadow-md transition-all duration-300'>submit</Button>
+                            )
+                            }
                         </div>
 
                     </form>
