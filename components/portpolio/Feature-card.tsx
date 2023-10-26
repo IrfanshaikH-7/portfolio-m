@@ -83,6 +83,7 @@ export const Discord = ({ id, title, imgUrl, note, tags, githublink, livelink, d
                         }
                     </div>
                 </section>
+                
                 <div className=" xl:hidden absolute space-y-4 p-1 xl:p-4 flex items-end justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:translate-y-52 hover:translate-y-52 sm:group-hover:translate-y-72 sm:hover:translate-y-72 lg:group-hover:translate-y-64 lg:hover:translate-y-64 transition-all duration-500 rounded-2xl md:rounded-[50px]">
                     <div className="  h-[90%] w-full bg-white py-6 px-3 overflow-hidden rounded-2xl md:rounded-[50px] relative ">
                         <h3 className="text-xs sm:text-sm  font-mono text-slate-800">introduction -</h3>
@@ -95,7 +96,7 @@ export const Discord = ({ id, title, imgUrl, note, tags, githublink, livelink, d
                     </div>
                 </div>
                 <section className=" xl:hidden h-full w-full flex flex-col gap-2 sm:gap-4 justify-start items-center">
-                    <div className="w-5/6 h-4/6 bg-white rounded-xl mt-8 relative overflow-hidden p-2">
+                    <div className="w-full md:w-5/6 h-4/6 dark:bg-slate-700 bg-emerald-400 rounded-xl mt-8 relative overflow-hidden p-px">
                         <Image
                             src={imgUrl}
                             fill
@@ -174,7 +175,7 @@ export const Saas = ({ id, title, imgUrl, note, tags, githublink, livelink, disc
                     </div>
                 </div>
                 <section className=" xl:hidden h-full w-full flex flex-col gap-2 sm:gap-4 justify-start items-center">
-                    <div className="w-5/6 h-4/6 bg-white rounded-xl mt-8 relative overflow-hidden p-2">
+                    <div className="w-full md:w-5/6 h-4/6 dark:bg-slate-700 bg-emerald-400 rounded-xl mt-8 relative overflow-hidden p-px">
                         <Image
                             src={imgUrl}
                             fill
@@ -254,7 +255,7 @@ export const NewLife = ({ id, title, imgUrl, note, tags, githublink, livelink, d
                     </div>
                 </div>
                 <section className=" xl:hidden h-full w-full flex flex-col gap-2 sm:gap-4 justify-start items-center">
-                    <div className="w-5/6 h-4/6 bg-white rounded-xl mt-8 relative overflow-hidden p-2">
+                    <div className="w-full md:w-5/6 h-4/6 dark:bg-slate-700 bg-emerald-400 rounded-xl mt-8 relative overflow-hidden p-px">
                         <Image
                             src={imgUrl}
                             fill
@@ -332,7 +333,7 @@ export const Port = ({ id, title, imgUrl, note, tags, githublink, livelink, disc
                     </div>
                 </div>
                 <section className=" xl:hidden h-full w-full flex flex-col gap-2 sm:gap-4 justify-start items-center">
-                    <div className="w-5/6 h-4/6 bg-white rounded-xl mt-8 relative overflow-hidden p-2">
+                    <div className="w-full md:w-5/6 h-4/6 dark:bg-slate-700 bg-emerald-400 rounded-xl mt-8 relative overflow-hidden p-px">
                         <Image
                             src={imgUrl}
                             fill
@@ -410,7 +411,7 @@ export const Animata = ({ id, title, imgUrl, note, tags, githublink, livelink, d
                     </div>
                 </div>
                 <section className=" xl:hidden h-full w-full flex flex-col gap-2 sm:gap-4 justify-start items-center">
-                    <div className="w-5/6 h-4/6 bg-white rounded-xl mt-8 relative overflow-hidden p-2">
+                    <div className="w-full md:w-5/6 h-4/6 dark:bg-slate-700 bg-emerald-400 rounded-xl mt-8 relative overflow-hidden p-px">
                         <Image
                             src={imgUrl}
                             fill
@@ -491,7 +492,7 @@ export const LMS = ({ id, title, imgUrl, note, tags, githublink, livelink, discr
                     </div>
                 </div>
                 <section className=" xl:hidden h-full w-full flex flex-col gap-2 sm:gap-4 justify-start items-center">
-                    <div className="w-5/6 h-4/6 bg-white rounded-xl mt-8 relative overflow-hidden p-2">
+                    <div className="w-full md:w-5/6 h-4/6 dark:bg-slate-700 bg-emerald-400 rounded-xl mt-8 relative overflow-hidden p-px">
                         <Image
                             src={imgUrl}
                             fill
@@ -572,7 +573,7 @@ export const Thread = ({ id, title, imgUrl, note, tags, githublink, livelink, di
                     </div>
                 </div>
                 <section className=" xl:hidden h-full w-full flex flex-col gap-2 sm:gap-4 justify-start items-center">
-                    <div className="w-5/6 h-4/6 bg-white rounded-xl mt-8 relative overflow-hidden p-2">
+                    <div className="w-full md:w-5/6 h-4/6 dark:bg-slate-700 bg-emerald-400 rounded-xl mt-8 relative overflow-hidden p-px">
                         <Image
                             src={imgUrl}
                             fill

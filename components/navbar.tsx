@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
 
     <>
-      <div className="w-full h-12 flex items-center justify-between mx-auto mt-8 bg-transparent  border-2 backdrop-blur-sm border-slate-500 dark:border-white rounded-[80px] px-8  py-2 shadow-md">
+      <div className="w-full h-12 flex items-center justify-between mx-auto mt-8 bg-transparent  border-2 backdrop-blur-sm border-slate-500 dark:border-white rounded-[80px] px-8  py-2 shadow-md z-50">
 
         <div onClick={()=> router.push('/')} className=" h-10 w-28 cursor-pointer flex justify-self-center items-center relative">
           <p className="capitalize"><span className="text-rose-600 text-xl">I</span><span className="text-rose-600">rf</span>anshaikH-7</p>

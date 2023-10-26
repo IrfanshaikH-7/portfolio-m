@@ -11,21 +11,21 @@ const LandingS = () => {
             
             >
                 <div className=" text-4xl flex justify-center items-center text-black dark:text-white font-semibold py-4 px-2">
-                    Quicklinks <span className="h-[2px] w-full bg-white ml-2 mt-2 px-2" />
+                    Quicklinks <span className="h-[2px] w-full bg-black dark:bg-white  ml-2 mt-2 px-2" />
                 </div>
 
                 <Link href='/portfolio' className="px-1 md:px-3 flex flex-col justify-center items-center w-full h-24 md:h-36 hover:scale-110  bg-gradient-to-r from-sky-400 to-emerald-500 rounded-full hover:border-white border-2 border-blue-200 transition-all duration-300 relative overflow-hidden group">
-                    <p className="text-sm md:text-lg font-medium text-slate-200">projects skills and achievement</p>
+                    <p className="text-sm md:text-lg font-medium text-slate-200">Projects skills and achievement</p>
                     <p className=" p-2 text-[150px] -right-12 mt-12  uppercase text-white font-bold absolute opacity-0 group-hover:opacity-40 transition-all duration-700">Portfolio</p>
                 </Link>
 
                 <div className=" w-full h-20 md:h-24 flex gap-2">
                     <Link href='/about' className="px-1 md:px-3 flex flex-col justify-center items-center w-1/2 h-20 md:h-24 hover:w-3/5 bg-gradient-to-r from-emerald-400 to-sky-500 rounded-full hover:border-white border-2 border-blue-200 transition-all duration-300 relative overflow-hidden group">
-                        <p className="text-sm md:text-lg font-medium text-slate-200">Know more about me</p>
+                        <p className="text-sm md:text-lg font-medium text-slate-200">More about me</p>
                         <p className=" p-2 text-[150px] -right-20 mt-12  uppercase text-white font-bold absolute opacity-0 group-hover:opacity-40 transition-all duration-700">About</p>
                     </Link>
                     <Link href='/about' className="px-1 md:px-3 flex flex-col justify-center items-center w-1/2 h-20 md:h-24 hover:w-3/5  bg-gradient-to-r from-yellow-300 to-yellow-500 rounded-full hover:border-white border-2 border-blue-200 transition-all duration-300 relative overflow-hidden group">
-                        <p className="text-sm md:text-lg font-medium text-slate-200">Currently not available</p>
+                        <p className="text-sm md:text-lg font-medium text-slate-200">Underdevelopment</p>
                         <p className=" p-2 text-[150px] -right-12 mt-12  uppercase text-white font-bold absolute opacity-0 group-hover:opacity-40 transition-all duration-700">Blog</p>
                     </Link>
                 </div>

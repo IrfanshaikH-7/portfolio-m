@@ -90,7 +90,7 @@
   height:  20px !important;
   border-radius: 50%;
   pointer-events: none;
-  z-index: 999999;
+  z-index: 9999999999999;
   mix-blend-mode:normal;
   padding: 10px;
   background-color: transparent; /*rgb(248, 243, 243)*/

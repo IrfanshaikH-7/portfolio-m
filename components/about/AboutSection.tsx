@@ -4,9 +4,10 @@ import { useRef, useState } from "react";
 import { motion } from 'framer-motion'
 import Lottie from "lottie-react";
 import WaveAnimation from "./WaveAnimation";
+import { cn } from "@/lib/utils";
 
 const AboutSection = () => {
-    const [state, setState] = useState('')
+    const [activeLink, setActiveLink] = useState('')
 
     const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         // first prevent the default behavior
@@ -14,6 +15,8 @@ const AboutSection = () => {
         // get the href and remove everything before the hash (#)
         const href = e.currentTarget.href;
         const targetId = href.replace(/.*\#/, "");
+        setActiveLink(targetId)
+
         // get the element by id and use scrollIntoView
         const elem = document.getElementById(targetId);
         elem?.scrollIntoView({
@@ -48,55 +51,52 @@ const AboutSection = () => {
                 </div>
              <div className="flex flex-col xl:ml-16 px-2  gap-3 items-start justify-center w-full h-fit ">
                 <div className="flex justify-center items-center group ">
-                    <div className="md:w-6 lg:w-12 h-[1px] bg-zinc-900  md:group-hover:w-10 lg:group-hover:w-20 transition-all duration-300" />
-                    <Link href='#abt' className="px-2 text-xs text-black dark:text-white uppercase" onClick={handleScroll}>About</Link>
+                    <Link href='#abt' className={cn("px-2 text-xs text-black dark:text-white uppercase border-l-4 border-transparent transition-all duration-300",activeLink ==="abt" ? "border-l-4 rounded-sm border-white" : "")} onClick={handleScroll}>About</Link>
 
                 </div>
                 <div className="flex justify-center items-center group ">
-                    <div className="md:w-6 lg:w-12 h-[1px] bg-zinc-900  md:group-hover:w-10 lg:group-hover:w-20 transition-all duration-300" />
-                    <Link href='#edu' className="px-2 text-xs text-black dark:text-white uppercase" onClick={handleScroll}>Education</Link>
+                    <Link href='#edu' className={cn("px-2 text-xs text-black dark:text-white uppercase border-l-4 border-transparent transition-all duration-300",activeLink ==="edu" ? "border-l-4 rounded-sm border-white" : "")} onClick={handleScroll}>Education</Link>
 
                 </div>
                 <div className="flex justify-center items-center group ">
-                    <div className="md:w-6 lg:w-12 h-[1px] bg-zinc-900  md:group-hover:w-10 lg:group-hover:w-20 transition-all duration-300" />
-                    <Link href='#exp' className="px-2 text-xs text-black dark:text-white uppercase" onClick={handleScroll}>Experience</Link>
+                    <Link href='#exp' className={cn("px-2 text-xs text-black dark:text-white uppercase border-l-4 border-transparent transition-all duration-300",activeLink ==="exp" ? "border-l-4 rounded-sm border-white" : "")} onClick={handleScroll}>Experience</Link>
                 </div>
             </div>   
             </div>
-            <div className="md:hidden flex absolute top-3 left-10 right-10 font-semibold min-w-fit  bg-transparent backdrop-blur-sm border border-violet-300 py-2 rounded-[50px]">
+            <div className="md:hidden flex absolute top-3 left-10 right-10 font-semibold min-w-fit  bg-transparent backdrop-blur-[2px] border border-violet-300 py-2 rounded-[50px] z-50">
             <div className="flex  xl:ml-16 px-2  gap-1 items-start justify-center w-full h-fit ">
                 <div className="flex justify-center items-center group ">
-                    <Link href='#abt' scroll={false} className="px-2 text-[10px] scroll-mt-4 text-black dark:text-white uppercase hover:-translate-y-[2px] transition-all duration-300" onClick={handleScroll}>About</Link>
+                    <Link href='#abt' scroll={false} className="px-2 text-[10px] scroll-mt-4 text-black dark:text-white uppercase transition-all duration-300" onClick={handleScroll}>About</Link>
 
                 </div>
                 <div className="flex justify-center items-center group ">
-                    <Link href='#edu' scroll={false} className="px-2 text-[10px] scroll-mt-4 text-black dark:text-white uppercase hover:-translate-y-[2px] transition-all duration-300" onClick={handleScroll}>Education</Link>
+                    <Link href='#edu' scroll={false} className="px-2 text-[10px] scroll-mt-4 text-black dark:text-white uppercase transition-all duration-300" onClick={handleScroll}>Education</Link>
 
                 </div>
                 <div className="flex justify-center items-center group ">
-                    <Link href='#exp' scroll={false} className="px-2 text-[10px] scroll-mt-4 text-black dark:text-white uppercase hover:-translate-y-[2px] transition-all duration-300" onClick={handleScroll}>Experience</Link>
+                    <Link href='#exp' scroll={false} className="px-2 text-[10px] scroll-mt-4 text-black dark:text-white uppercase transition-all duration-300" onClick={handleScroll}>Experience</Link>
                 </div>
             </div>  
             </div>
             
             <div className="h-full w-full px-2 pt-2 pb-1 md:py-2 md:px-4 rounded-md ">
-                <div className="h-full w-full  overflow-y-auto px-4 lg:px-10 xl:px-32 bg-white dark:bg-slate-900 rounded-[50px] no-scrollbar"
+                <div className="h-full w-full  overflow-y-auto px-4  lg:px-10 xl:px-32 bg-white dark:bg-slate-900 rounded-[50px] no-scrollbar"
                 
                 >
                     <div id="abt" className="flex flex-col justify-center items-start h-full w-full"
                     >
-                        <h3 className="text-3xl lg:text-4xl font-semibold  justify-self-start">Irfan shaikH</h3>
-                        <motion.div className=" mt-4 text-slate-600 dark:text-white/90"
+                        <h3 className="text-2xl lg:text-4xl font-semibold  justify-self-start self-center">Irfan shaikH</h3>
+                        <motion.div className=" mt-0 md:mt-4 text-slate-600 dark:text-white/90"
                         initial={{opacity:0}}
                         animate={{ opacity: 1, transition:{duration:0.5,}}}
                         >
-                            <p className=" indent-8  text-xs lg:text-sm  tracking-wider mt-6">
+                            <p className=" indent-6  text-xs lg:text-sm tracking-wider mt-4 md:mt-6">
                                 The world of art, softwares &rsquo;n&rsquo; technology always facinated me and I&rsquo;ve never been afraid to just jump in and give it a go. whethers it&rsquo;s development, openSource contributions or AI/ML.
                             </p>
-                            <p className="text-xs lg:text-sm  tracking-wider mt-6">
+                            <p className="text-xs lg:text-sm  tracking-wider mt-3 md:mt-6">
                                 Fast forward to 2023 and I&rsquo;ve tried it all, from Web Design to actually implementing them with code, Animation, HTML/CSS, Web Development by Creating various <Link href='/portfolio' className="text-base text-white">projects</Link> on them. Everything I have done, small or big, has been a vital stepping stone for where I am today.
                             </p>
-                            <p className="text-xs lg:text-sm  tracking-wider mt-6">
+                            <p className="text-xs lg:text-sm  tracking-wider mt-3 md:mt-6">
                                 What excites me most about being a Web Developer is being able to design and create softwares that have a purpose and solve real problems. It goes beyond developing landing pages and websites and involves having a passion for designing experiences and solutions that help people, whether it&rsquo;s helping them make better audience, market themselves online, or buy something online. Leaning into customer insight and understanding their needs, finding the right problems to solve, delivering solutions as quickly as possible, learning from those and then iterating and improving that value over time is the key to great developer.
                             </p>
                         </motion.div>

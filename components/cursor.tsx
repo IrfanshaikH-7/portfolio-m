@@ -1,6 +1,6 @@
 'use client'
 import { useEffect } from 'react';
-import { Link } from 'lucide-react';
+import { Disc, Link } from 'lucide-react';
 import { gsap } from 'gsap';
 
 
@@ -59,7 +59,7 @@ const Cursor = () => {
 
     return (
         <div id='custom-cursor' className='custom-cursor hidden sm:flex border-slate-00 border-2 dark:border-white items-center justify-center  '>
-            <span className='cursor-text flex justify-center items-center'><Link height={8} width={8}/></span>
+            <span className='cursor-text flex justify-center items-center'><Disc height={8} width={8} className='text-white dark:text-white font-bold'/></span>
         </div>
     )
 }

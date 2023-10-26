@@ -13,7 +13,7 @@ const SocialLarge = () => {
 
           <TooltipProvider>
             <Tooltip>
-              <TooltipTrigger className="flex justify-center items-end  px-2"><a href="#twitter"><Github className="fill-slate-600 dark:fill-white dark:text-white text-slate-600 p-[3px] " /></a></TooltipTrigger>
+              <TooltipTrigger className="flex justify-center items-end  px-2"><a href="https://github.com/IrfanshaikH-7" target='_blank'><Github className="fill-slate-600 dark:fill-white dark:text-white text-slate-600 p-[3px] " /></a></TooltipTrigger>
               <TooltipContent side="left" className="bg-transparent backdrop-blur-sm border-0 border-l border-slate-300 px-3 py-1 ">
                 <p>Github</p>
               </TooltipContent>
@@ -22,7 +22,7 @@ const SocialLarge = () => {
 
           <TooltipProvider>
             <Tooltip>
-              <TooltipTrigger className="flex justify-center items-end  px-2"><a href="#twitter"><Twitter className="fill-slate-600 dark:fill-white dark:text-white text-slate-600 p-[3px] " /></a></TooltipTrigger>
+              <TooltipTrigger className="flex justify-center items-end  px-2"><a href="https://github.com/IrfanshaikH-7" target='_blank'><Twitter className="fill-slate-600 dark:fill-white dark:text-white text-slate-600 p-[3px] " /></a></TooltipTrigger>
               <TooltipContent side="left" className="bg-transparent backdrop-blur-sm border-0 border-l border-slate-300 px-3 py-1 ">
                 <p>Twitter/X</p>
               </TooltipContent>
@@ -31,7 +31,7 @@ const SocialLarge = () => {
 
           <TooltipProvider>
             <Tooltip>
-              <TooltipTrigger className="flex justify-center items-end  px-2"><a href="#twitter"><Linkedin className="fill-slate-600 dark:fill-white dark:text-white text-slate-600 p-[3px] " /></a></TooltipTrigger>
+              <TooltipTrigger className="flex justify-center items-end  px-2"><a href="https://www.linkedin.com/in/IrfanshaikH-n7/" target='_blank'><Linkedin className="fill-slate-600 dark:fill-white dark:text-white text-slate-600 p-[3px] " /></a></TooltipTrigger>
               <TooltipContent side="left" className="bg-transparent backdrop-blur-sm border-0 border-l border-slate-300 px-3 py-1 ">
                 <p>LinkenIn</p>
               </TooltipContent>
