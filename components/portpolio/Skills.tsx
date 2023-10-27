@@ -3,6 +3,7 @@ import { backend, frontend, languages, others, techs } from "@/public/data/skill
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Image from "next/image";
 import { motion } from 'framer-motion'
+import { Kanban } from "lucide-react";
 
 const Skills = () => {
 
@@ -15,7 +16,10 @@ const Skills = () => {
             <div className=" md:w-full lg:w-20 lg:h-full ">
                 <div className="flex lg:flex-col justify-center items-center h-full ">
                     <div className="h-60 hidden lg:block w-[2px] rounded-lg bg-emerald-400 ml-2 " />
-                    <p className="xl:text-5xl lg:text-xl text-4xl py-2 px-8 md:px-0 md:py-0 uppercase border-2 md:border-none md:rounded-none rounded-3xl lg:-rotate-90 mt-6 lg:mt-16 text-white ">Skills</p>
+                    <div className="flex justify-center items-center xl:text-5xl lg:text-xl text-4xl py-2 px-8 md:px-0 md:py-0 uppercase border-2 md:border-none md:rounded-none rounded-3xl lg:-rotate-90 mt-6 lg:mt-16 text-white group">
+                        Skills
+                        <Kanban className="h-8 w-8 text-black dark:text-white group-hover:rotate-180 transition-all duration-300" />
+                    </div>
                 </div>
             </div>
 
@@ -118,7 +122,7 @@ const Skills = () => {
                                             src={tech.tech}
                                             alt="skill"
                                             fill
-                                            className="object-contain p-2 lg:p-4 "
+                                            className="object-contain p-3.5 lg:p-4 "
                                         />
                                     </div>
                                 ))

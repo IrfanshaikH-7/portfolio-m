@@ -1,6 +1,6 @@
 "use client"
 import { Project } from '@prisma/client'
-import { LucideArrowBigLeftDash, LucideArrowBigRightDash } from 'lucide-react'
+import { Grip, LucideArrowBigLeftDash, LucideArrowBigRightDash } from 'lucide-react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import React from 'react'
@@ -11,7 +11,11 @@ const AllProjects = ({ projects }: Props) => {
     const router = useRouter()
     return (
         <div className='h-full w-[90%] mx-auto  rounded-e-3xl'>
-            <div className='h-full w-full px-4 grid grid-cols-2 gap-8 '>
+            <div className=' flex justify-center items-center text-3xl gap-2 group'>
+            My works
+             <Grip className="h-7  w-7 text-black dark:text-white group-hover:rotate-180 transition-all duration-300"/>
+            </div>
+            <div className='h-full w-full px-4 grid grid-cols-2 gap-8 mt-16 md:mt-24'>
                 {
                     projects.map((project) => (
                         <>

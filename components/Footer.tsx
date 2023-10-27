@@ -15,8 +15,8 @@ const Footer = () => {
                     <h1 className='underline'>More</h1>
                     <p>414irfann@gmail.com</p>
                     <div className='flex gap-4 '>
-                         <Link href='http://github.com/IrfanshaikH-7' target='_blank' className='h-12 w-12 border-2 flex hover:bg-white group justify-center items-center transition-all duration-300'><Github className='text-slate fill-slate-700 dark:text-slate-500 dark:fill-slate-500 hover:dark:text-black hover:dark:fill-black' /></Link>
-                    <Link href='https://www.linkedin.com/in/IrfanshaikH-n7/' target='_blank' className='h-12 w-12 border-2 hover:bg-white group flex justify-center items-center transition-all duration-300'><Linkedin className='text-slate fill-slate-700 dark:text-slate-500 dark:fill-slate-500 hover:dark:text-black hover:dark:fill-black' /></Link>
+                         <Link href='http://github.com/IrfanshaikH-7' target='_blank' className='h-12 w-12 border-2 flex hover:bg-white group justify-center items-center transition-all duration-300 text-slate dark:textslate-500'><Github className='text-slate fill-slate-700 dark:text-slate-500 dark:fill-slate-500 hover:dark:text-black hover:dark:fill-black' /></Link>
+                    <Link href='https://www.linkedin.com/in/IrfanshaikH-n7/' target='_blank' className='h-12 w-12 border-2 hover:bg-white group flex justify-center items-center transition-all duration-300 text-slate dark:textslate-500'><Linkedin className='text-slate fill-slate-700 dark:text-slate-500 dark:fill-slate-500 hover:dark:text-black hover:dark:fill-black' /></Link>
                     </div>
                    
                 </div>
