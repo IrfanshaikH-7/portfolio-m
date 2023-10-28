@@ -31,7 +31,7 @@ const Navbar = () => {
           <DropdownMenuTrigger className="flex justify-center items-center"><div className="flex justify-center items-center"><span className="uppercase text-slate-600 dark:text-white">Menu</span><Text className=" h-5 w-5  text-slate-600 dark:text-white" /></div></DropdownMenuTrigger>
           <DropdownMenuContent className="flex mr-4 md:mr-32 px-4 md:px-8 mt-4 md:mt-2 bg-white backdrop-blur-sm border-slate-600 dark:border-white bg-transparent rounded-[50px]">
             <DropdownMenuSeparator />
-            <DropdownMenuItem className= "group hover:bg-blue-300/80 hover:text-slate-900 transition-all duration-300">
+            <DropdownMenuItem className= "group hover:bg-blue-300 hover:text-slate-900 transition-all duration-300">
               <a href='/portfolio' id="linnk" className="linnk uppercase text-xs font-semibold text-slate-600 dark:text-slate-300 group-hover:text-slate-900 transition-all duration-300">
                 Portfolio
               </a>
