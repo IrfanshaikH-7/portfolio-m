@@ -7,7 +7,6 @@ const Footer = () => {
         <section className=' flex h-60 w-full px-4 md:px-0 md:w-[80%] mx-auto '>
 
             <div className='hidden lg:flex text-4xl flex-1 flex-col w-full h-full justify-center items-center '>
-                
                 <p className='text-7xl xl:text-9xl'>IrfanShaikH</p>
             </div>
             <div className=' flex-1 gap-12 flex flex-row w-full h-full justify-center items-start  py-12'>
@@ -30,7 +29,6 @@ const Footer = () => {
                     <Link href='/contact' className='px-2'><p  className='text-black dark:text-white text-base hover:text-slate-600'>contact</p> </Link>
                     <Link href='/admin' className='px-2'> <p  className='text-black dark:text-white text-base hover:text-slate-600'>admin</p></Link>
                 </div>
-
             </div>
 
         </section>

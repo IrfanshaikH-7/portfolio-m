@@ -51,15 +51,15 @@ const AboutSection = () => {
                 </div>
              <div className="flex flex-col xl:ml-16 px-2  gap-3 items-start justify-center w-full h-fit ">
                 <div className="flex justify-center items-center group ">
-                    <Link href='#abt' className={cn("px-2 text-xs text-black dark:text-white uppercase border-l-4 border-transparent transition-all duration-300",activeLink ==="abt" ? "border-l-4 rounded-sm border-white" : "")} onClick={handleScroll}>About</Link>
+                    <Link href='#abt' className={cn("px-2 text-xs text-black dark:text-white font-semibold uppercase border-l-4 border-transparent transition-all duration-300",activeLink ==="abt" ? "border-l-4 rounded-sm border-white" : "")} onClick={handleScroll}>About</Link>
 
                 </div>
                 <div className="flex justify-center items-center group ">
-                    <Link href='#edu' className={cn("px-2 text-xs text-black dark:text-white uppercase border-l-4 border-transparent transition-all duration-300",activeLink ==="edu" ? "border-l-4 rounded-sm border-white" : "")} onClick={handleScroll}>Education</Link>
+                    <Link href='#edu' className={cn("px-2 text-xs text-black dark:text-white font-semibold uppercase border-l-4 border-transparent transition-all duration-300",activeLink ==="edu" ? "border-l-4 rounded-sm border-white" : "")} onClick={handleScroll}>Education</Link>
 
                 </div>
                 <div className="flex justify-center items-center group ">
-                    <Link href='#exp' className={cn("px-2 text-xs text-black dark:text-white uppercase border-l-4 border-transparent transition-all duration-300",activeLink ==="exp" ? "border-l-4 rounded-sm border-white" : "")} onClick={handleScroll}>Experience</Link>
+                    <Link href='#exp' className={cn("px-2 text-xs text-black dark:text-white font-semibold uppercase border-l-4 border-transparent transition-all duration-300",activeLink ==="exp" ? "border-l-4 rounded-sm border-white" : "")} onClick={handleScroll}>Experience</Link>
                 </div>
             </div>   
             </div>

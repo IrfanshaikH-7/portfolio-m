@@ -107,7 +107,7 @@ const AchievementForm = () => {
                             </FormLabel>
                             <FormControl>
                                 <Input placeholder="Enter title" {...field}
-                                    className='bg-slate-300 dark:bg-slate-950 border border-black dark:border-white text-slate-700 dark:text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 rounded-3xl'
+                                    className='bg-slate-100 dark:bg-zinc-800/50 border border-slate-400 dark:border-white text-slate-700 dark:text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 rounded-3xl'
                                 />
                             </FormControl>
                             <FormMessage />

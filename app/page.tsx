@@ -7,6 +7,7 @@ import { db } from '@/lib/db';
 import TestimonialCurosel from '@/components/Hero/TestimonialCurosel';
 import Footer from '@/components/Footer';
 import LottieHero from '@/components/Hero/Lottiehero';
+import { Sparkle } from 'lucide-react';
 
 const Home: NextPage = async () => {
   const testimonials = (await db.testimonials.findMany({
@@ -52,7 +53,7 @@ const Home: NextPage = async () => {
             {/* ----------------XL: Exploring section------------------ */}
             <section className='hidden lg:block bg-gradient-to-t from-emerald-400 via-emerald-400 h-60 mt-24 lg:-mt-8 rounded-b-[80px] pointer-events-none md:px-16 xl:px-32 py-4 '>
               <div className='h-full w-full flex-col justify-center items-center bg-white rounded-[80px] overflow-hidden py-2'>
-                <h1 className='text-center text-black font-semibold '>Exploring...</h1>
+                <div className='text-center text-xl py-2 text-black font-semibold flex justify-center'>Exploring <Sparkle className='h-4 w-4' /></div>
 
                 <div className='h-full w-full flex justify-evenly items-start gap-4 xl:gap-8 mt-6 '>
 

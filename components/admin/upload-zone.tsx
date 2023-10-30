@@ -125,12 +125,12 @@ const FormZone = () => {
               name="title"
               render={({ field }) => (
                 <FormItem className="relative flex-1">
-                  <FormLabel className="absolute -top-1.5 ml-3 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase  font-semibold ">
+                  <FormLabel className="absolute -top-1.5 ml-3 text-white  px-3 bg-slate-600 dark:bg-zinc-800/50 rounded-full shadow-md text-[11px]  uppercase  font-semibold ">
                     Title
                   </FormLabel>
                   <FormControl>
                     <Input placeholder="Enter title" {...field}
-                      className='bg-slate-300 dark:bg-slate-950 border border-black dark:border-white text-slate-700 dark:text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 rounded-3xl'
+                      className='bg-slate-100 dark:bg-zinc-800/50 border border-slate-400 dark:border-zinc-700 text-slate-700 dark:text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 rounded-3xl'
                     />
                   </FormControl>
                   <FormMessage />
@@ -142,13 +142,13 @@ const FormZone = () => {
               name="category"
               render={({ field }) => (
                 <FormItem className="relative flex-1">
-                  <FormLabel className="absolute  -top-1 ml-3 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase  font-semibold ">
+                  <FormLabel className="absolute  -top-1 ml-3 text-white  px-3 bg-slate-600 dark:bg-zinc-800/50 rounded-full shadow-md text-[11px]  uppercase  font-semibold ">
                     category
                   </FormLabel>
                   <FormControl>
                     <div className=''>
                       <Select  onValueChange={field.onChange} defaultValue={field.value}>
-                        <SelectTrigger className="bg-slate-300 dark:bg-slate-950 border border-black dark:border-white text-slate-700 dark:text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 rounded-3xl">
+                        <SelectTrigger className="bg-slate-100 dark:bg-zinc-800/50 border border-slate-400 dark:border-zinc-700 text-slate-700 dark:text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 rounded-3xl">
                           <SelectValue placeholder="others" />
                         </SelectTrigger>
                         <SelectContent>
@@ -173,12 +173,12 @@ const FormZone = () => {
             name="note"
             render={({ field }) => (
               <FormItem className="relative flex-1">
-                <FormLabel className="absolute  -top-1 ml-3 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase  font-semibold ">
+                <FormLabel className="absolute  -top-1 ml-3 text-white  px-3 bg-slate-600 dark:bg-zinc-800/50 rounded-full shadow-md text-[11px]  uppercase  font-semibold ">
                   Project note
                 </FormLabel>
                 <FormControl>
                   <Input placeholder="Add a short note" {...field}
-                    className='bg-slate-300 dark:bg-slate-950 border border-black dark:border-white text-slate-700 dark:text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 rounded-3xl'
+                    className='bg-slate-100 dark:bg-zinc-800/50 border border-slate-400 dark:border-zinc-700 text-slate-700 dark:text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 rounded-3xl'
                   />
                 </FormControl>
                 <FormMessage />
@@ -191,14 +191,14 @@ const FormZone = () => {
             name="tag"
             render={({ field }) => (
               <FormItem className="relative w-full">
-                <FormLabel className="absolute -top-1.5 ml-3 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase  font-semibold ">Techs</FormLabel>
+                <FormLabel className="absolute -top-1.5 ml-3 text-white  px-3 bg-slate-600 dark:bg-zinc-800/50 rounded-full shadow-md text-[11px]  uppercase  font-semibold ">Techs</FormLabel>
 
                 <FormControl>
                   <TagInput
                     {...field}
                     placeholder="Press Enter to add #tag"
                     tags={tags}
-                    className='bg-slate-300 dark:bg-slate-950 border border-black dark:border-white text-slate-700 dark:text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 rounded-3xl'
+                    className='bg-slate-100 dark:bg-zinc-800/50 border border-slate-400 dark:border-zinc-700 text-slate-700 dark:text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 rounded-3xl'
                     setTags={(newTags) => {
                       setTags(newTags);
                       setValue("tag", newTags as [string, ...string[]]);
@@ -217,12 +217,12 @@ const FormZone = () => {
             name="githubLink"
             render={({ field }) => (
               <FormItem className="relative flex-1">
-                <FormLabel className="absolute  -top-1 ml-3 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase  font-semibold ">
+                <FormLabel className="absolute  -top-1 ml-3 text-white  px-3 bg-slate-600 dark:bg-zinc-800/50 rounded-full shadow-md text-[11px]  uppercase  font-semibold ">
                   Github link
                 </FormLabel>
                 <FormControl>
                   <Input placeholder="Add a short note" {...field}
-                    className='bg-slate-300 dark:bg-slate-950 border border-black dark:border-white text-slate-700 dark:text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 rounded-3xl'
+                    className='bg-slate-100 dark:bg-zinc-800/50 border border-slate-400 dark:border-zinc-700 text-slate-700 dark:text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 rounded-3xl'
                   />
                 </FormControl>
                 <FormMessage />
@@ -235,12 +235,12 @@ const FormZone = () => {
             name="liveLink"
             render={({ field }) => (
               <FormItem className="relative flex-1">
-                <FormLabel className="absolute  -top-1 ml-3 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase  font-semibold ">
+                <FormLabel className="absolute  -top-1 ml-3 text-white  px-3 bg-slate-600 dark:bg-zinc-800/50 rounded-full shadow-md text-[11px]  uppercase  font-semibold ">
                   Live link
                 </FormLabel>
                 <FormControl>
                   <Input placeholder="Add a short note" {...field}
-                    className='bg-slate-300 dark:bg-slate-950 border border-black dark:border-white text-slate-700 dark:text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 rounded-3xl'
+                    className='bg-slate-100 dark:bg-zinc-800/50 border border-slate-400 dark:border-zinc-700 text-slate-700 dark:text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 rounded-3xl'
                   />
                 </FormControl>
                 <FormMessage />
@@ -253,12 +253,12 @@ const FormZone = () => {
             name="pointers"
             render={({ field }) => (
               <FormItem className="relative">
-                <FormLabel className="absolute -top-1.5 ml-3 text-white  px-3 bg-slate-600 dark:bg-slate-950 rounded-full shadow-md text-[11px]  uppercase  font-semibold ">
+                <FormLabel className="absolute -top-1.5 ml-3 text-white  px-3 bg-slate-600 dark:bg-zinc-800/50 rounded-full shadow-md text-[11px]  uppercase  font-semibold ">
                   Pointers
                 </FormLabel>
                 <FormControl>
                   <Textarea rows={4} placeholder="Enter pointers saperated by '.'" {...field}
-                    className='bg-slate-300 dark:bg-slate-950 border border-black dark:border-white text-slate-700 dark:text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 rounded-3xl'
+                    className='bg-slate-100 dark:bg-zinc-800/50 border border-slate-400 dark:border-zinc-700 text-slate-700 dark:text-zinc-400 ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 rounded-3xl'
                   />
                 </FormControl>
                 <FormMessage />

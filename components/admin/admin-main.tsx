@@ -18,7 +18,7 @@ import FormZone from "./upload-zone";
 
 
 const AdminDB = () => {
-    const [state, setState ] = useState('')
+    const [state, setState ] = useState('project')
     return ( 
       <>
       <div className='w-80 lg:w-1/3 flex mx-auto z-50 fixed bg-transparent h-auto transition-opacity'>
@@ -27,7 +27,7 @@ const AdminDB = () => {
         <section className="flex gap-4 py-24 flex-col md:flex-row  justify-center items-center w-full  h-full md:h-screen px-4">
           
           <div className="w-full md:w-1/4   h-full rounded-3xl bg-slate-400/70 dark:bg-zinc-800/70">
-            <div className=" m-2  md:mt-0  flex flex-col justify-center items-center h-auto w-auto space-y-3 rounded-3xl bg-slate-300 dark:bg-zinc-800/70 p-5">
+            <div className=" m-2  md:mt-4  flex flex-col justify-center items-center h-auto w-auto space-y-3 rounded-3xl bg-slate-300 dark:bg-zinc-800/70 p-5">
               <UserButton afterSignOutUrl="/portfolio" />
             </div>
             <div className="m-2 flex flex-col justify-center items-center h-auto w-auto space-y-3 rounded-3xl bg-slate-300 dark:bg-zinc-800/70 p-5">
@@ -39,12 +39,12 @@ const AdminDB = () => {
           </div>
 
           { state === "project" &&
-            <div className="flex justify-center items-center w-full md:w-3/4  h-full  rounded-sm bg-white/30">
+            <div className="flex justify-center items-center w-full md:w-3/4  h-full bg-slate-50 dark:bg-zinc-800/50 rounded-3xl">
             <FormZone />
           </div>
           }
           { state === "achievement" &&
-            <div className="flex justify-center items-center  w-full md:w-3/4 md:p-24  h-full  rounded-sm">
+            <div className="flex justify-center items-center  w-full md:w-3/4 md:p-24  h-full   bg-slate-50 dark:bg-zinc-800/50 rounded-3xl">
             <AchievementForm />
           </div>
           }

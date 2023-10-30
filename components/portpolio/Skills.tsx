@@ -18,7 +18,7 @@ const Skills = () => {
                     <div className="h-60 hidden lg:block w-[2px] rounded-lg bg-emerald-400 ml-2 " />
                     <div className="flex justify-center items-center xl:text-5xl lg:text-xl text-4xl py-2 px-8 md:px-0 md:py-0 uppercase border-2 md:border-none md:rounded-none rounded-3xl lg:-rotate-90 mt-6 lg:mt-16 text-white group">
                         Skills
-                        <Kanban className="h-8 w-8 text-black dark:text-white group-hover:rotate-180 transition-all duration-300" />
+                        <Kanban className="h-8 w-8 text-white dark:text-white group-hover:rotate-180 transition-all duration-300" />
                     </div>
                 </div>
             </div>
@@ -117,7 +117,7 @@ const Skills = () => {
                             {
                                 // hover:shadow-[0px_10px_20px_rgba(256,256,256)]
                                 techs.map((tech) => (
-                                    <div key={tech.tech} className=" relative aspect-square rounded-full border border-slate-400  hover:-translate-y-[2px] hover:shadow-[0px_22px_24px_0px_#FFFFFF24] transition-all duration-300">
+                                    <div key={tech.tech} className=" relative aspect-square rounded-full border border-white dark:border-slate-400  hover:-translate-y-[2px] hover:shadow-[0px_22px_24px_0px_#FFFFFF24] transition-all duration-300">
                                         <Image
                                             src={tech.tech}
                                             alt="skill"
