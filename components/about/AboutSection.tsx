@@ -51,15 +51,15 @@ const AboutSection = () => {
                 </div>
              <div className="flex flex-col xl:ml-16 px-2  gap-3 items-start justify-center w-full h-fit ">
                 <div className="flex justify-center items-center group ">
-                    <Link href='#abt' className={cn("px-2 text-xs text-black dark:text-white font-semibold uppercase border-l-4 border-transparent transition-all duration-300",activeLink ==="abt" ? "border-l-4 rounded-sm border-white" : "")} onClick={handleScroll}>About</Link>
+                    <Link href='#abt' className={cn("px-2 text-xs text-white font-semibold border-l-4 border-transparent transition-all duration-300",activeLink ==="abt" ? "border-l-4 rounded-sm border-white" : "")} onClick={handleScroll}>About</Link>
 
                 </div>
                 <div className="flex justify-center items-center group ">
-                    <Link href='#edu' className={cn("px-2 text-xs text-black dark:text-white font-semibold uppercase border-l-4 border-transparent transition-all duration-300",activeLink ==="edu" ? "border-l-4 rounded-sm border-white" : "")} onClick={handleScroll}>Education</Link>
+                    <Link href='#edu' className={cn("px-2 text-xs text-white font-semibold border-l-4 border-transparent transition-all duration-300",activeLink ==="edu" ? "border-l-4 rounded-sm border-white" : "")} onClick={handleScroll}>Education</Link>
 
                 </div>
                 <div className="flex justify-center items-center group ">
-                    <Link href='#exp' className={cn("px-2 text-xs text-black dark:text-white font-semibold uppercase border-l-4 border-transparent transition-all duration-300",activeLink ==="exp" ? "border-l-4 rounded-sm border-white" : "")} onClick={handleScroll}>Experience</Link>
+                    <Link href='#exp' className={cn("px-2 text-xs text-white font-semibold border-l-4 border-transparent transition-all duration-300",activeLink ==="exp" ? "border-l-4 rounded-sm border-white" : "")} onClick={handleScroll}>Experience</Link>
                 </div>
             </div>   
             </div>
@@ -129,7 +129,7 @@ const AboutSection = () => {
                     </div>
                     <div id="exp" className="flex flex-col justify-center items-start h-full w-full">
                         <div>
-                            <h1 className="font-sans font-bold text-4xl">Experience. &nbsp; &nbsp;!</h1>
+                            <h1 className="font-bold text-4xl">experience. &nbsp; &nbsp;!</h1>
                             <div className="mt-2 text-slate-600 dark:text-white/80">
                               <p className=" ml-4 py-2  text-xs lg:text-sm">Being a self-taught Developer Im looking for job apportunities.</p>
                             <p className="ml-4 py-2  text-xs lg:text-sm">

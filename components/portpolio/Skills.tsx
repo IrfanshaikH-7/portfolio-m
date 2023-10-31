@@ -117,12 +117,12 @@ const Skills = () => {
                             {
                                 // hover:shadow-[0px_10px_20px_rgba(256,256,256)]
                                 techs.map((tech) => (
-                                    <div key={tech.tech} className=" relative aspect-square rounded-full border border-white dark:border-slate-400  hover:-translate-y-[2px] hover:shadow-[0px_22px_24px_0px_#FFFFFF24] transition-all duration-300">
+                                    <div key={tech.tech} className=" relative aspect-square rounded-full border border-white dark:border-slate-400  hover:-translate-y-[2px] hover:shadow-[0px_22px_24px_0px_#00000024] dark:hover:shadow-[0px_22px_24px_0px_#FFFFFF24] transition-all duration-300">
                                         <Image
                                             src={tech.tech}
                                             alt="skill"
                                             fill
-                                            className="object-contain p-3.5 lg:p-4 "
+                                            className="object-contain p-3.5 lg:p-4"
                                         />
                                     </div>
                                 ))

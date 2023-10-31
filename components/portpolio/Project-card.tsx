@@ -35,7 +35,7 @@ const ProjectCard = ({ cardDetails }: Props) => {
                 whileInView={{ opacity: 1, transition: { duration: 0.3, delay: 0.3, type: 'tween', delayChildren:1, staggerChildren:2 } }}
                 
                         >
-                            <div className=" bg-slate-300 dark:bg-slate-800 rounded-lg h-full w-full px-2">
+                            <div className=" bg-slate-200 dark:bg-slate-800 rounded-lg h-full w-full px-2">
 
                                 <div className="relative h-full w-full space-y-1 md:space-y-3 py-2">
                                     <div className="aspect-video w-full relative cursor-pointer" onClick={() => router.push(`/portfolio/${item.id}`)}>
