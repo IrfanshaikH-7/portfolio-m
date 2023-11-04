@@ -26,7 +26,7 @@ const HeroL = () => {
                     Connect
                     <MoveRight className="absolute group-hover:-right-4 -right-3 transition-all duration-300" />
                 </Link>
-                <Link href='/contact' className="heroR-link group relative text-sm lg:px-8 px-6 py-4 font-semibold text-slate-300 border-2 border-slate-300 hover:bg-white hover:text-slate-500">
+                <Link href='https://utfs.io/f/cfcba73c-c083-45b0-b128-3ad48ac3b58f-z6ts03.pdf' target="_blank" className="heroR-link group relative text-sm lg:px-8 px-6 py-4 font-semibold text-slate-300 border-2 border-slate-300 hover:bg-white hover:text-slate-500">
                     Resume
                     <FileText className="absolute group-hover:-right-6 invisible group-hover:visible -right-5 transition-all ease-out" />
                 </Link> 

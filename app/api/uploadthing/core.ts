@@ -16,7 +16,8 @@ export const ourFileRouter = {
   // Define as many FileRoutes as you like, each with a unique routeSlug
   imageUploader: f({
         image: { maxFileSize: "4MB", maxFileCount: 6 },
-        video: { maxFileSize: "256MB", maxFileCount: 1 }
+        video: { maxFileSize: "256MB", maxFileCount: 1 },
+        pdf: {maxFileCount: 1}
   })
     // Set permissions and file types for this FileRoute
     .middleware(() => handleAuth())
@@ -28,7 +29,7 @@ export const ourFileRouter = {
       console.log("file url", file.url);
     }),
 
-    mediaType: f(['image','video'])
+    mediaType: f(['image','video','pdf'])
     .middleware(() => handleAuth())
     .onUploadComplete(async ({ metadata, file }) => {
       console.log("Upload complete for userId:", metadata.userId);
