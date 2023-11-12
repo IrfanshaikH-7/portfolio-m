@@ -27,7 +27,6 @@ const Footer = () => {
                     <Link href='/portfolio' className='px-2'> <p  className='text-black dark:text-white text-base hover:text-slate-600'>portfolio</p></Link>
                     <Link href='/about' className='px-2'> <p  className='text-black dark:text-white text-base hover:text-slate-600'>about</p></Link>
                     <Link href='/contact' className='px-2'><p  className='text-black dark:text-white text-base hover:text-slate-600'>contact</p> </Link>
-                    <Link href='/admin' className='px-2'> <p  className='text-black dark:text-white text-base hover:text-slate-600'>admin</p></Link>
                 </div>
             </div>
 

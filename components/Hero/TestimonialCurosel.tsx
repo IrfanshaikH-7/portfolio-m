@@ -46,7 +46,7 @@ const TestimonialCurosel = ({ testimonials, anonymousTestimonials }: Props) => {
 
         <div className='flex justify-center items-center flex-col gap-4 w-full px-4 py-4'>
           <div className='bg-white dark:bg-slate-800 flex justify-between items-center w-full py-2 px-4 md:px-24 rounded-3xl relative group'>
-            <div className='text-2xl text-black dark:text-white'>Testimonials <ListTreeIcon className='h-12 w 12 text-white inline-block group-hover:rotate-180 transition-transform duration-300' /> </div>
+            <div className='text-2xl text-black dark:text-white'>Testimonials <ListTreeIcon className='h-12 w 12 text-black dark:text-white inline-block group-hover:rotate-180 transition-transform duration-300' /> </div>
 
             <div className=' rounded-full border border-black dark:border-white'>
 

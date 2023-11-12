@@ -15,11 +15,11 @@ const Home: NextPage = async () => {
       anonymous: false
     },
     orderBy: {
-      createdAt:'desc'
+      createdAt: 'desc'
     },
   }
   ))
-  const anonymousTestimonials = await db.testimonials.findMany({ where: { anonymous: true },orderBy: {createdAt: 'desc'} })
+  const anonymousTestimonials = await db.testimonials.findMany({ where: { anonymous: true }, orderBy: { createdAt: 'desc' } })
 
   return (
     <>

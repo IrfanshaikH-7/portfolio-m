@@ -5,6 +5,7 @@ import type { Metadata } from 'next'
 import { Tilt_Neon } from 'next/font/google'
 import { ThemeProvider } from '@/components/providers/theme-provider'
 import { ClerkProvider } from '@clerk/nextjs'
+import { Toaster } from 'sonner'
 
 const tilt_neon = Tilt_Neon({ subsets: ['latin'], weight: ['400'] })
 export const metadata: Metadata = {
@@ -29,6 +30,7 @@ export default function RootLayout({
           >
             <Cursor />
             <div className='  h-full lg:h-screen w-full no-scrollbar'>
+              <Toaster position='top-left' />
               {children}
             </div>
           </ThemeProvider>

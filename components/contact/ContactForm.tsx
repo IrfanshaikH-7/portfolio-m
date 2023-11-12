@@ -1,5 +1,5 @@
 "use client"
-import React from 'react';
+import React, { useState } from 'react';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '../ui/form'
 import * as z from 'zod'
 import { useForm } from 'react-hook-form'
@@ -8,8 +8,10 @@ import { Input } from '../ui/input'
 import { Button } from '../ui/button'
 import { Textarea } from '../ui/textarea'
 import axios from 'axios';
+import { Loader2 } from 'lucide-react';
 
 const ContactForm = () => {
+    const [loading,setLoading] = useState(false)
     const contactSchema = z.object({
         name: z.string().min(3, { message: "name must be atleast 3 characters." }),
         email: z.string().email(),
@@ -26,6 +28,7 @@ const ContactForm = () => {
     })
     console.log(typeof(form))
     const onSubmit = async(values: z.infer<typeof contactSchema>) => {
+        setLoading(true)
         console.log(typeof(values.name))
         const mail = await axios.post('/api/contact',{
             name: values.name,
@@ -37,6 +40,8 @@ const ContactForm = () => {
                     form.reset()
                 }
             }
+        ).finally( ()=>
+            setLoading(false)
         )
         
     }
@@ -57,7 +62,6 @@ const ContactForm = () => {
                                 <FormControl>
                                     <Input placeholder="Enter your name" {...field} name='user_name' className='w-full placeholder:text-white/70 bg-transparent backdrop-blur-sm border-2 border-white  text-white rounded-3xl ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 ' />
                                 </FormControl>
-                                <FormMessage />
                             </FormItem>
                         )}
                     />
@@ -70,7 +74,6 @@ const ContactForm = () => {
                                 <FormControl>
                                     <Input placeholder="Enter your email" {...field} name='user_email' className='w-full placeholder:text-white/70 bg-transparent backdrop-blur-sm border-2 border-white text-white rounded-3xl ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 ' />
                                 </FormControl>
-                                <FormMessage />
                             </FormItem>
                         )}
                     />
@@ -83,13 +86,12 @@ const ContactForm = () => {
                                 <FormControl>
                                     <Textarea rows={4} placeholder="Add your message" {...field} name='user_message' className='w-full placeholder:text-white/70 bg-transparent backdrop-blur-sm border-2 border-white text-white rounded-3xl ring-0 ring-offset-0 focus:!ring-0 focus:!ring-offset-0 resize-none' />
                                 </FormControl>
-                                <FormMessage />
                             </FormItem>
                         )}
                     />
                     <div className='flex gap-4'>
-                       <Button type="reset" onClick={()=> form.reset()} className='rounded-3xl w-full font-semibold hover:-translate-y-[2px] hover:shadow-md transition-all duration-300 bg-white text-black/80'>Cancel</Button>
-                    <Button type="submit" className='rounded-3xl w-full font-semibold hover:-translate-y-[2px] hover:shadow-md transition-all duration-300 bg-white text-black/80'>Submit</Button> 
+                       <Button type="reset" onClick={()=> form.reset()} className='rounded-3xl w-full font-semibold hover:bg-white hover:-translate-y-[2px] hover:shadow-md transition-all duration-300 bg-white text-black/80'>Cancel</Button>
+                    <Button type="submit" className='rounded-3xl w-full font-semibold hover:bg-white hover:-translate-y-[2px] hover:shadow-md transition-all duration-300 bg-white text-black/80'>{loading ? <Loader2 className='h-4 w-4 animate-spin'/> : 'Submit' }</Button> 
                     </div>
                     
                 </form>

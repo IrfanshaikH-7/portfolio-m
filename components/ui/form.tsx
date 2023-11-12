@@ -9,6 +9,7 @@ import {
   FormProvider,
   useFormContext,
 } from "react-hook-form"
+import { toast } from "sonner"
 
 import { cn } from "@/lib/utils"
 import { Label } from "@/components/ui/label"
@@ -152,7 +153,8 @@ const FormMessage = React.forwardRef<
   }
 
   return (
-    <p
+    toast.warning(
+      <p
       ref={ref}
       id={formMessageId}
       className={cn("text-sm font-medium text-destructive", className)}
@@ -160,6 +162,8 @@ const FormMessage = React.forwardRef<
     >
       {body}
     </p>
+    )
+    // 
   )
 })
 FormMessage.displayName = "FormMessage"
