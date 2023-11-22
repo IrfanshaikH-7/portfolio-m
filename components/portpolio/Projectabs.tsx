@@ -24,8 +24,14 @@ const Projectabs = ({
  whileInView={{ opacity: 1, y: 0, transition:{duration:0.5,delay:0.3, type:'tween'}  }} 
         >
             <Tabs defaultValue="fullstack" className="w-full h-full justify-end md:flex items-center ">
-                <TabsContent value="fullstack">
-                    <section className="h-full w-full overflow-y-scroll bg-blue relative no-scrollbar">
+            <TabsList className="sm:hidden flex md:flex-col xl:w-2/5 mt-2 md:mt-0 md:h-full md:px-12 bg-transparent border border-slate-400 backdrop-blur-md">
+                    <TabsTrigger className="" value="fullstack">Full stack</TabsTrigger>
+                    <TabsTrigger value="frontend">Frontend</TabsTrigger>
+                    <TabsTrigger value="python">Python</TabsTrigger>
+                    <TabsTrigger value="others">others</TabsTrigger>
+                </TabsList>
+                <TabsContent value="fullstack" className='sm:mt-0 mt-4'>
+                    <section className="h-full w-full overflow-y-scroll bg-blue relative no-scrollbar ">
                         <div className="flex flex-col items-center justify-center mb-12 py-2">
                             <h3 className="text-3xl text-center justify-center  uppercase ">Fullstack</h3>
                             <Triangle className="rotate-180 fill-black dark:fill-white h-4 w-4" />
@@ -33,7 +39,7 @@ const Projectabs = ({
                         <ProjectCard cardDetails={fullstack} />
                     </section>
                 </TabsContent>
-                <TabsContent value="frontend">
+                <TabsContent value="frontend" className='sm:mt-0 mt-4'>
                     <section className="h-full w-full overflow-y-scroll no-scrollbar">
                         <div className="flex flex-col items-center justify-center mb-12 py-2">
                             <h3 className="text-3xl text-center justify-center  uppercase ">frontend</h3>
@@ -42,7 +48,7 @@ const Projectabs = ({
                         <ProjectCard cardDetails={frontend} />
                     </section>
                 </TabsContent>
-                <TabsContent value="python">
+                <TabsContent value="python" className='sm:mt-0 mt-4'>
                     <section className="h-full w-full  overflow-y-scroll no-scrollbar">
                         <div className="flex flex-col items-center justify-center mb-12 py-2">
                             <h3 className="text-3xl text-center justif
@@ -52,7 +58,7 @@ const Projectabs = ({
                         <ProjectCard cardDetails={backend} />
                     </section>
                 </TabsContent>
-                <TabsContent value="others">
+                <TabsContent value="others" className='sm:mt-0 mt-4'>
                     <section className="h-full w-full  overflow-y-scroll no-scrollbar">
                         <div className="flex flex-col items-center justify-center mb-12 py-2">
                             <h3 className="text-3xl text-center justify-center  uppercase ">Others</h3>
@@ -62,12 +68,13 @@ const Projectabs = ({
                         <ProjectCard cardDetails={others} />
                     </section>
                 </TabsContent>
-                <TabsList className="flex md:flex-col xl:w-2/5 mt-2 md:mt-0 md:h-full md:px-12">
+                <TabsList className="hidden sm:flex md:flex-col xl:w-2/5 mt-2 md:mt-0 md:h-full md:px-12 bg-transparent border border-slate-400 backdrop-blur-md">
                     <TabsTrigger className="" value="fullstack">Full stack</TabsTrigger>
                     <TabsTrigger value="frontend">Frontend</TabsTrigger>
                     <TabsTrigger value="python">Python</TabsTrigger>
                     <TabsTrigger value="others">others</TabsTrigger>
                 </TabsList>
+                
             </Tabs>
         </motion.div>
     )

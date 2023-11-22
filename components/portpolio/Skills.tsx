@@ -40,7 +40,9 @@ const Skills = () => {
                             <div className="grid grid-cols-2 gap-2 aspect-square p-1 md:p-7  ">
                                 {
                                     languages.map((language) => (
-                                        <div key={language.lan} className=" relative text-2xl flex items-center justify-center rounded-md border-2  dark:border border-white">
+                                        <div key={language.lan} className=" relative text-2xl flex items-center justify-center rounded-md border-2  dark:border border-white 
+                                        last:h-4/5 last:w-4/5 first:h-4/5 first:w-4/5 first:justify-self-end first:self-end
+                                        ">
                                             <Image
                                                 src={language.img}
                                                 alt="skill"

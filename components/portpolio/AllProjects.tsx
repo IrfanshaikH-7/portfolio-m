@@ -15,7 +15,7 @@ const AllProjects = ({ projects }: Props) => {
             My works
              <Grip className="h-7  w-7 text-black dark:text-white group-hover:rotate-180 transition-all duration-300"/>
             </div>
-            <div className='h-full w-full px-4 grid grid-cols-2 gap-8 mt-16 md:mt-24'>
+            <div className='h-full w-full px-2 grid grid-cols-2 gap-4 sm:gap-8 mt-16 md:mt-24'>
                 {
                     projects.map((project) => (
                         <>
@@ -29,7 +29,7 @@ const AllProjects = ({ projects }: Props) => {
                                                 {project?.title}
                                                 <LucideArrowBigLeftDash className='fill-black dark:fill-white h-4 w-4 lg:h-12 lg:w-12' />
                                             </div>
-                                            <p className='text-slate-900 dark:text-slate-300 text-[9px] lg:text-base'>{project.note}</p>
+                                            <p className='text-slate-900 dark:text-slate-300 text-[8px] lg:text-base'>{project.note}</p>
                                         </div>
                                         <p className='text-slate-900 dark:text-slate-300 capitalize px-2 py-px border-l-2 border-r-2 border-0 border-slate-900 dark:border-slate-300 text-[9px] lg:text-base'>{project?.category}</p>
                                     </div>

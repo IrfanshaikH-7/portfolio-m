@@ -25,7 +25,7 @@ const FeatureCard = ({ children, gradient, id }: FeatureCardProps) => {
     const isInViewF = useFeatureStore((state) => state.inViewF)
 
     return (
-        <div className={cn(" absolute inset-0 h-full w-full bg-gradient-to-br  p-1 border-none dark:border rounded-2xl md:rounded-[50px] transition-all duration-300",
+        <div className={cn(" absolute inset-0 h-full w-full bg-gradient-to-br  p-1 border-none dark:border rounded-lg transition-all duration-300",
             gradient,
             isInViewF === id ? 'opacity-100' : 'opacity-0'
             )}
@@ -54,7 +54,7 @@ export const Discord = ({ id, title, imgUrl, note, tags, githublink, livelink, d
                     <Link href={githublink} className="h-4 sm:h-8 w-4 sm:w-8 flex items-center justify-center"><GithubIcon className="fill-black text-black"/></Link>
                     <Link href={livelink} className="h-4 sm:h-8 w-4 sm:w-8 flex items-center justify-center"><ListVideo className="text-black"/></Link>
                 </div>
-                <div className="hidden xl:flex absolute space-y-4 p-1 xl:p-4  items-center justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:-translate-x-72 hover:-translate-x-72 xl:group-hover:-translate-x-96 xl:hover:-translate-x-96 transition-all duration-500 rounded-[50px]">
+                <div className="hidden xl:flex absolute space-y-4 p-1 xl:p-4  items-center justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:-translate-x-72 hover:-translate-x-72 xl:group-hover:-translate-x-96 xl:hover:-translate-x-96 transition-all duration-500 rounded-lg">
                     <div className="  h-full w-4/5 xl:w-2/3 bg-white py-6 px-3 overflow-hidden rounded-[50px] relative ">
                         <h3 className="text-xs xl:text-sm   text-slate-800">introduction -</h3>
                         <p className="text-xs md:text-[10px] xl:text-xs   indent-6 break-words text-slate-700 ">
@@ -84,8 +84,8 @@ export const Discord = ({ id, title, imgUrl, note, tags, githublink, livelink, d
                     </div>
                 </section>
                 
-                <div className=" xl:hidden absolute space-y-4 p-1 xl:p-4 flex items-end justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:translate-y-52 hover:translate-y-52 sm:group-hover:translate-y-72 sm:hover:translate-y-72 lg:group-hover:translate-y-64 lg:hover:translate-y-64 transition-all duration-500 rounded-2xl md:rounded-[50px]">
-                    <div className="  h-[90%] w-full bg-white py-6 px-3 overflow-hidden rounded-2xl md:rounded-[50px] relative ">
+                <div className=" xl:hidden absolute space-y-4 p-1 xl:p-4 flex items-end justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:translate-y-52 hover:translate-y-52 sm:group-hover:translate-y-72 sm:hover:translate-y-72 lg:group-hover:translate-y-64 lg:hover:translate-y-64 transition-all duration-500 rounded-lg">
+                    <div className="  h-[90%] w-full bg-white py-6 px-3 overflow-hidden rounded-lg relative ">
                         <h3 className="text-xs sm:text-sm    text-slate-800">introduction -</h3>
                         <p className="text-[9px] sm:text-xs   indent-6 leading-snug sm:leading-normal sm:break-words text-slate-700 ">
                             We know discord, My discord clone application is a project that aims to replicate the core features and functionality of discord. It is built using Next.js, Socket.io, TypeScript, and SQL. Some of the features that my discord clone application offers are:
@@ -96,7 +96,7 @@ export const Discord = ({ id, title, imgUrl, note, tags, githublink, livelink, d
                     </div>
                 </div>
                 <section className=" xl:hidden h-full w-full flex flex-col gap-2 sm:gap-4 justify-start items-center">
-                    <div className="w-full md:w-5/6 h-4/6 dark:bg-slate-700 bg-emerald-400 rounded-xl mt-8 relative overflow-hidden p-px">
+                    <div className="w-full aspect-video h-4/6 dark:bg-slate-700 bg-emerald-400 rounded-xl mt-8 relative overflow-hidden p-px">
                         <Image
                             src={imgUrl}
                             fill
@@ -107,7 +107,7 @@ export const Discord = ({ id, title, imgUrl, note, tags, githublink, livelink, d
                     <div className="flex gap-1 xl:gap-3 flex-wrap z-30 w-56 sm:w-full justify-center items-center ">
                         {
                             tags.map((tag) => (
-                                <p key={tag} className="text-[10px] leading-tight sm:leading-normal sm:text-xs h-fit  text-slate-500  bg-white px-2 rounded-md">{tag}</p>
+                                <p key={tag} className=" text-[10px] leading-tight sm:leading-normal sm:text-xs h-fit  text-slate-500  bg-white py-px  px-2 rounded-sm">{tag}</p>
 
                             ))
                         }
@@ -133,8 +133,8 @@ export const Saas = ({ id, title, imgUrl, note, tags, githublink, livelink, disc
                     <Link href={githublink} className="h-4 sm:h-8 w-4 sm:w-8 flex items-center justify-center"><GithubIcon className="fill-black text-black"/></Link>
                     <Link href={livelink} className="h-4 sm:h-8 w-4 sm:w-8 flex items-center justify-center"><ListVideo className="text-black"/></Link>
                 </div>
-                <div className="hidden xl:flex absolute space-y-4 p-1 xl:p-4  items-center justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:-translate-x-72 hover:-translate-x-72 xl:group-hover:-translate-x-96 xl:hover:-translate-x-96 transition-all duration-500 rounded-[50px]">
-                    <div className="  h-full w-4/5 xl:w-2/3 bg-white py-6 px-3 overflow-hidden rounded-2xl md:rounded-[50px] relative ">
+                <div className="hidden xl:flex absolute space-y-4 p-1 xl:p-4  items-center justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:-translate-x-72 hover:-translate-x-72 xl:group-hover:-translate-x-96 xl:hover:-translate-x-96 transition-all duration-500 rounded-lg">
+                    <div className="  h-full w-4/5 xl:w-2/3 bg-white py-6 px-3 overflow-hidden rounded-[50px] relative ">
                         <h3 className="text-xs xl:text-sm   text-slate-800">introduction -</h3>
                         <p className="text-xs md:text-[10px] xl:text-xs   indent-6 break-words text-slate-700 ">
                             We know discord, My discord clone application is a project that aims to replicate the core features and functionality of discord. It is built using Next.js, Socket.io, TypeScript, and SQL. Some of the features that my discord clone application offers are:
@@ -151,7 +151,7 @@ export const Saas = ({ id, title, imgUrl, note, tags, githublink, livelink, disc
                             src={imgUrl}
                             fill
                             alt="project"
-                            className="p-[2px] rounded-xl"
+                            className="p-[2px] rounded-xl object-cover"
                         />
                     </div>
                     <div className="flex gap-1 xl:gap-3 flex-wrap z-30">
@@ -163,8 +163,8 @@ export const Saas = ({ id, title, imgUrl, note, tags, githublink, livelink, disc
                         }
                     </div>
                 </section>
-                <div className=" xl:hidden absolute space-y-4 p-1 xl:p-4 flex items-end justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:translate-y-52 hover:translate-y-52 sm:group-hover:translate-y-72 sm:hover:translate-y-72 lg:group-hover:translate-y-64 lg:hover:translate-y-64 transition-all duration-500 rounded-2xl md:rounded-[50px]">
-                    <div className="  h-[90%] w-full bg-white py-6 px-3 overflow-hidden rounded-2xl md:rounded-[50px] relative ">
+                <div className=" xl:hidden absolute space-y-4 p-1 xl:p-4 flex items-end justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:translate-y-52 hover:translate-y-52 sm:group-hover:translate-y-72 sm:hover:translate-y-72 lg:group-hover:translate-y-64 lg:hover:translate-y-64 transition-all duration-500 rounded-lg">
+                    <div className="  h-[90%] w-full bg-white py-6 px-3 overflow-hidden rounded-lg relative ">
                         <h3 className="text-xs sm:text-sm    text-slate-800">introduction -</h3>
                         <p className="text-[9px] sm:text-xs   indent-6 leading-snug sm:leading-normal sm:break-words text-slate-700 ">
                             We know discord, My discord clone application is a project that aims to replicate the core features and functionality of discord. It is built using Next.js, Socket.io, TypeScript, and SQL. Some of the features that my discord clone application offers are:
@@ -175,7 +175,7 @@ export const Saas = ({ id, title, imgUrl, note, tags, githublink, livelink, disc
                     </div>
                 </div>
                 <section className=" xl:hidden h-full w-full flex flex-col gap-2 sm:gap-4 justify-start items-center">
-                    <div className="w-full md:w-5/6 h-4/6 dark:bg-slate-700 bg-emerald-400 rounded-xl mt-8 relative overflow-hidden p-px">
+                    <div className="w-full aspect-video h-4/6 dark:bg-slate-700 bg-emerald-400 rounded-xl mt-8 relative overflow-hidden p-px">
                         <Image
                             src={imgUrl}
                             fill
@@ -186,7 +186,7 @@ export const Saas = ({ id, title, imgUrl, note, tags, githublink, livelink, disc
                     <div className="flex gap-1 xl:gap-3 flex-wrap z-30 w-56 sm:w-full justify-center items-center ">
                         {
                             tags.map((tag) => (
-                                <p key={tag} className="text-[10px] leading-tight sm:leading-normal sm:text-xs h-fit  text-slate-500  bg-whitepx-2 rounded-md">{tag}</p>
+                                <p key={tag} className=" text-[10px] leading-tight sm:leading-normal sm:text-xs h-fit  text-slate-500  bg-white py-px  px-2 rounded-sm">{tag}</p>
 
                             ))
                         }
@@ -213,7 +213,7 @@ export const NewLife = ({ id, title, imgUrl, note, tags, githublink, livelink, d
                     <Link href={livelink} className="h-4 sm:h-8 w-4 sm:w-8 flex items-center justify-center"><ListVideo className="text-black"/></Link>
                 </div>
 
-                <div className="hidden xl:flex absolute space-y-4 p-1 xl:p-4  items-center justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:-translate-x-72 hover:-translate-x-72 xl:group-hover:-translate-x-96 xl:hover:-translate-x-96 transition-all duration-500 rounded-[50px]">
+                <div className="hidden xl:flex absolute space-y-4 p-1 xl:p-4  items-center justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:-translate-x-72 hover:-translate-x-72 xl:group-hover:-translate-x-96 xl:hover:-translate-x-96 transition-all duration-500 rounded-lg">
                     <div className="  h-full w-4/5 xl:w-2/3 bg-white py-6 px-3 overflow-hidden rounded-[50px] relative ">
                         <h3 className="text-xs xl:text-sm   text-slate-800">introduction -</h3>
                         <p className="text-xs md:text-[10px] xl:text-xs   indent-6 break-words text-slate-700 ">
@@ -243,8 +243,8 @@ export const NewLife = ({ id, title, imgUrl, note, tags, githublink, livelink, d
                     </div>
                 </section>
                 
-                <div className=" xl:hidden absolute space-y-4 p-1 xl:p-4 flex items-end justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:translate-y-52 hover:translate-y-52 sm:group-hover:translate-y-72 sm:hover:translate-y-72 lg:group-hover:translate-y-64 lg:hover:translate-y-64 transition-all duration-500 rounded-2xl md:rounded-[50px]">
-                    <div className="  h-[90%] w-full bg-white py-6 px-3 overflow-hidden rounded-2xl md:rounded-[50px] relative ">
+                <div className=" xl:hidden absolute space-y-4 p-1 xl:p-4 flex items-end justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:translate-y-52 hover:translate-y-52 sm:group-hover:translate-y-72 sm:hover:translate-y-72 lg:group-hover:translate-y-64 lg:hover:translate-y-64 transition-all duration-500 rounded-lg">
+                    <div className="  h-[90%] w-full bg-white py-6 px-3 overflow-hidden rounded-lg relative ">
                         <h3 className="text-xs sm:text-sm    text-slate-800">introduction -</h3>
                         <p className="text-[9px] sm:text-xs   indent-6 leading-snug sm:leading-normal sm:break-words text-slate-700 ">
                             We know discord, My discord clone application is a project that aims to replicate the core features and functionality of discord. It is built using Next.js, Socket.io, TypeScript, and SQL. Some of the features that my discord clone application offers are:
@@ -255,7 +255,7 @@ export const NewLife = ({ id, title, imgUrl, note, tags, githublink, livelink, d
                     </div>
                 </div>
                 <section className=" xl:hidden h-full w-full flex flex-col gap-2 sm:gap-4 justify-start items-center">
-                    <div className="w-full md:w-5/6 h-4/6 dark:bg-slate-700 bg-emerald-400 rounded-xl mt-8 relative overflow-hidden p-px">
+                    <div className="w-full aspect-video h-4/6 dark:bg-slate-700 bg-emerald-400 rounded-xl mt-8 relative overflow-hidden p-px">
                         <Image
                             src={imgUrl}
                             fill
@@ -266,7 +266,7 @@ export const NewLife = ({ id, title, imgUrl, note, tags, githublink, livelink, d
                     <div className="flex gap-1 xl:gap-3 flex-wrap z-30 w-56 sm:w-full justify-center items-center ">
                         {
                             tags.map((tag) => (
-                                <p key={tag} className="text-[10px] leading-tight sm:leading-normal sm:text-xs h-fit  text-slate-500  bg-white px-2 rounded-md">{tag}</p>
+                                <p key={tag} className=" text-[10px] leading-tight sm:leading-normal sm:text-xs h-fit  text-slate-500  bg-white py-px  px-2 rounded-sm">{tag}</p>
 
                             ))
                         }
@@ -292,7 +292,7 @@ export const Port = ({ id, title, imgUrl, note, tags, githublink, livelink, disc
                     <Link href={githublink} className="h-4 sm:h-8 w-4 sm:w-8 flex items-center justify-center"><GithubIcon className="fill-black text-black"/></Link>
                     <Link href={livelink} className="h-4 sm:h-8 w-4 sm:w-8 flex items-center justify-center"><ListVideo className="text-black"/></Link>
                 </div>
-                <div className="hidden xl:flex absolute space-y-4 p-1 xl:p-4  items-center justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:-translate-x-72 hover:-translate-x-72 xl:group-hover:-translate-x-96 xl:hover:-translate-x-96 transition-all duration-500 rounded-[50px]">
+                <div className="hidden xl:flex absolute space-y-4 p-1 xl:p-4  items-center justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:-translate-x-72 hover:-translate-x-72 xl:group-hover:-translate-x-96 xl:hover:-translate-x-96 transition-all duration-500 rounded-lg">
                     <div className="  h-full w-4/5 xl:w-2/3 bg-white py-6 px-3 overflow-hidden rounded-[50px] relative ">
                         <h3 className="text-xs xl:text-sm   text-slate-800">introduction -</h3>
                         <p className="text-xs md:text-[10px] xl:text-xs   indent-6 break-words text-slate-700 ">
@@ -321,8 +321,8 @@ export const Port = ({ id, title, imgUrl, note, tags, githublink, livelink, disc
                         }
                     </div>
                 </section>
-                <div className=" xl:hidden absolute space-y-4 p-1 xl:p-4 flex items-end justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:translate-y-52 hover:translate-y-52 sm:group-hover:translate-y-72 sm:hover:translate-y-72 lg:group-hover:translate-y-64 lg:hover:translate-y-64 transition-all duration-500 rounded-2xl md:rounded-[50px]">
-                    <div className="  h-[90%] w-full bg-white py-6 px-3 overflow-hidden rounded-2xl md:rounded-[50px] relative ">
+                <div className=" xl:hidden absolute space-y-4 p-1 xl:p-4 flex items-end justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:translate-y-52 hover:translate-y-52 sm:group-hover:translate-y-72 sm:hover:translate-y-72 lg:group-hover:translate-y-64 lg:hover:translate-y-64 transition-all duration-500 rounded-lg">
+                    <div className="  h-[90%] w-full bg-white py-6 px-3 overflow-hidden rounded-lg relative ">
                         <h3 className="text-xs sm:text-sm    text-slate-800">introduction -</h3>
                         <p className="text-[9px] sm:text-xs   indent-6 leading-snug sm:leading-normal sm:break-words text-slate-700 ">
                             We know discord, My discord clone application is a project that aims to replicate the core features and functionality of discord. It is built using Next.js, Socket.io, TypeScript, and SQL. Some of the features that my discord clone application offers are:
@@ -333,7 +333,7 @@ export const Port = ({ id, title, imgUrl, note, tags, githublink, livelink, disc
                     </div>
                 </div>
                 <section className=" xl:hidden h-full w-full flex flex-col gap-2 sm:gap-4 justify-start items-center">
-                    <div className="w-full md:w-5/6 h-4/6 dark:bg-slate-700 bg-emerald-400 rounded-xl mt-8 relative overflow-hidden p-px">
+                    <div className="w-full aspect-video h-4/6 dark:bg-slate-700 bg-emerald-400 rounded-xl mt-8 relative overflow-hidden p-px">
                         <Image
                             src={imgUrl}
                             fill
@@ -344,7 +344,7 @@ export const Port = ({ id, title, imgUrl, note, tags, githublink, livelink, disc
                     <div className="flex gap-1 xl:gap-3 flex-wrap z-30 w-56 sm:w-full justify-center items-center ">
                         {
                             tags.map((tag) => (
-                                <p key={tag} className="text-[10px] leading-tight sm:leading-normal sm:text-xs h-fit  text-slate-500  bg-white px-2 rounded-md">{tag}</p>
+                                <p key={tag} className=" text-[10px] leading-tight sm:leading-normal sm:text-xs h-fit  text-slate-500  bg-white py-px  px-2 rounded-sm">{tag}</p>
 
                             ))
                         }
@@ -370,7 +370,7 @@ export const Animata = ({ id, title, imgUrl, note, tags, githublink, livelink, d
                     <Link href={githublink} className="h-4 sm:h-8 w-4 sm:w-8 flex items-center justify-center"><GithubIcon className="fill-black text-black"/></Link>
                     <Link href={livelink} className="h-4 sm:h-8 w-4 sm:w-8 flex items-center justify-center"><ListVideo className="text-black"/></Link>
                 </div>
-                <div className="hidden xl:flex absolute space-y-4 p-1 xl:p-4  items-center justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:-translate-x-72 hover:-translate-x-72 xl:group-hover:-translate-x-96 xl:hover:-translate-x-96 transition-all duration-500 rounded-[50px]">
+                <div className="hidden xl:flex absolute space-y-4 p-1 xl:p-4  items-center justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:-translate-x-72 hover:-translate-x-72 xl:group-hover:-translate-x-96 xl:hover:-translate-x-96 transition-all duration-500 rounded-lg">
                     <div className="  h-full w-4/5 xl:w-2/3 bg-white py-6 px-3 overflow-hidden rounded-[50px] relative ">
                         <h3 className="text-xs xl:text-sm   text-slate-800">introduction -</h3>
                         <p className="text-xs md:text-[10px] xl:text-xs   indent-6 break-words text-slate-700 ">
@@ -399,8 +399,8 @@ export const Animata = ({ id, title, imgUrl, note, tags, githublink, livelink, d
                         }
                     </div>
                 </section>
-                <div className=" xl:hidden absolute space-y-4 p-1 xl:p-4 flex items-end justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:translate-y-52 hover:translate-y-52 sm:group-hover:translate-y-72 sm:hover:translate-y-72 lg:group-hover:translate-y-64 lg:hover:translate-y-64 transition-all duration-500 rounded-2xl md:rounded-[50px]">
-                    <div className="  h-[90%] w-full bg-white py-6 px-3 overflow-hidden rounded-2xl md:rounded-[50px] relative ">
+                <div className=" xl:hidden absolute space-y-4 p-1 xl:p-4 flex items-end justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:translate-y-52 hover:translate-y-52 sm:group-hover:translate-y-72 sm:hover:translate-y-72 lg:group-hover:translate-y-64 lg:hover:translate-y-64 transition-all duration-500 rounded-lg">
+                    <div className="  h-[90%] w-full bg-white py-6 px-3 overflow-hidden rounded-lg relative ">
                         <h3 className="text-xs sm:text-sm    text-slate-800">introduction -</h3>
                         <p className="text-[9px] sm:text-xs   indent-6 leading-snug sm:leading-normal sm:break-words text-slate-700 ">
                             We know discord, My discord clone application is a project that aims to replicate the core features and functionality of discord. It is built using Next.js, Socket.io, TypeScript, and SQL. Some of the features that my discord clone application offers are:
@@ -411,7 +411,7 @@ export const Animata = ({ id, title, imgUrl, note, tags, githublink, livelink, d
                     </div>
                 </div>
                 <section className=" xl:hidden h-full w-full flex flex-col gap-2 sm:gap-4 justify-start items-center">
-                    <div className="w-full md:w-5/6 h-4/6 dark:bg-slate-700 bg-emerald-400 rounded-xl mt-8 relative overflow-hidden p-px">
+                    <div className="w-full aspect-video h-4/6 dark:bg-slate-700 bg-emerald-400 rounded-xl mt-8 relative overflow-hidden p-px">
                         <Image
                             src={imgUrl}
                             fill
@@ -422,7 +422,7 @@ export const Animata = ({ id, title, imgUrl, note, tags, githublink, livelink, d
                     <div className="flex gap-1 xl:gap-3 flex-wrap z-30 w-56 sm:w-full justify-center items-center ">
                         {
                             tags.map((tag) => (
-                                <p key={tag} className="text-[10px] leading-tight sm:leading-normal sm:text-xs h-fit  text-slate-500  bg-white px-2 rounded-md">{tag}</p>
+                                <p key={tag} className=" text-[10px] leading-tight sm:leading-normal sm:text-xs h-fit  text-slate-500  bg-white py-px  px-2 rounded-sm">{tag}</p>
 
                             ))
                         }
@@ -449,7 +449,7 @@ export const LMS = ({ id, title, imgUrl, note, tags, githublink, livelink, discr
                     <Link href={githublink} className="h-4 sm:h-8 w-4 sm:w-8 flex items-center justify-center"><GithubIcon className="fill-black text-black"/></Link>
                     <Link href={livelink} className="h-4 sm:h-8 w-4 sm:w-8 flex items-center justify-center"><ListVideo className="text-black"/></Link>
                 </div>
-                <div className="hidden xl:flex absolute space-y-4 p-1 xl:p-4  items-center justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:-translate-x-72 hover:-translate-x-72 xl:group-hover:-translate-x-96 xl:hover:-translate-x-96 transition-all duration-500 rounded-[50px]">
+                <div className="hidden xl:flex absolute space-y-4 p-1 xl:p-4  items-center justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:-translate-x-72 hover:-translate-x-72 xl:group-hover:-translate-x-96 xl:hover:-translate-x-96 transition-all duration-500 rounded-lg">
                     <div className="  h-full w-4/5 xl:w-2/3 bg-white py-6 px-3 overflow-hidden rounded-[50px] relative ">
                         <h3 className="text-xs xl:text-sm   text-slate-800">introduction -</h3>
                         <p className="text-xs md:text-[10px] xl:text-xs   indent-6 break-words text-slate-700 ">
@@ -480,8 +480,8 @@ export const LMS = ({ id, title, imgUrl, note, tags, githublink, livelink, discr
                 </section>
                 
                 
-                <div className=" xl:hidden absolute space-y-4 p-1 xl:p-4 flex items-end justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:translate-y-52 hover:translate-y-52 sm:group-hover:translate-y-72 sm:hover:translate-y-72 lg:group-hover:translate-y-64 lg:hover:translate-y-64 transition-all duration-500 rounded-2xl md:rounded-[50px]">
-                    <div className="  h-[90%] w-full bg-white py-6 px-3 overflow-hidden rounded-2xl md:rounded-[50px] relative ">
+                <div className=" xl:hidden absolute space-y-4 p-1 xl:p-4 flex items-end justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:translate-y-52 hover:translate-y-52 sm:group-hover:translate-y-72 sm:hover:translate-y-72 lg:group-hover:translate-y-64 lg:hover:translate-y-64 transition-all duration-500 rounded-lg">
+                    <div className="  h-[90%] w-full bg-white py-6 px-3 overflow-hidden rounded-lg relative ">
                         <h3 className="text-xs sm:text-sm    text-slate-800">introduction -</h3>
                         <p className="text-[9px] sm:text-xs   indent-6 leading-snug sm:leading-normal sm:break-words text-slate-700 ">
                             We know discord, My discord clone application is a project that aims to replicate the core features and functionality of discord. It is built using Next.js, Socket.io, TypeScript, and SQL. Some of the features that my discord clone application offers are:
@@ -492,7 +492,7 @@ export const LMS = ({ id, title, imgUrl, note, tags, githublink, livelink, discr
                     </div>
                 </div>
                 <section className=" xl:hidden h-full w-full flex flex-col gap-2 sm:gap-4 justify-start items-center">
-                    <div className="w-full md:w-5/6 h-4/6 dark:bg-slate-700 bg-emerald-400 rounded-xl mt-8 relative overflow-hidden p-px">
+                    <div className="w-full aspect-video h-4/6 dark:bg-slate-700 bg-emerald-400 rounded-xl mt-8 relative overflow-hidden p-px">
                         <Image
                             src={imgUrl}
                             fill
@@ -503,7 +503,7 @@ export const LMS = ({ id, title, imgUrl, note, tags, githublink, livelink, discr
                     <div className="flex gap-1 xl:gap-3 flex-wrap z-30 w-56 sm:w-full justify-center items-center ">
                         {
                             tags.map((tag) => (
-                                <p key={tag} className="text-[10px] leading-tight sm:leading-normal sm:text-xs h-fit  text-slate-500  bg-white px-2 rounded-md">{tag}</p>
+                                <p key={tag} className=" text-[10px] leading-tight sm:leading-normal sm:text-xs h-fit  text-slate-500  bg-white py-px  px-2 rounded-sm">{tag}</p>
 
                             ))
                         }
@@ -530,7 +530,7 @@ export const Thread = ({ id, title, imgUrl, note, tags, githublink, livelink, di
                     <Link href={livelink} className="h-4 sm:h-8 w-4 sm:w-8 flex items-center justify-center"><ListVideo className="text-black"/></Link>
                 </div>
 
-                <div className="hidden xl:flex absolute space-y-4 p-1 xl:p-4  items-center justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:-translate-x-72 hover:-translate-x-72 xl:group-hover:-translate-x-96 xl:hover:-translate-x-96 transition-all duration-500 rounded-[50px]">
+                <div className="hidden xl:flex absolute space-y-4 p-1 xl:p-4  items-center justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:-translate-x-72 hover:-translate-x-72 xl:group-hover:-translate-x-96 xl:hover:-translate-x-96 transition-all duration-500 rounded-lg">
                     <div className="  h-full w-4/5 xl:w-2/3 bg-white py-6 px-3 overflow-hidden rounded-[50px] relative ">
                         <h3 className="text-xs xl:text-sm   text-slate-800">introduction -</h3>
                         <p className="text-xs md:text-[10px] xl:text-xs   indent-6 break-words text-slate-700 ">
@@ -561,8 +561,8 @@ export const Thread = ({ id, title, imgUrl, note, tags, githublink, livelink, di
                 </section>
 
 
-                <div className=" xl:hidden absolute space-y-4 p-1 xl:p-4 flex items-end justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:translate-y-52 hover:translate-y-52 sm:group-hover:translate-y-72 sm:hover:translate-y-72 lg:group-hover:translate-y-64 lg:hover:translate-y-64 transition-all duration-500 rounded-2xl md:rounded-[50px] ">
-                    <div className="  h-[90%] w-full bg-white py-6 px-3 overflow-hidden rounded-2xl md:rounded-[50px] relative ">
+                <div className=" xl:hidden absolute space-y-4 p-1 xl:p-4 flex items-end justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:translate-y-52 hover:translate-y-52 sm:group-hover:translate-y-72 sm:hover:translate-y-72 lg:group-hover:translate-y-64 lg:hover:translate-y-64 transition-all duration-500 rounded-lg ">
+                    <div className="  h-[90%] w-full bg-white py-6 px-3 overflow-hidden rounded-lg relative ">
                         <h3 className="text-xs sm:text-sm    text-slate-800">introduction -</h3>
                         <p className="text-[9px] sm:text-xs   indent-6 leading-snug sm:leading-normal sm:break-words text-slate-700 ">
                             We know discord, My discord clone application is a project that aims to replicate the core features and functionality of discord. It is built using Next.js, Socket.io, TypeScript, and SQL. Some of the features that my discord clone application offers are:
@@ -573,7 +573,7 @@ export const Thread = ({ id, title, imgUrl, note, tags, githublink, livelink, di
                     </div>
                 </div>
                 <section className=" xl:hidden h-full w-full flex flex-col gap-2 sm:gap-4 justify-start items-center">
-                    <div className="w-full md:w-5/6 h-4/6 dark:bg-slate-700 bg-emerald-400 rounded-xl mt-8 relative overflow-hidden p-px">
+                    <div className="w-full aspect-video h-4/6 dark:bg-slate-700 bg-emerald-400 rounded-xl mt-8 relative overflow-hidden p-px">
                         <Image
                             src={imgUrl}
                             fill

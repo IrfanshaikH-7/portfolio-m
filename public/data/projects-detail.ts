@@ -8,7 +8,7 @@ export const FeatureprojectData = [
         card: Discord,
         imgUrl: "/assets/projectImgs/discord.png",
         note: 'A Real-time group/direct messaging application',
-        tags: ['NextJs', 'Typescript', 'Planet-Scale', 'socket.io', 'tailwind css'],
+        tags: ['NextJs', 'Typescript', 'MySQL', 'tailwind css'],
         githublink: 'https://github.com/IrfanshaikH-7/discord-clone',
         livelink: 'https://discord-clone-production-c39a.up.railway.app',
         discription: 'A real-time chat system users can send and receive messages, emojis, images, videos, and other media files in various channels and groups.A user authentication system using Clerk.A server and user management system that allows users to create, edit, delete, and join servers.video and audio call functionality, and much more.'

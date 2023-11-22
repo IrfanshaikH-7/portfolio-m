@@ -1,7 +1,7 @@
 import AllProjects from "@/components/portpolio/AllProjects";
 import { db } from "@/lib/db";
 import { format } from "date-fns";
-import { Asterisk, Dot, LucideArrowBigLeftDash } from "lucide-react";
+import { Asterisk, CornerDownRight, CornerRightDown, Dot, LucideArrowBigLeftDash } from "lucide-react";
 import Image from "next/image";
 
 interface ProjectPageProps {
@@ -27,6 +27,15 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
                             fill
                             className="object-fill"
                         />
+                        {/* {
+                          project?.imgUrl?.map((url) => (
+                                <Image 
+                                src={url}
+                                alt="image"
+                                fill
+                                />
+                            ))
+                        } */}
                     </div>
                     
                     <div className="md:px-12 py-8 md:py-0 group md:w-2/5 w-auto md:self-auto self-start">
@@ -41,24 +50,27 @@ const ProjectPage = async ({ params }: ProjectPageProps) => {
                             <div className="flex gap-2">
                                 {
                                     project!.tags.map((tag, index) => (
-                                        <p className=" bg-emerald-500 text-white text-sm rounded-lg px-3 py-1">{tag}</p>
+                                        <p key={index} className=" bg-emerald-500 text-white text-sm rounded-lg px-3 py-1">{tag}</p>
                                     ))
                                 }
                             </div>
                         </div>
 
                         <div className="py-4">
-                            <h3 className="text-2xl text-slate-800 dark:text-slate-400 ">Features implemented.</h3>
+                            <h3 className="text-2xl text-slate-800 dark:text-slate-400 pb-2">Features implemented.</h3>
+                            <div className="flex flex-col gap-1">
                             {
-                                project?.pointers.split('.').map((point) => (
+                                project?.pointers.split('.').map((point,i) => (
                                     <>
-                                        <div key={point} className="flex items-center gap-1 ">
-                                            <Dot className="h-4 w-4 border-2 rounded-3xl " />
-                                            <p>{point}.</p>
+                                        <div key={i} className="flex items-start justify-start h-11  gap-2">
+                                            <Dot className="h-5 w-5 font-semibold"/>
+                                            <p className="break-words text-sm md:text-base w-full ">{point}.</p>
                                         </div>
                                     </>
                                 ))
                             }
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
