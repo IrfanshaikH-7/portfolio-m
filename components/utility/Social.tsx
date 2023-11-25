@@ -20,7 +20,7 @@ const Social = () => {
             <DropdownMenu>
                 <DropdownMenuTrigger className="flex justify-center items-center  h-full w-full px-1"><Menu className="text-black h-4 w-4 " /></DropdownMenuTrigger>
                 <DropdownMenuContent className=" gap-4 mt-2 flex flex-col items-center justify-center  bg-transparent border-none shadow-none w-full px-1 ">
-                    <DropdownMenuItem className="h-6 w-6 bg-white dark:bg-slate-500 rounded-full rounded-tl-sm rotate-45  flex items-center justify-center">
+                    <DropdownMenuItem className="h-6 w-6 bg-white dark:bg-white rounded-full rounded-tl-sm rotate-45  flex items-center justify-center">
                         <TooltipProvider>
                             <Tooltip  >
                                 <TooltipTrigger className="flex justify-start items-center"><a href="https://github.com/IrfanshaikH-7"><Github  className="dark:fill-black dark:text-black text-slate-600 fill-slate-600 p-[6px] -rotate-45"/></a></TooltipTrigger>
@@ -30,7 +30,7 @@ const Social = () => {
                             </Tooltip>
                         </TooltipProvider>
                     </DropdownMenuItem>
-                    <DropdownMenuItem className="h-6 w-6 bg-white dark:bg-slate-500 rounded-full rounded-tl-sm rotate-45  flex items-center justify-center">
+                    <DropdownMenuItem className="h-6 w-6 bg-white dark:bg-white rounded-full rounded-tl-sm rotate-45  flex items-center justify-center">
                     <TooltipProvider>
                             <Tooltip>
                                 <TooltipTrigger className="flex justify-start items-center"><a href="#linkedIn"><Linkedin  className="dark:fill-black dark:text-black text-slate-600 fill-slate-600 p-[6px] -rotate-45"/></a></TooltipTrigger>
@@ -40,7 +40,7 @@ const Social = () => {
                             </Tooltip>
                         </TooltipProvider>
                     </DropdownMenuItem>
-                    <DropdownMenuItem className="h-6 w-6 bg-white dark:bg-slate-500 rounded-full rounded-tl-sm rotate-45  flex items-center justify-center">
+                    <DropdownMenuItem className="h-6 w-6 bg-white dark:bg-white rounded-full rounded-tl-sm rotate-45  flex items-center justify-center">
                     <TooltipProvider>
                             <Tooltip>
                                 <TooltipTrigger className="flex justify-start items-center"><a href="#twitter"><Twitter  className="dark:fill-black dark:text-black text-slate-600 fill-slate-600 p-[6px] -rotate-45"/></a></TooltipTrigger>

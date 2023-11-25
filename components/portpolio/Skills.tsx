@@ -30,10 +30,10 @@ const Skills = () => {
 
                     <Tabs defaultValue="languages" className=" h-full w-full relative p-2 ">
                         <TabsList className="flex gap-2 w-">
-                            <TabsTrigger className="" value="languages">Languages</TabsTrigger>
-                            <TabsTrigger value="frontend">Frontend</TabsTrigger>
-                            <TabsTrigger value="backend">Backend</TabsTrigger>
-                            <TabsTrigger value="others">others</TabsTrigger>
+                            <TabsTrigger className="text-xs sm:text-base" value="languages">Languages</TabsTrigger>
+                            <TabsTrigger className="text-xs sm:text-base" value="frontend">Frontend</TabsTrigger>
+                            <TabsTrigger className="text-xs sm:text-base" value="backend">Backend</TabsTrigger>
+                            <TabsTrigger className="text-xs sm:text-base" value="others">others</TabsTrigger>
                         </TabsList>
 
                         <TabsContent value="languages" className="mt-2">
@@ -60,7 +60,9 @@ const Skills = () => {
                             <div className="grid grid-cols-2 gap-2 aspect-square p-1 md:p-7  ">
                                 {
                                     frontend.map((language) => (
-                                        <div key={language.skill} className=" relative text-2xl flex items-center justify-center rounded-md border-2  dark:border border-white">
+                                        <div key={language.skill} className=" relative text-2xl flex items-center justify-center rounded-md border-2  dark:border border-white
+                                        last:h-4/5 last:w-4/5 first:h-4/5 first:w-4/5 first:justify-self-end first:self-end
+                                        ">
                                             <Image
                                                 src={language.img}
                                                 alt="skill"
@@ -78,7 +80,9 @@ const Skills = () => {
                             <div className="grid grid-cols-2 gap-2 aspect-square p-1 md:p-7 ">
                                 {
                                     backend.map((skill) => (
-                                        <div key={skill.skill} className="relative text-2xl flex items-center justify-center rounded-md border-2  dark:border border-white">
+                                        <div key={skill.skill} className="relative text-2xl flex items-center justify-center rounded-md border-2  dark:border border-white
+                                        last:h-4/5 last:w-4/5 first:h-4/5 first:w-4/5 first:justify-self-end first:self-end
+                                        ">
                                             <Image
                                                 src={skill.img}
                                                 alt="skill"
@@ -96,7 +100,9 @@ const Skills = () => {
                             <div className="grid grid-cols-2 gap-2 aspect-square p-1 md:p-7 ">
                                 {
                                     others.map((skill) => (
-                                        <div key={skill.skill} className=" relative text-2xl flex items-center justify-center rounded-md border-2  dark:border border-white">
+                                        <div key={skill.skill} className=" relative text-2xl flex items-center justify-center rounded-md border-2  dark:border border-white
+                                        last:h-4/5 last:w-4/5 first:h-4/5 first:w-4/5 first:justify-self-end first:self-end
+                                        ">
                                             <skill.icon className="h-full w-full absolute p-16 text-slate-600/40 hover:text-slate-600 transition-all duration-300" />
                                             <p className="z-10 font-semibold uppercase text-sm sm:text-base text-white">{skill.skill}</p>
                                         </div>
