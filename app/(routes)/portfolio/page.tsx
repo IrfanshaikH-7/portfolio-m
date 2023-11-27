@@ -6,6 +6,7 @@ import MoreProjects from "@/components/portpolio/More-project";
 import PageWrapper from "@/components/providers/PageWrapper";
 import SvgOne from "@/components/svg1";
 import { FeatureprojectData } from "@/public/data/projects-detail";
+import Achievements from "@/components/portpolio/Achievements";
 
 const Portfolio = () => {
 
@@ -86,8 +87,10 @@ const Portfolio = () => {
                     <section className="snap-center h-full  md:py-16 xl:py-28 py-8  w-full flex items-center justify-center mx-auto bg-emerald-300 dark:bg-slate-900 rounded-[80px] overflow-hidden">
                         <div className=" h-[80%] mx-auto w-full md:w-[90%] xl:w-[72%] ">
                             <Skills />
+                            
                         </div>
                     </section>
+                    {/* <Achievements /> */}
                     <Quote />
                 </section>
                 <div className='h-auto w-full bg-white dark:bg-slate-950 py-6 group'>

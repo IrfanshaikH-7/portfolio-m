@@ -58,7 +58,7 @@ const ProjectCard = ({ cardDetails }: Props) => {
                                     </div>
 
                                     <div >
-                                        <p className="px-4 text-xs xl:text-base text-slate-700 dark:text-slate-300 font-semibold text-center"><span className="font-semibold ">⪧{" "}</span>{item.note}</p>
+                                        <p className="px-4 text-xs xl:text-sm text-slate-700 dark:text-slate-300 font-semibold text-center"><span className="font-semibold ">⪧{" "}</span>{item.note}</p>
                                     </div>
                                 </div>
                             </div>

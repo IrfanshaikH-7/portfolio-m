@@ -107,6 +107,7 @@ const Home: NextPage = async () => {
           {/* <TestimonialCurosel testimonials={testimonials} anonymous={false}/> */}
           <TestimonialCurosel testimonials={testimonials} anonymousTestimonials={anonymousTestimonials} />
         </div>
+        
         {/* ----------------Footer--------------------- */}
         <div className='h-auto w-full bg-white dark:bg-slate-950 py-6 group'>
           <div className='h-px w-[80%] bg-black dark:bg-white mx-auto group-hover:animate-pulse'></div>
