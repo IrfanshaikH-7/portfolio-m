@@ -90,7 +90,7 @@ const Portfolio = () => {
                             
                         </div>
                     </section>
-                    {/* <Achievements /> */}
+                    <Achievements />
                     <Quote />
                 </section>
                 <div className='h-auto w-full bg-white dark:bg-slate-950 py-6 group'>
