@@ -12,7 +12,7 @@ const AllProjects = ({ projects }: Props) => {
     return (
         <div className='h-full w-[90%] mx-auto  rounded-e-3xl'>
             <div className=' flex justify-center items-center text-3xl gap-2 group'>
-            My works
+             More of my works
              <Grip className="h-7  w-7 text-black dark:text-white group-hover:rotate-180 transition-all duration-300"/>
             </div>
             <div className='h-full w-full px-2 grid grid-cols-2 gap-4 sm:gap-8 mt-16 md:mt-24'>
