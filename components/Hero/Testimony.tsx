@@ -62,10 +62,10 @@ const Testimony = () => {
     return (
         <>
             <div className=' flex justify-center items-center gap-2 h-24 w-72 sm:w-full bg-slate-800 rounded-3xl'>
-                <div onClick={() => setActiveImg(mProfile)} className={cn('h-16 sm:h-20 aspect-square relative rounded-full overflow-hidden border-4 border-slate-400', activeImg === mProfile ? 'border-green-600' : '')}><Image src={mProfile} alt='testinomy-img' fill className='object-cover' /></div>
-                <div onClick={() => setActiveImg(fProfile)} className={cn('h-16 sm:h-20 aspect-square relative rounded-full overflow-hidden border-4 border-slate-400', activeImg === fProfile ? 'border-green-600' : '')}><Image src={fProfile} alt='testinomy-img' fill className='object-cover' /></div>
-                <div onClick={() => setActiveImg(mProfile2)} className={cn('h-16 sm:h-20 aspect-square relative rounded-full overflow-hidden border-4 border-slate-400', activeImg === mProfile2 ? 'border-green-600' : '')}><Image src={mProfile2} alt='testinomy-img' fill className='object-cover' /></div>
-                <div onClick={() => setActiveImg(fProfile2)} className={cn('h-16 sm:h-20 aspect-square relative rounded-full overflow-hidden border-4 border-slate-400', activeImg === fProfile2 ? 'border-green-600' : '')}><Image src={fProfile2} alt='testinomy-img' fill className='object-cover' /></div>
+                <div onClick={() => setActiveImg(mProfile)} className={cn('h-16 sm:h-16 lg:h-20 aspect-square relative rounded-full overflow-hidden border-4 border-slate-400', activeImg === mProfile ? 'border-green-600' : '')}><Image src={mProfile} alt='testinomy-img' fill className='object-cover' /></div>
+                <div onClick={() => setActiveImg(fProfile)} className={cn('h-16 sm:h-16 lg:h-20 aspect-square relative rounded-full overflow-hidden border-4 border-slate-400', activeImg === fProfile ? 'border-green-600' : '')}><Image src={fProfile} alt='testinomy-img' fill className='object-cover' /></div>
+                <div onClick={() => setActiveImg(mProfile2)} className={cn('h-16 sm:h-16 lg:h-20 aspect-square relative rounded-full overflow-hidden border-4 border-slate-400', activeImg === mProfile2 ? 'border-green-600' : '')}><Image src={mProfile2} alt='testinomy-img' fill className='object-cover' /></div>
+                <div onClick={() => setActiveImg(fProfile2)} className={cn('h-16 sm:h-16 lg:h-20 aspect-square relative rounded-full overflow-hidden border-4 border-slate-400', activeImg === fProfile2 ? 'border-green-600' : '')}><Image src={fProfile2} alt='testinomy-img' fill className='object-cover' /></div>
             </div>
             <div className='mt-6'>
 

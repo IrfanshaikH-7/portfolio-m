@@ -65,7 +65,7 @@ const Anonymous = () => {
             <div className='mt-6'>
 
                 <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmitt)} className='space-y-4  w-72 sm:w-full'>
+                    <form onSubmit={form.handleSubmit(onSubmitt)} className='space-y-4 w-full'>
                         <FormField
                             control={form.control}
                             name="name"

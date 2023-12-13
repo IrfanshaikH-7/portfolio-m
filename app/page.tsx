@@ -51,7 +51,7 @@ const Home: NextPage = async () => {
               </div>
             </div>
             {/* ----------------XL: Exploring section------------------ */}
-            <section className='hidden lg:block bg-gradient-to-t from-emerald-400 via-emerald-400 h-60 mt-24 lg:-mt-8 rounded-b-[80px] pointer-events-none md:px-16 xl:px-32 py-4 '>
+            <section className='hidden lg:block  h-60 mt-24 lg:-mt-8 rounded-b-[80px] pointer-events-none md:px-16 xl:px-32 py-4 '>  {/*bg-gradient-to-t from-emerald-400 via-emerald-400*/}
               <div className='h-full w-full flex-col justify-center items-center bg-white rounded-[80px] overflow-hidden py-2'>
                 <div className='text-center text-xl py-2 text-black font-semibold flex justify-center'>Exploring <Sparkle className='h-4 w-4' /></div>
 

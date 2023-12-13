@@ -55,7 +55,7 @@ const Portfolio = () => {
                                             ))
                                         }
                                     </div>
-                                    <div className=" relative w-64 sm:w-full aspect-square lg:aspect-[12/9]  rounded-2xl xl:hidden  hover:-translate-y-24 group transition-all duration-500">
+                                    <div className=" relative w-64 sm:w-full aspect-square sm:aspect-[12/9]  rounded-2xl xl:hidden hover:-translate-y-28  md:hover:-translate-y-24 group transition-all duration-500">
                                         {
                                             FeatureprojectData.map((feature) => (
                                                 <feature.card id={feature.id} key={feature.id}

@@ -12,7 +12,7 @@ const TestimonialCurosel = ({ testimonials, anonymousTestimonials }: Props) => {
 
   return (
     <>
-      <section className='w-full md:w-[90%] h-full px-4 md:px-0 py-24'>
+      <section className='w-full md:w-[90%] h-full px-4 md:px-0 py-16'>
 
         <div className='flex justify-center items-center flex-col gap-4 w-full px-4 max-w-full overflow-hidden'>
 

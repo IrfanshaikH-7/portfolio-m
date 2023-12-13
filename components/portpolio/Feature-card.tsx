@@ -84,7 +84,7 @@ export const Discord = ({ id, title, imgUrl, note, tags, githublink, livelink, d
                     </div>
                 </section>
                 
-                <div className=" xl:hidden absolute space-y-4 p-1 xl:p-4 flex items-end justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:translate-y-52 hover:translate-y-52 sm:group-hover:translate-y-72 sm:hover:translate-y-72 lg:group-hover:translate-y-64 lg:hover:translate-y-64 transition-all duration-500 rounded-lg">
+                <div className=" xl:hidden absolute space-y-4 p-1 xl:p-4 flex items-end justify-start h-full w-full bg-gradient-to-r from-emerald-300  to-emerald-400 opacity-0 group-hover:opacity-100 group-hover:translate-y-52 hover:translate-y-52 lg:group-hover:translate-y-64 lg:hover:translate-y-64 transition-all duration-500 rounded-lg">
                     <div className="  h-[90%] w-full bg-white py-6 px-3 overflow-hidden rounded-lg relative ">
                         <h3 className="text-xs sm:text-sm    text-slate-800">introduction -</h3>
                         <p className="text-[9px] sm:text-xs   indent-6 leading-snug sm:leading-normal sm:break-words text-slate-700 ">
